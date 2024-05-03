@@ -1,12 +1,57 @@
-## L1
-The names "John Doe" for males, "Jane Doe" or "Jane Roe" for females, or "Jonnie Doe" and "Janie Doe" for children, or just "Doe" non-gender-specifically are used as placeholder names for a party whose true identity is unknown or must be withheld in a legal action, case, or discussion. The names are also used to refer to acorpse or hospital patient whose identity is unknown. This practice is widely used in the United States and Canada, but is rarely used in other English-speaking countries including the United Kingdom itself, from where the use of "John Doe" in a legal context originates. The names Joe Bloggs or John Smith are used in the UK instead, as well as in Australia and New Zealand.
-
-## L2
-John Doe is sometimes used to refer to a typical male in other contexts as well, in a similar manner to John Q. Public, known in Great Britain as Joe Public, John Smith or Joe Bloggs. For example, the first name listed on a form is often John Doe, along with a fictional address or other fictional information to provide an example of how to fill in the form. The name is also used frequently in popular culture, for example in the Frank Capra film Meet John Doe. John Doe was also the name of a 2002 American television series.
-
-## L3
-Similarly, a child or baby whose identity is unknown may be referred to as Baby Doe. A notorious murder case in Kansas City, Missouri, referred to the baby victim as Precious Doe. Other unidentified female murder victims are Cali Doe and Princess Doe. Additional persons may be called James Doe, Judy Doe, etc. However, to avoid possible confusion, if two anonymous or unknown parties are cited in a specific case or action, the surnames Doe and Roe may be used simultaneously; for example, "John Doe v. Jane Roe".
+# Set 1
+1. What do you mean by procedure oriented and object oriented languages? (compare them)
+2. What is the need to shift from procedure to object oriented languages?
+3. Mention different OOP languages. Mention OOP applications.
 
 
-## L4
-If several anonymous parties are referenced, they may simply be labelled John Doe #1, John Doe #2, etc. (the U.S. Operation Delego cited 21 (numbered) "John Doe"s) or labelled with other variants of Doe / Roe / Poe / etc. Other early alternatives such as John Stiles and Richard Miles are now rarely used, and Mary Major has been used in some American federal cases.
+# Set 2
+4. What is top-down and bottom –up approach.
+5. Concepts/ features of OOPL.
+6. Show two ways to of representing an object.
+
+
+# Set 3
+7. What is object? What is class? Explain with example of student database.
+8. What is (explain with example of student database): data abstraction, Encapsulation, Inheritance, Polymorphism, dynamic binding.
+9. Benefits of oop.
+
+
+# Set 3
+10. Who is the developer of C++?What is iostream.h?
+11. What is namespace?
+12. What are Output and i/p operators
+
+
+## Set 12
+45. What is the need of friend function in function overloading?
+46. What is the o/p for each of it explain. (c1, c2, c3 are classes):: C3=c1+c2; C3= c1+5; C3=5+c2;
+47. What is operator overloading? What are rules
+
+
+## Set 13
+49. Which operators can not be overloaded.
+50. Mention where friend function can’t be used to overload operator.
+51. Explain Type conversions of class with example.
+
+
+## Set 14
+53. What is default access specifier in C++.
+54. When protected access specifier comes into the picture.
+55. What is diamond problem? (in Inheritance )
+
+
+## Set 15
+56. Explain visibility of inherited members.
+57. What are various types of classes and explain them: Friend, virtual, abstract, member classes, nested classes(local)
+58. What is dynamic overloading and over riding?
+
+
+## Set 16
+59. What is polymorphism? Classify it.
+60. What is “this”pointer?
+61. Declare Pointer to member functions, variable of your own example class. (with dot and arrow operator
+
+
+## Set 17
+42. What is function overloading?
+43. Explain Memory allocation for objects, functions, static data members of a same class.
