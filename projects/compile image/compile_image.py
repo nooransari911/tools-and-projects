@@ -5,6 +5,8 @@ from flask import Flask, render_template, jsonify, request, Request
 
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
+from gdrive_im import download_files
+from gdrive_te import download_filest
 
 # ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
 # ROOT = "/tmp/"
@@ -16,18 +18,19 @@ inits = [
     "cd {ROOT}",
     "mkdir -p ./static",
     "mkdir -p ./static/image",
-    "mkdir -p ./templates",
-    "python3 ./gdrive_im.py",
-    "python3 ./gdrive_te.py"
+    "mkdir -p ./templates"
 ]
 
 [subprocess.Popen (x, shell=True).wait() for x in inits]
 
-def gdrive ():
-    
-    inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
 
-    subprocess.Popen (inits, shell=True)
+def gdrive ():
+    #inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
+    #subprocess.Popen (inits, shell=True)
+    download_files()
+    download_filest()
+
+
 
 
 
