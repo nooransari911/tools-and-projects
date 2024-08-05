@@ -27,7 +27,7 @@ def gdrive ():
     
     inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
 
-    subprocess.Popen (x, shell=True).wait()
+    subprocess.Popen (inits, shell=True).wait()
 
 
 
@@ -45,6 +45,7 @@ app = Flask(__name__, static_folder=PATH_STATIC, template_folder=PATH_TEMPLATE)
 @app.route ("/comm", methods=["GET", "POST"])
 def compile_image ():
     gdrive()
+    print ("return from gdrive")
     image_list_rel = [os.path.join ("/static/image/", im) for im in os.listdir(IMAGE_DIR) if im.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
     image_list_rel = sorted (image_list_rel)
     print (image_list_rel)
