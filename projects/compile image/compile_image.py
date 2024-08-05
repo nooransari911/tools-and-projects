@@ -7,7 +7,9 @@ from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 
 # ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
-ROOT = "/tmp/"
+# ROOT = "/tmp/"
+ROOT="/opt/render/project/src/projects/compile image/"
+
 
 inits = [
     "mkdir -p {ROOT}",

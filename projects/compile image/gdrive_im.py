@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from google.cloud import secretmanager
 
-ROOT="/tmp/rootdir/"
+ROOT="/opt/render/project/src/projects/compile image/"
 
 # Configuration
 SECRET_ID = 'projects/927511831564/secrets/wire_service_account_json/versions/latest'
@@ -24,7 +24,9 @@ def get_secret():
 
 def download_files():
     # Fetch and load credentials
-    secret_json = get_secret()
+    # secret_json = get_secret()
+    secret_json = os.getenv ("GOOGLE_APPLICATION_CREDENTIALS")
+    
     creds = service_account.Credentials.from_service_account_info(
         json.loads(secret_json), scopes=['https://www.googleapis.com/auth/drive.readonly'])
     service = build('drive', 'v3', credentials=creds)
