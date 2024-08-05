@@ -62,7 +62,7 @@ def refresh ():
 @app.route ("/comm", methods=["GET", "POST"])
 def compile_image ():
     # gdrive()
-    print ("return from gdrive")
+    # print ("return from refresh")
     image_list_rel = [os.path.join ("/static/image/", im) for im in os.listdir(IMAGE_DIR) if im.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
     image_list_rel = sorted (image_list_rel)
     print (image_list_rel)
