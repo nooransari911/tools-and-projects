@@ -79,4 +79,4 @@ def entry (request: Request) -> str:
         return response.get_data(as_text=True), response.status_code
 
 if (__name__=="__main__"):
-    app.run (debug=True, port=8156, host="127.0.0.1")
+    app.run (debug=False)
