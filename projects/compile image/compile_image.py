@@ -23,6 +23,22 @@ inits = [
 
 [subprocess.Popen (x, shell=True).wait() for x in inits]
 
+def gdrive ():
+    
+    inits = [
+        "mkdir -p {ROOT}",
+        "cd {ROOT}",
+        "mkdir -p ./static",
+        "mkdir -p ./static/image",
+        "mkdir -p ./templates",
+        "python3 ./gdrive_im.py",
+        "python3 ./gdrive_te.py"
+    ]
+
+    [subprocess.Popen (x, shell=True).wait() for x in inits]
+
+
+
 
 PATH_APP = ROOT
 PATH_STATIC = PATH_APP+"static/"
@@ -36,6 +52,7 @@ app = Flask(__name__, static_folder=PATH_STATIC, template_folder=PATH_TEMPLATE)
 
 @app.route ("/comm", methods=["GET", "POST"])
 def compile_image ():
+    gdrive()
     image_list_rel = [os.path.join ("/static/image/", im) for im in os.listdir(IMAGE_DIR) if im.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
     image_list_rel = sorted (image_list_rel)
     print (image_list_rel)
