@@ -6,7 +6,7 @@ from flask import Flask, render_template, jsonify, request, Request
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 
-ROOT="/home/ansarimn/Downloads/tools\ and\ projects/projects/compile\ image/"
+ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
 
 inits = [
     "mkdir -p {ROOT}",
@@ -71,7 +71,7 @@ def compile_image ():
         return render_template ("results_im.html")
 
 
-@functions_framework.http
+# @functions_framework.http
 def entry (request: Request) -> str:
     # Forward the request to the Flask app
     with app.test_request_context(request.url, request.method, request.get_data(), request.headers):
