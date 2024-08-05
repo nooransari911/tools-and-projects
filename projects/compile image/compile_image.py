@@ -6,14 +6,17 @@ from flask import Flask, render_template, jsonify, request, Request
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 
-ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
+# ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
+ROOT = "/tmp/"
 
 inits = [
     "mkdir -p {ROOT}",
     "cd {ROOT}",
     "mkdir -p ./static",
     "mkdir -p ./static/image",
-    "mkdir -p ./templates"
+    "mkdir -p ./templates",
+    "python3 ./gdrive_im.py",
+    "python3 ./gdrive_te.py"
 ]
 
 [subprocess.Popen (x, shell=True).wait() for x in inits]
