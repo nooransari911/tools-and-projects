@@ -26,11 +26,7 @@ inits = [
 def gdrive ():
     
     inits = [
-        "mkdir -p {ROOT}",
         "cd {ROOT}",
-        "mkdir -p ./static",
-        "mkdir -p ./static/image",
-        "mkdir -p ./templates",
         "python3 ./gdrive_im.py",
         "python3 ./gdrive_te.py"
     ]
