@@ -50,10 +50,10 @@ def gdrive ():
 def refresh ():
     # [os.remove(f) for f in glob.glob(f'{IMAGE_DIR}*') if os.path.isfile(f)]
     # [os.remove(f) for f in os.listdir(IMAGE_DIR)]
-    if (not os.listdir (IMAGE_DIR)):
+    if (os.listdir (IMAGE_DIR)):
         inits = f"rm -f {IMAGE_DIR}*"
         subprocess.Popen (inits, shell=True)
-        
+
     inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
     subprocess.Popen (inits, shell=True)
     return ("<h1>Download was success</h1>")
