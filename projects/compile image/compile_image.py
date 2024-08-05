@@ -48,7 +48,9 @@ def gdrive ():
 
 @app.route ("/refresh")
 def refresh ():
-    inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
+    inits = f"shopt -s nullglob && rm -f {IMAGE_DIR}* && shopt -u nullglob"
+    subprocess.Popen (inits, shell=True)
+    inits = "rm ./static/image/* && python3 ./gdrive_im.py && python3 ./gdrive_te.py"
     subprocess.Popen (inits, shell=True)
     return ("<h1>Download was success</h1>")
 
