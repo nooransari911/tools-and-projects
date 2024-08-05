@@ -27,7 +27,7 @@ def gdrive ():
     
     inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
 
-    subprocess.Popen (inits, shell=True).wait()
+    subprocess.Popen (inits, shell=True)
 
 
 
