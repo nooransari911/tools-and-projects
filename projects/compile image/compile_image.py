@@ -24,11 +24,6 @@ inits = [
 [subprocess.Popen (x, shell=True).wait() for x in inits]
 
 
-def gdrive ():
-    #inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
-    #subprocess.Popen (inits, shell=True)
-    download_files()
-    download_filest()
 
 
 
@@ -44,10 +39,23 @@ IMAGE_DIR = PATH_STATIC+"image/"
 app = Flask(__name__, static_folder=PATH_STATIC, template_folder=PATH_TEMPLATE)
 
 
+def gdrive ():
+    #inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
+    #subprocess.Popen (inits, shell=True)
+    download_files()
+    download_filest()
+
+
+@app.route ("/refresh")
+def refresh ():
+    inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
+    subprocess.Popen (inits, shell=True)
+    return ("<h1>Download was success</h1>")
+
 
 @app.route ("/comm", methods=["GET", "POST"])
 def compile_image ():
-    gdrive()
+    # gdrive()
     print ("return from gdrive")
     image_list_rel = [os.path.join ("/static/image/", im) for im in os.listdir(IMAGE_DIR) if im.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
     image_list_rel = sorted (image_list_rel)
@@ -89,12 +97,7 @@ def compile_image ():
         return render_template ("results_im.html")
 
 
-# @functions_framework.http
-def entry (request: Request) -> str:
-    # Forward the request to the Flask app
-    with app.test_request_context(request.url, request.method, request.get_data(), request.headers):
-        response = app.full_dispatch_request()
-        return response.get_data(as_text=True), response.status_code
+
 
 if (__name__=="__main__"):
     app.run (debug=False)
