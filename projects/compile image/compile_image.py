@@ -1,4 +1,4 @@
-import os
+import os, glob
 import subprocess
 
 from flask import Flask, render_template, jsonify, request, Request
@@ -48,8 +48,12 @@ def gdrive ():
 
 @app.route ("/refresh")
 def refresh ():
-    inits = f"shopt -s nullglob && rm -f {IMAGE_DIR}* && shopt -u nullglob"
-    subprocess.Popen (inits, shell=True)
+    # [os.remove(f) for f in glob.glob(f'{IMAGE_DIR}*') if os.path.isfile(f)]
+    # [os.remove(f) for f in os.listdir(IMAGE_DIR)]
+    if (not os.listdir (IMAGE_DIR)):
+        inits = f"rm -f {IMAGE_DIR}*"
+        subprocess.Popen (inits, shell=True)
+        
     inits = "python3 ./gdrive_im.py && python3 ./gdrive_te.py"
     subprocess.Popen (inits, shell=True)
     return ("<h1>Download was success</h1>")
