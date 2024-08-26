@@ -51,3 +51,130 @@ info127.0.0.1 - - [05/Aug/2024:11:40:57 +0000] "GET /static/image/stackoverflow-
 ['/static/image/stackoverflow-dev-survey-2024-technology-admired-and-desired-database-desire-admire-social.png', '/static/image/stackoverflow-dev-survey-2024-technology-admired-and-desired-language-desire-admire-social.png', '/static/image/stackoverflow-dev-survey-2024-technology-admired-and-desired-platform-desire-admire-social.png', '/static/image/stackoverflow-dev-survey-2024-technology-admired-and-desired-webframe-desire-admire-social.png']
 127.0.0.1 - - [05/Aug/2024 14:59:04] "POST /comm HTTP/1.1" 200 -
 127.0.0.1 - - [05/Aug/2024 14:59:17] "GET /static/generated_file.docx HTTP/1.1" 200 -
+
+
+
+## GCF
+without flask.response:
+   [5:04:05 PM] - Execution response:
+         {
+               "args":{},
+               "headers":{"Host":"localhost"},
+               "message":"<h1>Hello, World!</h1>
+                     <h1>Status code: 200</h1>
+                     <h1>Request method: GET</h1>    
+                     <h1>Request path: /</h1>    
+                     <h2>Request url: http://localhost/</h2>    
+                     <h2>Request headers: {'Host': 'localhost'}</h2>    
+                     <h2>Request args: {}</h2>",
+               "method":"GET","url":"http://localhost/"
+         }
+
+
+with flask.response:
+
+[5:06:27 PM] - Execution response: 
+         {
+               "args":{},
+               "headers":{"Host":"localhost"},
+               "message":"<h1>Hello, World!</h1>    
+                     <h1>Status code: 200</h1>    
+                     <h1>Request method: GET</h1>    
+                     <h1>Request path: /</h1>    
+                     <h2>Request url: http://localhost/</h2>   
+                     <h2>Request headers: {'Host': 'localhost'}</h2>    
+                     <h2>Request args: {}</h2>",
+               "method":"GET","url":"http://localhost/"
+         }
+
+
+
+## use images from cloud storage in functions
+
+from google.cloud import storage
+from google.cloud import functions
+
+def generate_signed_url(request):
+    """Generates a signed URL for an image in Cloud Storage."""
+
+    # Get the image name from the request
+    image_name = request.args.get('image_name')
+
+    # Create a Cloud Storage client
+    storage_client = storage.Client()
+
+    # Get the bucket
+    bucket = storage_client.bucket('my-bucket-name')
+
+    # Create a blob object for the image
+    blob = bucket.blob(image_name)
+
+    # Generate a signed URL with a 1-hour expiration
+    url = blob.generate_signed_url(expiration=3600)
+
+    # Return the signed URL
+    return functions.Response(200, {'url': url})
+
+
+
+
+
+
+## move images to cloud storage
+from google.cloud import storage
+from googleapiclient.discovery import build
+from google.oauth2 import service_account
+import os
+
+# Set up Google Drive API credentials
+SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+SERVICE_ACCOUNT_FILE = 'path/to/your/service_account.json'  # Replace with your service account file path
+credentials = service_account.Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE, scopes=SCOPES
+)
+
+# Set up Cloud Storage client
+storage_client = storage.Client()
+bucket_name = 'your-cloud-storage-bucket-name'  # Replace with your bucket name
+bucket = storage_client.bucket(bucket_name)
+
+# Set up Google Drive API client
+drive_service = build('drive', 'v3', credentials=credentials)
+
+def move_images_to_cloud_storage(request):
+    '''
+    Moves images from a public Google Drive folder to Cloud Storage.
+
+    Args:
+        request (flask.Request): The request object.
+        
+    Returns:
+        The response text, or any set of values that can be turned into a
+        Response object using `make_response`
+    '''
+
+    # Get the Google Drive folder ID from the request
+    folder_id = request.args.get('folder_id')
+
+    # Get the list of files in the folder
+    results = drive_service.files().list(
+        q=f"'{folder_id}' in parents and mimeType='image/jpeg'",
+        fields='files(id, name, mimeType)'
+    ).execute()
+    files = results.get('files', [])
+
+    # Iterate through the files and upload them to Cloud Storage
+    for file in files:
+        # Download the file from Google Drive
+        file_data = drive_service.files().get(fileId=file['id'], download=True).execute()
+
+        # Create a Cloud Storage blob object
+        blob = bucket.blob(file['name'])
+
+        # Upload the file to Cloud Storage
+        blob.upload_from_string(file_data)
+
+        print(f"Uploaded {file['name']} to Cloud Storage.")
+
+    return 'Images moved successfully!'
+
