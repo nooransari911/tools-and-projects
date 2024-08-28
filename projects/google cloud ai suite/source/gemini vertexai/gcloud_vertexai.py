@@ -1,9 +1,11 @@
+# Uses static-manifest project ONLY
+
 import vertexai, time
 from vertexai.generative_models import GenerativeModel, Part
 import time
 
 
-vertexai.init(project="optimum-task-411411", location="us-west1")
+vertexai.init(project="static-manifest", location="us-west1")
 model = GenerativeModel("gemini-1.5-pro-001")
 prompt = "perform OCR on this document. Give entire text"
 

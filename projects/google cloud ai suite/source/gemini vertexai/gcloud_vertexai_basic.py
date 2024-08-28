@@ -1,7 +1,9 @@
+# Use wire project only
 import time
 
 import vertexai
 from vertexai.language_models import TextGenerationModel
+
 
 time_start = time.time_ns()
 
