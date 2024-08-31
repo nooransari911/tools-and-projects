@@ -10,4 +10,4 @@ optimum-task-411411-3f4dc520069f.json
 *.pdf
 **/venv/
 **/ex-*
-
+**/.env-*
