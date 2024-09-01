@@ -1,0 +1,8 @@
+ * Serving Flask app 'test0'
+ * Debug mode: on
+
+
+Df is:
+Empty DataFrame
+Columns: []
+Index: []
