@@ -4,9 +4,11 @@ from google.cloud import bigquery
 import datetime
 import pandas as pd
 import plotly.express as px
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 import os, json
 from dotenv import load_dotenv
+
+from SQL_queries import *
 
 load_dotenv()
 
@@ -181,10 +183,12 @@ def viz_data (query):
 
 
 # Function to generate visualizations for the current month
-@app.route('/')
+@app.route('/latest')
 def visualize_current_month():
     # Get the current month
     current_month = datetime.datetime.now().strftime('%Y-%m')
+    current_month = current_month [2:]
+    #print(current_month)
     query = f"""
                 SELECT payee, SUM(withdrawal_amt) AS total_spent, SUM(deposit_amt) AS total_deposited
                 FROM `{BQ_PROJECT}.{BQ_DATASET}.transactions`
@@ -192,41 +196,64 @@ def visualize_current_month():
                     AND CAST(SUBSTR(date, 7, 2) AS INT64) = CAST(SUBSTR("{current_month}", 1, 2) AS INT64)
                 GROUP BY payee
             """
-    return viz_data (query)
+    return viz_data(return_sql(prequested_month=current_month)[2])
 
 
 # Function to generate visualizations for a specific month
 @app.route('/<year>-<month>')
 def visualize_specific_month(year, month):
     requested_month = f"{year}-{month}"
-    query = f"""
-            SELECT payee, SUM(withdrawal_amt) AS total_spent, SUM(deposit_amt) AS total_deposited
-            FROM `{BQ_PROJECT}.{BQ_DATASET}.transactions`
-            WHERE CAST(SUBSTR(date, 4, 2) AS INT64) = CAST(SUBSTR("{requested_month}", 4, 2) AS INT64)
-                AND CAST(SUBSTR(date, 7, 2) AS INT64) = CAST(SUBSTR("{requested_month}", 1, 2) AS INT64)
-            GROUP BY payee
-        """
-    return viz_data(query)
+    #print(requested_month)
+    #print(return_sql(prequested_month=requested_month)[2])
+    return viz_data(return_sql(prequested_month=requested_month)[2])
 
 
 
 
-@app.route('/rx/<year>')
+@app.route('/year/<year>')
 def visualize_year(year):
-    query = f"""
-        SELECT payee, SUM(withdrawal_amt) AS total_spent, SUM(deposit_amt) AS total_deposited
-        FROM `{BQ_PROJECT}.{BQ_DATASET}.transactions`
-        WHERE CAST(SUBSTR(date, 7, 2) AS INT64) = CAST(SUBSTR('{year}', 1, 2) AS INT64)
-        GROUP BY payee
-    """
-    return viz_data(query)
+    return viz_data(return_sql(pyear=year)[1])
 
 
 
-@app.route ("/hx")
+
+@app.route('/', methods=["GET"])
+def select_data_get():
+    client = bigquery.Client(project=BQ_PROJECT)
+    oldest_year = client.query_and_wait(SQL_LIST [0])
+    oldest_year = "".join (["20", str (next(oldest_year)["oldest_year"])])
+
+
+    current_year = datetime.datetime.now().year
+    years = list(range(int (oldest_year), current_year + 1)) # Generate a list of years
+    months = list(range(1, 13))
+    return render_template('select.html', years=years, months=months)
+
+
+@app.route ("/", methods=["POST"])
+def select_year_post ():
+    selected_option = request.form.get('option')
+    selected_year = int(request.form.get('year'))
+    #print(selected_year)
+    if selected_option == 'month':
+        selected_month = int(request.form.get('month'))
+        return redirect(url_for("visualize_specific_month",
+                                year=str(selected_year)[-2:], month=f"{selected_month:02}"))
+
+    elif selected_option == 'year':
+        return redirect(url_for("visualize_year",
+                                year=str(selected_year)[-2:]))
+    else:
+        return "Invalid selection."
+
+
+
+@app.route ("/update")
 def process ():
     process_latest_statement()
     return ("<h1>Done</h1>")
+
+
 
 
 if __name__ == '__main__':
