@@ -4,6 +4,7 @@
 /update    process latest statement and update database;
 /24-08     for Aug `24;
 /year/24   for year `24
+/test      to automatic test routes
 """
 import time
 
@@ -448,7 +449,7 @@ def gcs_image_url_direct ():
 
     time_end = time.time_ns()
     time_elapsed = (time_end - time_start) / (10 ** 9)
-    print(f"\nTime elapsed: {time_elapsed} s")
+    #print(f"\nTime elapsed: {time_elapsed} s")
     return redirect(signed_url)
 
 
@@ -459,12 +460,19 @@ def test_route_post_request():
     target_route = request.form.get('target_route')
     app_url = 'http://127.0.0.1:5000'  # Base URL of your Flask app
 
-    num_requests = 4  # Number of requests to send
+    if request.form.get('no_of_hits') != '':
+        num_requests = int(request.form.get('no_of_hits'))
+    else:
+        num_requests = 2
+
     for i in range(num_requests):
+        start_time = time.time_ns()  # Start timing
         full_url = app_url + "/" + target_route
         try:
             response = requests.get(full_url)
-            print(f"Request {i + 1}: Status code - {response.status_code}")  # Print results
+            end_time = time.time_ns()  # End timing
+            request_time = (end_time - start_time) / (10**9)
+            print(f"Request {i + 1}: Status code - {response.status_code}, Time: {request_time:.4f} seconds")  # Print results
         except requests.exceptions.RequestException as e:
             print(f"Error: {e}")
 
