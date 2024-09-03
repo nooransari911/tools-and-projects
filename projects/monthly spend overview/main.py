@@ -1,11 +1,20 @@
+"""Routes:
+/          homepage; generate viz for a year/month
+/up        upload files to GCS bucket;
+/update    process latest statement and update database;
+/24-08     for Aug `24;
+/year/24   for year `24
+"""
+import time
+
 import openpyxl
 from google.cloud import storage
 from google.cloud import bigquery
 import datetime
 import pandas as pd
 import plotly.express as px
-from flask import Flask, render_template, redirect, url_for, request
-import os, json
+from flask import Flask, render_template, redirect, url_for, request, Response
+import os, json, io, requests
 from dotenv import load_dotenv
 
 from SQL_queries import *
@@ -354,23 +363,123 @@ def upload_file():
     bucket = storage_client.bucket (GCS_BUCKET)
 
 
-    if request.method == 'POST':
-        # Get the uploaded file and desired filename
-        file = request.files['file']
-        new_filename = request.form['new_filename']
+    # Get the uploaded file and desired filename
+    file = request.files['file']
+    new_filename = request.form['new_filename']
 
-        if file and new_filename:
-            try:
-                # Upload the file to GCS with the new name
-                blob = bucket.blob(new_filename)
-                # Overwrite the existing file
-                blob.upload_from_string(file.read(), content_type=file.content_type)
-                return f'<h1>File {file.filename} uploaded to {GCS_BUCKET} as {new_filename}</h1>'
+    if file and new_filename:
+        try:
+            # Upload the file to GCS with the new name
+            blob = bucket.blob(new_filename)
+            # Overwrite the existing file
+            blob.upload_from_string(file.read(), content_type=file.content_type)
+            return f'<h1>File {file.filename} uploaded to {GCS_BUCKET} as {new_filename}</h1>'
 
-            except Exception as e:
-                return f'Error uploading file: {str(e)}', 500
-        else:
-            return 'No file or filename provided', 400
+        except Exception as e:
+            return f'Error uploading file: {str(e)}', 500
+    else:
+        return 'No file or filename provided', 400
+
+
+
+@app.route ("/GCS-text")
+def in_memory_download_text ():
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(GCS_BUCKET)
+    blobs = bucket.list_blobs()
+
+    blobs = bucket.list_blobs()
+    latest_file = max(blobs, key=lambda blob: blob.updated)
+
+    blob_stream = io.BytesIO()
+    latest_file.download_to_file(blob_stream)
+    blob_stream.seek(0)
+
+    text_content = blob_stream.read().decode('utf-8')
+    #print(text_content)
+
+    return (f"<h1>Content is:</h1>\n\n{text_content}")
+
+
+
+@app.route ("/GCS-image")
+def in_memory_download_image ():
+    #Takes ~4.5 seconds to 5 second to show 1080p 450 kB proxdr image
+
+
+    time_start = time.time_ns()
+    IMAGE_BUCKET = "gcloud_image_intelligence"
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(IMAGE_BUCKET)
+
+
+    #select latest file:
+    #blobs = bucket.list_blobs()
+    #latest_file = max(blobs, key=lambda blob: blob.updated)
+    blob = bucket.blob ("proxdr.jpg")
+    blob_stream = io.BytesIO()
+
+    content_type = blob.content_type
+    blob.download_to_file(blob_stream)
+    blob_stream.seek(0)
+    time_end = time.time_ns()
+    time_elapsed = (time_end - time_start) / (10**9)
+    print (f"\nTime elapsed: {time_elapsed} s")
+    return Response (blob_stream.getvalue(), mimetype=blob.content_type, headers={'Content-Disposition': 'inline'})
+
+
+
+
+@app.route ("/GCS-url")
+def gcs_image_url_direct ():
+    #Takes ~0.03 to ~0.08 seconds for 450kB proxdr image
+    time_start = time.time_ns()
+    IMAGE_BUCKET = "gcloud_image_intelligence"
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(IMAGE_BUCKET)
+    blob = bucket.blob("proxdr.jpg")
+
+    signed_url = blob.generate_signed_url(version="v4",
+        # This URL is valid for 15 minutes
+        expiration=datetime.timedelta (minutes=15),
+        # Allow GET requests using this URL.
+        method="GET",
+    )
+
+    time_end = time.time_ns()
+    time_elapsed = (time_end - time_start) / (10 ** 9)
+    print(f"\nTime elapsed: {time_elapsed} s")
+    return redirect(signed_url)
+
+
+
+
+@app.route('/test', methods=['POST'])
+def test_route_post_request():
+    target_route = request.form.get('target_route')
+    app_url = 'http://127.0.0.1:5000'  # Base URL of your Flask app
+
+    num_requests = 4  # Number of requests to send
+    for i in range(num_requests):
+        full_url = app_url + "/" + target_route
+        try:
+            response = requests.get(full_url)
+            print(f"Request {i + 1}: Status code - {response.status_code}")  # Print results
+        except requests.exceptions.RequestException as e:
+            print(f"Error: {e}")
+
+    return "<h1>Requests sent!</h1>"  # Send a simple message back to the browser
+
+@app.route('/test', methods=['GET'])
+def test_route_get_request():
+    return render_template('test.html')
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
