@@ -48,15 +48,33 @@ def return_sql (pyear=None, prequested_month=None):
         sq [1] = re.sub (r"{BQ_PROJECT}.{BQ_DATASET}.transactions",
                 f"{BQ_PROJECT}.{BQ_DATASET}.transactions",
                 str (sq [1]))
-        #print (sq [1])
+        print (sq [1])
 
 
     elif prequested_month:
-        sq [2] = re.sub (r'<', str (prequested_month), sq [2])
-        sq [2] = re.sub (r"({BQ_PROJECT}.{BQ_DATASET}.transactions)",
-               (f"{BQ_PROJECT}.{BQ_DATASET}.transactions"),
-               sq [2])
-        #print (sq [2])
+
+        if re.search (r"<", sq[2]):
+            sq[2] = re.sub(r"({BQ_PROJECT}.{BQ_DATASET}.transactions)",
+                           (f"{BQ_PROJECT}.{BQ_DATASET}.transactions"),
+                           sq[2])
+
+            sq [2] = re.sub (r'<', str (prequested_month), sq [2])
+
+
+        else:
+            replacements = [f"CAST(SUBSTR(\"{prequested_month}\", 4, 2) AS INT64)",
+                            f"CAST(SUBSTR(\"{prequested_month}\", 1, 2) AS INT64)"
+                            ]
+
+            sq [2] = re.sub (r'CAST\(SUBSTR\("(\d{2}-\d{2})", \d{1}, \d{1}\) AS INT64\)',
+                   lambda m, reps=replacements: reps.pop(0),
+                   sq [2], 2)
+
+            sq[2] = re.sub(r"({BQ_PROJECT}.{BQ_DATASET}.transactions)",
+                           (f"{BQ_PROJECT}.{BQ_DATASET}.transactions"),
+                           sq[2])
+
+        print (sq [2])
 
 
     return sq

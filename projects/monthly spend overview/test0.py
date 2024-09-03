@@ -134,7 +134,7 @@ def process_latest_statement():
 
 
 def viz_data (query):
-    # Query BigQuery for the requested month's data
+    """# Query BigQuery for the requested month's data
     client = bigquery.Client(project=BQ_PROJECT)
 
     query_job = client.query_and_wait(query)
@@ -142,40 +142,127 @@ def viz_data (query):
 
     data = [dict(row) for row in results]
     df = pd.DataFrame(data)
-    # print (f"\n\nDf is:\n{df.to_string()}")
+    # print (f"\n\nDf is:\n{df.to_string()}")"""
 
-    df_spending = df.sort_values(by='total_spent', ascending=False)
-    df_deposits = df.sort_values(by='total_deposited', ascending=False)
-    df_spending = df_spending.dropna(subset=['total_spent'])  # Drop rows with null in total_spent
-    df_deposits = df_deposits.dropna(subset=['total_deposited'])  # Drop rows with null in total_deposited
 
-    FIG_WIDTH = 1000
-    FIG_HEIGHT = 700
-    # Create pie chart for spending
-    fig_pie_spending = px.pie(
-        df_spending,
-        names='payee',
-        values='total_spent',
-        title=f"Spending Breakdown"
-    )
-    fig_pie_spending.update_layout(width=FIG_WIDTH, height=FIG_HEIGHT)
-    # Create bar chart (you can use either df_spending or df_deposits)
-    fig_bar = px.bar(df_spending, x="payee", y="total_spent", title=f"Spending by Payee")
-    fig_bar.update_layout(width=FIG_WIDTH, height=FIG_HEIGHT)
-    fig_bar.update_xaxes(tickangle=45)
+    client = bigquery.Client(project=BQ_PROJECT)
 
-    # Convert charts to HTML
-    pie_chart_spending = fig_pie_spending.to_html(full_html=False)
-    bar_chart = fig_bar.to_html(full_html=False)
+    query_job = client.query_and_wait(query)
+    results = query_job
 
-    df_spending = df_spending.drop('total_deposited', axis=1)
-    df_deposits = df_deposits.drop('total_spent', axis=1)
-    df_sp_html = df_spending.to_html(classes='table table-striped', index=False)
-    df_de_html = df_deposits.to_html(classes='table table-striped', index=False)
 
-    return render_template('index.html',
-                           pie_chart_spending=pie_chart_spending, bar_chart=bar_chart,
-                           df_sp_html=df_sp_html, df_de_html=df_de_html)
+    # Check if the query returned any rows
+    if results.total_rows == 0:
+        requested_month = query.split("WHERE")[1].strip()  # Extract the month from the query
+        error_message = f"No data found for {requested_month}"
+        return render_template('index.html', error=error_message)
+
+
+    else:
+        data = [dict(row) for row in results]
+        df = pd.DataFrame(data)
+
+        df_spending = df.sort_values(by='total_spent', ascending=False)
+        df_deposits = df.sort_values(by='total_deposited', ascending=False)
+        df_spending = df_spending.dropna(subset=['total_spent'])  # Drop rows with null in total_spent
+        df_deposits = df_deposits.dropna(subset=['total_deposited'])  # Drop rows with null in total_deposited
+
+        FIG_WIDTH = 1000
+        FIG_HEIGHT = 700
+        """# Create pie chart for spending
+        fig_pie_spending = px.pie(
+            df_spending,
+            names='payee',
+            values='total_spent',
+            title=f"Spending Breakdown"
+        )
+        fig_pie_spending.update_layout(width=FIG_WIDTH, height=FIG_HEIGHT)
+        # Create bar chart (you can use either df_spending or df_deposits)
+        fig_bar = px.bar(df_spending, x="payee", y="total_spent", title=f"Spending by Payee")
+        fig_bar.update_layout(width=FIG_WIDTH, height=FIG_HEIGHT)
+        fig_bar.update_xaxes(tickangle=45)
+
+        # Convert charts to HTML
+        pie_chart_spending = fig_pie_spending.to_html(full_html=False)
+        bar_chart = fig_bar.to_html(full_html=False)
+
+        #Generate spending and deposits table
+        df_spending = df_spending.drop('total_deposited', axis=1)
+        df_deposits = df_deposits.drop('total_spent', axis=1)
+        df_sp_html = df_spending.to_html(classes='table table-striped', index=False)
+        df_de_html = df_deposits.to_html(classes='table table-striped', index=False)"""
+
+        # Create pie chart for spending
+        pie_chart_spending = px.pie(
+            df_spending,
+            names='payee',
+            values='total_spent',
+            title=f"Spending Breakdown",
+            color_discrete_sequence=px.colors.qualitative.Prism  # Use a colorblind-friendly palette
+        )
+        pie_chart_spending.update_layout(
+            width=FIG_WIDTH,
+            height=FIG_HEIGHT,
+            template='plotly_dark',  # Use dark mode template
+            font=dict(family='Source Code Pro', size=14, color='#f0f0f0'),  # Update font
+            title=dict(font=dict(size=18, color='#00ffff'))  # Increase title font size
+        )
+
+        # Create bar chart
+        bar_chart = px.bar(
+            df_spending,
+            x="payee",
+            y="total_spent",
+            title=f"Spending by Payee",
+            color_discrete_sequence=px.colors.qualitative.Prism  # Use a colorblind-friendly palette
+        )
+        bar_chart.update_layout(
+            width=FIG_WIDTH,
+            height=FIG_HEIGHT,
+            template='plotly_dark',  # Use dark mode template
+            font=dict(family='Source Code Pro', size=14, color='#f0f0f0'),  # Update font
+            title=dict(font=dict(size=18, color='#00ffff')),  # Increase title font size
+            xaxis_tickangle=45
+        )
+
+        # Generate spending and deposits table
+        df_spending = df_spending.drop('total_deposited', axis=1)
+        df_deposits = df_deposits.drop('total_spent', axis=1)
+
+        # Convert charts to HTML
+        pie_chart_spending = pie_chart_spending.to_html(full_html=False)
+        bar_chart = bar_chart.to_html(full_html=False)
+
+        # Create the HTML for the tables with inline styling for text color
+        df_sp_html = df_spending.to_html(
+            classes='table table-striped',
+            index=False,
+        ).replace(
+            '<style type="text/css">',
+            '<style type="text/css"> .table th, .table td { color: #eee !important; } '  # More specific selectors
+        )
+        df_de_html = df_deposits.to_html(
+            classes='table table-striped',
+            index=False,
+        ).replace(
+            '<style type="text/css">',
+            '<style type="text/css"> .table th, .table td { color: #eee !important; } '  # More specific selectors
+        )
+
+        return render_template('index.html',
+                               pie_chart_spending=pie_chart_spending, bar_chart=bar_chart,
+                               df_sp_html=df_sp_html, df_de_html=df_de_html)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -254,6 +341,36 @@ def process ():
     return ("<h1>Done</h1>")
 
 
+
+@app.route('/up', methods=['GET'])
+def upload_form():
+    """Renders the file upload form."""
+    return render_template('upload.html')
+
+@app.route('/up', methods=['POST'])
+def upload_file():
+    """Handles file upload and redirection."""
+    storage_client = storage.Client()
+    bucket = storage_client.bucket (GCS_BUCKET)
+
+
+    if request.method == 'POST':
+        # Get the uploaded file and desired filename
+        file = request.files['file']
+        new_filename = request.form['new_filename']
+
+        if file and new_filename:
+            try:
+                # Upload the file to GCS with the new name
+                blob = bucket.blob(new_filename)
+                # Overwrite the existing file
+                blob.upload_from_string(file.read(), content_type=file.content_type)
+                return f'<h1>File {file.filename} uploaded to {GCS_BUCKET} as {new_filename}</h1>'
+
+            except Exception as e:
+                return f'Error uploading file: {str(e)}', 500
+        else:
+            return 'No file or filename provided', 400
 
 
 if __name__ == '__main__':
