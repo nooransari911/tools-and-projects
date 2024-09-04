@@ -7,7 +7,7 @@
 
 ### Error Handling
 
-![Error Handling](screenshots/error_handling.png)
+![Error Handling](screenshots/error%20handling.png)
 * Error handling.
 
 
@@ -15,15 +15,15 @@
 
 ### Full Page
 
-![Visualizations](screenshots/full_page.png)
-* Visualizations. Generate from database
+![Visualizations](screenshots/full%20page.png)
+* Visualizations. Generated from database.
 
 
 
 
 ### Home Page
 
-![Home Page](screenshots/home_page.png)
+![Home Page](screenshots/home%20page.png)
 * Home page.
 
 
@@ -31,7 +31,7 @@
 
 ### Test Routes
 
-![Test Routes](screenshots/test_routes.png)
+![Test Routes](screenshots/test%20routes.png)
 * Route to test routes.
 
 
@@ -39,5 +39,5 @@
 
 ### Upload Page
 
-![Upload Page](screenshots/upload_page.png)
+![Upload Page](screenshots/upload%20page.png)
 * Upload page. Upload to GCS bucket
