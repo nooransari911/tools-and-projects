@@ -1,6 +1,8 @@
 # GCS bucket details
 bucket_name = "gcloud_pdf_intelligence"
 output_file = "./output files/last iteration.md"
+all_files = "./output files/all files.md"
+all_fileserr = "./output files/all files err.md"
 all_iterations_file = "./output files/all_iterations.md"
 prompt_extract = """
     Forget all previous context. You need to extract all text from pdf and correctly format it into markdown. Then remove irrelevant and garbage text. Strictly preserve as much information as possible. Add appropriate heading to output text with heading level and heading number.
@@ -35,3 +37,6 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 PROMPTS = [prompt_extract, prompt_refine]
 RESPONSES = []
+
+
+PROMPT_LIST = []

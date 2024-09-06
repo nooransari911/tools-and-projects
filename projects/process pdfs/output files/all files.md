@@ -1,4 +1,10 @@
-2024-09-07 03:33:47.417533;
+# 2024-09-07 03:33:51.417919;
+
+# Total Time taken: 266.614270608
+
+total input tokens: 87697
+
+total output tokens: 8192
 
 ## Module 2: AWS Academy Data Engineering: Data-Driven Organizations Student Guide
 

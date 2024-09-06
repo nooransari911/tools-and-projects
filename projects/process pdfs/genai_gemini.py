@@ -7,16 +7,19 @@ import time
 import google.generativeai as genai
 from vertexai.generative_models import Part
 from google.cloud import storage
-import datetime, os, json, re
+import datetime, os, json, re, time
 from dotenv import load_dotenv
 from strings import *
 load_dotenv()
 
 
+global_gemini_responses = {}
+
+
 
 genai.configure(api_key=os.environ["API_KEY"])
 
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-1.5-pro")
 
 prompt = "briefly describe this image"
 
@@ -25,14 +28,26 @@ prompt = "briefly describe this image"
 directory_to_upload = "/home/ansarimn/Downloads/tools and projects/projects/google cloud ai suite/source/vision ai"
 
 
+def extract_numbers(filename):
+    # Extract numbers from the filename using regex
+    numbers = re.findall(r'\d+', filename)
+    return [int(num) for num in numbers] if numbers else [0]
+
+
 def upload_directory_to_genai(directory_path):
     """Uploads all files in a directory to GenAI.
 
     Args:
         directory_path: The path to the directory containing the files.
     """
+    filenames = os.listdir(directory_path)
+    filenames = [f for f in filenames if os.path.isfile(os.path.join(directory_path, f))]
+    filenames.sort(key=lambda x: extract_numbers(x), reverse=True)  # Case-insensitive sorting
 
-    for filename in os.listdir(directory_path):
+    print("Sorted filenames:", filenames)
+
+
+    for filename in filenames:
         file_path = os.path.join(directory_path, filename)
         if os.path.isfile(file_path):
             try:
@@ -79,9 +94,16 @@ def gemini_chain (file=None):
     #gemini_input = LOREM_IPSUM_STRING
     gemini_response = None
 
-
+    global PROMPT_LIST
     # Iterate over the list of prompts
-    for pri in PROMPTS:
+    #print (PROMPT_LIST)
+
+    if PROMPT_LIST == []:
+        raise "Empty List"
+        return
+
+
+    for pri in PROMPT_LIST:
         # Append the current prompt to the input
         gemini_input.append(pri)
 
@@ -112,6 +134,7 @@ def gemini_chain_all_files (directory):
     upload_directory_to_genai(directory)
     #print (list_genai_file_names())
     for file in genai.list_files():
+        print (f"Processing file {file.display_name}")
         iint = model.count_tokens (file).total_tokens
         ilist.append (iint)
         gemini_response = gemini_chain(file)

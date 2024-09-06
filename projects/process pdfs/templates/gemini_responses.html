@@ -116,6 +116,7 @@
     <h2 id="heading"></h2> <!-- Element with ID 'heading' -->
     <h2 id="directory"></h2> <!-- Element with ID 'directory' -->
     <h2 id="tokens"></h2> <!-- Element with ID 'directory' -->
+    <h2 id="elapsed_time"></h2> <!-- Element with ID 'directory' -->
     <div id="only_responses" class="markdown"></div>
 
 
@@ -124,7 +125,8 @@
         // Embed JSON data as a JavaScript object
         const data = {
             directory: "{{ directory | safe }}",
-            responses: {{ responses|tojson|safe }}
+            responses: {{ responses|tojson|safe }},
+            elapsed_time: "{{ elapsed_time }}"
         };
 
         const tokens = data.responses.slice (0, 2);
@@ -137,6 +139,7 @@
             document.getElementById('heading').textContent = "Selected directory: ";
             document.getElementById('directory').textContent = data.directory;
             document.getElementById('tokens').innerHTML = tokens.map (item => `<div class="class-tokens">${item}</div>`).join('');
+            document.getElementById('elapsed_time').innerHTML = `<div class="class-tokens">${data.elapsed_time} seconds</div>`;
 
             // Convert markdown to HTML and inject into the element
             const markdownHtml = only_responses.map(md => marked.parse(md)).join('<br>'); // Join with <br> for spacing
