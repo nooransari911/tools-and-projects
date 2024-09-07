@@ -7,7 +7,9 @@ import time
 import google.generativeai as genai
 from vertexai.generative_models import Part
 from google.cloud import storage
-import datetime, os, json, re, time
+import datetime, os, io, json, re, time
+import requests
+from contextlib import redirect_stdout
 from dotenv import load_dotenv
 from strings import *
 load_dotenv()
@@ -17,7 +19,7 @@ global_gemini_responses = {}
 
 
 
-genai.configure(api_key=os.environ["API_KEY"])
+genai.configure(api_key=os.environ["API_KEY_FREE"])
 
 model = genai.GenerativeModel("gemini-1.5-pro")
 
@@ -160,6 +162,39 @@ def gemini_chain_all_files (directory):
     delete_all_genai_files()
     return gemini_responses
 
+
+def test_all ():
+    # Load test cases from JSON file (or directly from the string)
+    with open("./test-steps.json", "r") as f:
+        test_cases = json.load(f)["tests"]
+
+    # Base URL for your Flask app (replace with your actual URL)
+    base_url = "http://localhost:5000"
+
+    # Iterate through the test cases and execute them
+    for test_case in test_cases:
+        method = test_case["method"]
+        url = base_url + test_case["url"]
+        data = test_case["data"]
+
+        if method == "GET":
+            response = requests.get(url)
+        elif method == "POST":
+            response = requests.post(url, data=data)
+        else:
+            print(f"Unsupported method: {method}")
+            continue
+
+        # Check for successful response status code (e.g., 200)
+        if response.status_code == 200:
+            print(f"{method} {url}: Success")
+            # Optionally, you can add more specific assertions based on the response content
+            # For example:
+            # if "some_expected_text" in response.text:
+            #     print("Response contains expected text.")
+        else:
+            print(f"{method} {url}: Failed (Status code: {response.status_code})")
+            print(response.text)  # Print the error response for debugging
 
 if __name__ == '__main__':
     upload_directory_to_genai(directory_to_upload)

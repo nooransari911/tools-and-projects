@@ -1,11 +1,18 @@
+import json
 import time
 
-from flask import Flask, request, render_template, jsonify, Response, stream_with_context
+from flask import Flask, request, render_template, jsonify, Response, make_response, Blueprint
 from genai_gemini import *
 from functools import wraps
 import multiprocessing
 from multiprocessing import Manager
-app = Flask(__name__)
+
+
+
+root_blueprint = Blueprint('root', __name__)
+
+
+
 
 
 manager = Manager()
@@ -27,7 +34,7 @@ def time_route(f):
 
 
 @time_route
-@app.route('/sync', methods=['GET', 'POST'])
+@root_blueprint.route('/sync', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
         directory = request.form.get('dir')
@@ -103,7 +110,7 @@ def process_multiple_directories (directory, global_dict):
 
 
 @time_route
-@app.route('/', methods=['GET', 'POST'])
+@root_blueprint.route('/', methods=['GET', 'POST'])
 def home_async():
     if request.method == 'POST':
         directory = request.form.get('dir')
@@ -133,17 +140,13 @@ def process_status():
 
 
 
-@app.route("/events")
+@root_blueprint.route("/events")
 def events():
     return Response(process_status(), content_type='text/event-stream')
 
-@app.route ("/hello")
-def hello ():
-    return Response ("status: <h1>hello</h1>", content_type="text/event-stream")
 
 
-
-@app.route('/results', methods=['GET', "POST"])
+@root_blueprint.route('/results', methods=['GET', "POST"])
 def results():
     if request.method == 'POST':
         directory = request.form.get('dir')
@@ -164,27 +167,27 @@ def results():
 
 
 # Route to check if the process is done and get the results
-@app.route('/delete-files', methods=['GET', "POST"])
+@root_blueprint.route('/delete-files', methods=['GET', "POST"])
 def delete_files():
     delete_all_genai_files()
     return ("<h1>Delete successful</h1>")
 
 
 
-@app.route('/delete-prompts', methods=['GET', "POST"])
+@root_blueprint.route('/delete-prompts', methods=['GET', "POST"])
 def delete_prompt():
     global PROMPT_LIST
     PROMPT_LIST = []
     return ("<h1>Delete successful</h1>")
 
 
-@app.route('/delete', methods=['GET', "POST"])
+@root_blueprint.route('/delete', methods=['GET', "POST"])
 def delete():
     return render_template ("generic_delete.html")
 
 
 
-@app.route('/prompts', methods=['GET', "POST"])
+@root_blueprint.route('/prompts', methods=['GET', "POST"])
 def prompts():
     global PROMPT_LIST
     if request.method == 'POST':
@@ -207,13 +210,4 @@ def prompts():
 
 
 
-if __name__ == '__main__':
-    '''
-    You need to reorganize content in these markdown files. Goals: 1) most important: information should not be lost; preserve all details; 2) some heading names are wrong. They don't reflect content. Fix them; 3) make it more readable by using adding heading levels, rewriting, adding content/explanation, etc. as deemed necessary; 4) remove garbage text like copyright notices. Replace them if needed;
-    
-    
-    You need to reorganize content in these markdown files. Goals: 1) most important: information should not be lost; preserve all details; 2) some heading names are wrong. They don't reflect content. Fix them; 3) remove garbage text like copyright notices. Replace them if needed; 4) Mild effect: make it more readable by using adding heading levels, rewriting, adding content/explanation, etc. as deemed necessary. Avoid excessive bullet points or excessively small paragraphs. Limit doing this;  5) Elaborate and add content where deemed necessary;
-    '''
 
-    app.run(debug=True)
-    #socketio.run(app, debug=True)
