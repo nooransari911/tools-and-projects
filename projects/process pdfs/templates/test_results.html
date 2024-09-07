@@ -79,7 +79,7 @@
             font-size: 24px;
             font-weight: bold;
         }
-    </style>>
+    </style>
 </head>
 
 
@@ -91,8 +91,8 @@
       <table>
             <thead>
                 <tr>
-                    <th>Request</th>
-                    <th>Status</th>
+                    <th>{{ thleft }}</th>
+                    <th>{{ thright }}</th>
                 </tr>
             </thead>
             <tbody id="tableBody">
@@ -103,37 +103,63 @@
         <div class="summary" id="summaryText">Summary: Loading...</div>
 
         <script>
+            var directory = "{{ directory }}";
+            var route = "{{ route }}";
 
-            // Function to populate the table with the detailed output
-                function populateTable() {
-                    fetch('/test/json')
+            function split() {
+                if (directory) {
+                    console.log('Splitting...');
+                    // Create FormData object
+                    const formData = new FormData();
+                    formData.append('dir', directory);
+
+                    // Send POST request using fetch
+                    fetch('/test/json/split', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        populateTable(jsonData); // Pass the JSON data to populateTable
+                    })
+                    .catch(error => console.error('Error sending POST request:', error));
+                } else {
+                    // If directory is not provided, fetch from the route
+                    fetch(route)
                         .then(response => response.json())
                         .then(jsonData => {
-                            const tableBody = document.getElementById('tableBody');
-
-                            jsonData.detailed_output.forEach(entry => {
-                                const splitEntry = entry.split(': ');
-                                const request = splitEntry[0].trim();
-                                const status = splitEntry[1].trim();
-
-                                const row = `
-                                    <tr>
-                                        <td>${request}</td>
-                                        <td>${status}</td>
-                                    </tr>
-                                `;
-
-                                tableBody.innerHTML += row;
-                            });
-
-                            // Set the summary text
-                            document.getElementById('summaryText').textContent = "Summary: " + jsonData.summary;
+                            populateTable(jsonData); // Pass the JSON data to populateTable
                         })
                         .catch(error => console.error('Error fetching JSON:', error));
-                        }
+                }
+            }
 
-            // Call the function to populate the table when the page loads
-            window.onload = populateTable;
+
+            // Function to populate the table with the detailed output
+            function populateTable(jsonData) {
+                const tableBody = document.getElementById('tableBody');
+
+                jsonData.detailed_output.forEach(entry => {
+                    const splitEntry = entry.split(': ');
+                    const request = splitEntry[0].trim();
+                    const status = splitEntry[1].trim();
+
+                    const row = `
+                        <tr>
+                            <td>${request}</td>
+                            <td>${status}</td>
+                        </tr>
+                    `;
+
+                    tableBody.innerHTML += row;
+                });
+
+                // Set the summary text
+                document.getElementById('summaryText').textContent = "Summary: " + jsonData.summary;
+            }
+
+            // Call the split function when the page loads
+            window.onload = split;
         </script>
 
 </body>

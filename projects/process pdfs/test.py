@@ -1,10 +1,12 @@
-from genai_gemini_app import *
-from flask import Blueprint
+from genai_gemini import *
+from genai_gemini_parallel import *
 
 test_blueprint = Blueprint('test', __name__)
 
 
-@test_blueprint.route("/json")
+
+
+@test_blueprint.route("/json/all")
 def test_json():
     test_results = []
 
@@ -63,4 +65,66 @@ def test_json():
 
 @test_blueprint.route("/")
 def test():
-    return render_template("test_results.html")
+    return render_template("test_results.html", route="/test/json/all",
+                           thleft="Request", thright="Status")
+
+
+
+
+
+@test_blueprint.route ("/json/char")
+def count_characters ():
+    """Counts the number of characters in a text file."""
+    count = 0
+    filename = "./ex-input files/merge all.md"
+    file_char_count = []
+
+    with open(filename, 'r') as file:
+        for line in file:  # Read line by line to avoid loading the whole file into memory
+            count += len(line)
+
+    file_char_count.append (f"{filename}: {count}")
+    return jsonify({"summary": "Tests completed", "detailed_output": file_char_count})
+
+
+@test_blueprint.route("/char")
+def test_char():
+    return render_template("test_results.html", route="/test/json/char",
+                           thleft="Filename", thright="Char count")
+
+
+
+
+@test_blueprint.route ("/json/split", methods=["GET", "POST"])
+def split_file_json ():
+    global GLOBAL_GENERIC_LIST
+
+    if request.method == "POST":
+        """Counts the number of characters in a text file."""
+        directory = request.form.get('dir')
+        filenames = os.listdir(directory)
+        filenames = [f for f in filenames if os.path.isfile(os.path.join(directory, f))]
+        #print("/test/json/split filenames:", filenames)
+        count = 0
+        #filename = "./ex-input files/merge all.md"
+        for filename in filenames:
+            file_path = os.path.join(directory, filename)
+            if os.path.isfile(file_path):
+                try:
+                    split_markdown_file (file_path)
+                except Exception as e:
+                    raise e
+        return jsonify({"summary": "Tests completed", "detailed_output": GLOBAL_GENERIC_LIST})
+
+    else:
+        return jsonify({"summary": "Tests completed", "detailed_output": GLOBAL_GENERIC_LIST})
+
+
+@test_blueprint.route("/split", methods=["GET", "POST"])
+def split_file():
+    if request.method=="POST":
+        directory = request.form.get('dir')
+        return render_template("test_results.html", route="/test/json/split",
+                               thleft="match", thright="filename", directory=directory)
+    else:
+        return render_template("gemini_app.html")

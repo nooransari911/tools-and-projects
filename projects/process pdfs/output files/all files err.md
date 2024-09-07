@@ -1,3 +1,3 @@
-2024-09-07 13:42:33.363435;
+2024-09-07 21:58:29.758336;
 
-exceptions must derive from BaseException
+Error sending result: '<multiprocessing.pool.ExceptionWithTraceback object at 0x7f61827fbd70>'. Reason: 'TypeError("cannot pickle '_thread.RLock' object")'

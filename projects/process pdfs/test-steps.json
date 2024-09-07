@@ -21,6 +21,14 @@
             "form_html": null
         },
         {
+            "method": "POST",
+            "url": "/test/split",
+            "data": {
+                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/"
+            },
+            "form_html": null
+        },
+        {
             "method": "GET",
             "url": "/",
             "data": null,
@@ -30,7 +38,7 @@
             "method": "POST",
             "url": "/",
             "data": {
-                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/"
+                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/segments/"
             },
             "form_html": null
         },
@@ -44,7 +52,35 @@
             "method": "POST",
             "url": "/results",
             "data": {
-                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/"
+                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/segments/"
+            },
+            "form_html": null
+        },
+        {
+            "method": "GET",
+            "url": "/parallel/",
+            "data": null,
+            "form_html": "<form method=\"post\" enctype=\"multipart/form-data\"><h1>Enter Absolute Path of Directory</h1><label for=\"dir\"><h2>Enter directory</h2></label><input type=\"text\" name=\"dir\" id=\"dir\" required/><input type=\"submit\" value=\"Submit\"></form>"
+        },
+        {
+            "method": "POST",
+            "url": "/parallel/",
+            "data": {
+                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/segments/"
+            },
+            "form_html": null
+        },
+        {
+            "method": "GET",
+            "url": "/parallel/results",
+            "data": null,
+            "form_html": "<form method=\"post\" enctype=\"multipart/form-data\"><h1>Enter Absolute Path of Directory</h1><label for=\"dir\"><h2>Enter directory</h2></label><input type=\"text\" name=\"dir\" id=\"dir\" required/><input type=\"submit\" value=\"Submit\"></form>"
+        },
+        {
+            "method": "POST",
+            "url": "/parallel/results",
+            "data": {
+                "dir": "/home/ansarimn/Downloads/tools and projects/projects/process pdfs/ex-input files/segments/"
             },
             "form_html": null
         }

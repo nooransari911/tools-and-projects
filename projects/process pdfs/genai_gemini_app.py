@@ -1,9 +1,9 @@
 import json
 import time
 
-from flask import Flask, request, render_template, jsonify, Response, make_response, Blueprint
+
 from genai_gemini import *
-from functools import wraps
+#from genai_gemini_parallel import *
 import multiprocessing
 from multiprocessing import Manager
 
@@ -130,13 +130,19 @@ def home_async():
 
 
 def process_status():
-    status_value = PROCESS [-1].is_alive()
-    if status_value == False:
-        status_string = "data: status: done\n\n"
-    else:
-        status_string = "data: status: processing\n\n"
-    yield status_string
-    time.sleep(1)
+    while True:  # Keep checking the status indefinitely
+        if not PROCESS:  # Handle the case where the list is empty
+            status_string = "data: status: idle\n\n"
+        else:
+            status_value = PROCESS[-1].is_alive()
+            if status_value == False:
+                status_string = "data: status: done\n\n"
+                PROCESS.pop()  # Remove the finished process from the list
+            else:
+                status_string = "data: status: processing\n\n"
+        yield status_string
+        time.sleep(1)
+
 
 
 
@@ -151,7 +157,7 @@ def results():
     if request.method == 'POST':
         directory = request.form.get('dir')
 
-        if PROCESS [-1].is_alive() == False:
+        if PROCESS and not PROCESS [-1].is_alive():
             # Return the result (either success or failure) as a JSON response
 
             return render_template ('gemini_responses.html',

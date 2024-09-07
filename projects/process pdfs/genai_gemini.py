@@ -2,26 +2,15 @@
 export Gemini API Key to API_KEY
 
 """
-import time
+import multiprocessing
 
-import google.generativeai as genai
-from vertexai.generative_models import Part
-from google.cloud import storage
-import datetime, os, io, json, re, time
-import requests
-from contextlib import redirect_stdout
-from dotenv import load_dotenv
-from strings import *
-load_dotenv()
-
-
-global_gemini_responses = {}
+from utils import *
 
 
 
 genai.configure(api_key=os.environ["API_KEY_FREE"])
 
-model = genai.GenerativeModel("gemini-1.5-pro")
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 prompt = "briefly describe this image"
 
@@ -36,6 +25,8 @@ def extract_numbers(filename):
     return [int(num) for num in numbers] if numbers else [0]
 
 
+
+@timestamped_print
 def upload_directory_to_genai(directory_path):
     """Uploads all files in a directory to GenAI.
 
@@ -72,6 +63,7 @@ def list_genai_file_names ():
     return file_info
 
 
+@timestamped_print
 def delete_all_genai_files ():
     for file in genai.list_files():
         print(f"Delete: {file.display_name}")
@@ -100,8 +92,8 @@ def gemini_chain (file=None):
     # Iterate over the list of prompts
     #print (PROMPT_LIST)
 
-    if PROMPT_LIST == []:
-        raise "Empty List"
+    if not PROMPT_LIST:
+        raise Exception("Empty List")
         return
 
 
