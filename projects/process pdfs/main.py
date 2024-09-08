@@ -1,8 +1,9 @@
 from flask import Flask
 from genai_gemini_app import root_blueprint
 from test import test_blueprint
-from parallel import parallel_blueprint
-import signal, datetime, sys
+from parallel import parallel_blueprint, PPROCESS
+from utils import *
+
 
 app = Flask(__name__)
 app.register_blueprint (root_blueprint, url_prefix="/")
@@ -10,13 +11,48 @@ app.register_blueprint (test_blueprint, url_prefix="/test")
 app.register_blueprint (parallel_blueprint, url_prefix="/parallel")
 
 
+
+#@timestamped_print
+def sigchld_handler(signum, frame):
+    # Simplified handler, avoid print
+    while True:
+        try:
+            pid, status = os.waitpid(-1, os.WNOHANG)
+            if pid == 0:
+                break
+            # Log to a file or use a signal-safe mechanism
+            with open("SIGCHLD_log.txt", "a") as f:
+                f.write(f"Child process {pid} terminated with status {status}\n")
+        except OSError:
+            break
+signal.signal(signal.SIGCHLD, sigchld_handler)
+
+
+@timestamped_print
 def signal_handler(sig, frame):
     print('You pressed Ctrl+C!')
-    # Perform any cleanup or graceful shutdown tasks here
-    # ...
-    exit(0)  # Exit the application
+
+    # Terminate child processes
+    for process in PPROCESS:
+        try:
+            p = psutil.Process(process.pid)
+            p.terminate()
+            p.wait(timeout=5)
+        except psutil.NoSuchProcess:
+            print(f"Process with PID {process.pid} not found.")
+        except Exception as e:
+            print(f"Error terminating process {process.pid}: {e}")
+
+    # ... other cleanup or shutdown tasks ...
+
+    sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
+
+
+
+
+
 
 
 
@@ -32,4 +68,3 @@ if __name__ == '__main__':
     '''
 
     app.run(debug=True)
-    # socketio.run(app, debug=True)

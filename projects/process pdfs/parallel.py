@@ -11,7 +11,7 @@ PPROCESS = []
 
 
 
-
+@timestamped_print
 @parallel_blueprint.route('/', methods=['GET', 'POST'])
 def phome_async():
     if request.method == 'POST':
@@ -23,6 +23,7 @@ def phome_async():
             process = multiprocessing.Process(target=pgemini_chain_all_files, args=(directory, PROMPT_LIST, RESULT_DICT, METADATA_DICT))
             process.start()
             PPROCESS.append(process)
+            print (f"for pgemini_chain_all_files: {process.pid}")
             return render_template('plive status.html', directory=directory)
         else:
             #print("No such directory")
@@ -32,20 +33,29 @@ def phome_async():
     return render_template('gemini_app.html', file_name=None)
 
 
-
+@timestamped_print
 @parallel_blueprint.route('/results', methods=['GET', "POST"])
 def presults():
     if request.method == 'POST':
         directory = request.form.get('dir')
+        print("presults; PPROCESS: ", PPROCESS)
 
-        if PPROCESS and not PPROCESS [-1].is_alive():
-            # Return the result (either success or failure) as a JSON response
-            all_responses_string, iint, oint, total_time = putil (RESULT_DICT, METADATA_DICT)
-            return render_template ('pgemini_responses.html',
-                                   directory=directory, responses=all_responses_string, iint=iint, oint=oint, total_time=total_time)
-
+        if PPROCESS:
+            active_processes = [p for p in PPROCESS if psutil.pid_exists(p.pid)]
+            print("presults; PPROCESS: ", PPROCESS)
+            print("presults; active process: ", active_processes)
+            if not active_processes:
+                # Processes have completed
+                all_responses_string, iint, oint, total_time = putil(RESULT_DICT, METADATA_DICT)
+                return render_template('pgemini_responses.html',
+                                       directory=directory, responses=all_responses_string, iint=iint, oint=oint, total_time=total_time)
+            else:
+                # Processes are still running
+                return render_template('plive status.html', directory=directory)
         else:
-            return render_template('plive status.html', directory=directory)
+            # No processes have been started
+            return render_template('plive status.html', directory=directory)  # Return live status for idle state
+
 
     else:
         return render_template('gemini_app.html', file_name=None)
@@ -53,16 +63,23 @@ def presults():
 
 
 def pprocess_status():
-    while True:  # Keep checking the status indefinitely
-        if not PPROCESS:  # Handle the case where the list is empty
+    done_sent = False  # Flag to track if "done" has been sent
+
+    while True:
+        if not PPROCESS:
             status_string = "data: status: idle\n\n"
         else:
-            status_value = PPROCESS[-1].is_alive()
-            if status_value == False:
+            active_processes = [p for p in PPROCESS if psutil.pid_exists(p.pid)]
+            if not active_processes and not done_sent:
                 status_string = "data: status: done\n\n"
-                #PPROCESS.pop()  # Remove the finished process from the list
+                done_sent = True  # Set the flag to True
+                #PPROCESS.clear()  # Clear the list only once
+            elif not active_processes:
+                # Keep yielding "done" until the connection is closed by the client
+                status_string = "data: status: done\n\n"
             else:
                 status_string = "data: status: processing\n\n"
+
         yield status_string
         time.sleep(1)
 

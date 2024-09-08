@@ -3,7 +3,7 @@ import signal
 import google.generativeai as genai
 from vertexai.generative_models import Part
 from google.cloud import storage
-import datetime, os, io, json, re, time
+import datetime, os, sys, io, json, re, time, signal
 import requests
 from contextlib import redirect_stdout
 from dotenv import load_dotenv
@@ -11,7 +11,7 @@ from strings import *
 import functools
 
 from flask import Flask, request, render_template, jsonify, Response, make_response, Blueprint
-import multiprocessing
+import multiprocessing, psutil
 from multiprocessing import Manager
 
 
@@ -31,7 +31,7 @@ def timestamped_print(func):
     @functools.wraps(func)  # Preserve function metadata
     def wrapper(*args, **kwargs):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"[{timestamp}] ", end="")  # Print timestamp at the beginning
+        print(f"[{timestamp}] [{func.__name__}] ", end="")  # Print timestamp and function name
         return func(*args, **kwargs)  # Call the original function
     return wrapper
 

@@ -1,4 +1,4 @@
-from genai_gemini import *
+#from genai_gemini import *
 from genai_gemini_parallel import *
 
 test_blueprint = Blueprint('test', __name__)

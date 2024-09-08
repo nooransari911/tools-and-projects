@@ -121,22 +121,51 @@ def psingle_file (file, directory, prompt_list, result_dict, metadata_dict):
 
 
 
-
+@timestamped_print
 def pgemini_chain_all_files (directory, prompt_list, result_dict, metadata_dict):
     upload_directory_to_genai(directory)
 
 
     for file in genai.list_files():
-        process = multiprocessing.Process (target=psingle_file, args=(file, directory, prompt_list, result_dict, metadata_dict)).start()
+        process = (multiprocessing.Process (
+            target=psingle_file, args=(file, directory, prompt_list, result_dict, metadata_dict)
+        ))
+        process.start()
+        print (f"for psingle_file: {process.pid}")
 
 
 
 @timestamped_print
 def putil (result_dict, metadata_dict):
     # 1. Create a new string with all values from result_dict[]["response"]
+    keys = list(result_dict.keys())
+    values = list(result_dict.values())
+
+    # Extract the module number from each key
+    module_numbers = [int(key.split(' ')[1].split('.')[0]) for key in keys]
+
+    # Create a list of tuples (module_number, key, value)
+    module_tuples = list(zip(module_numbers, keys, values))
+
+    # Sort the tuples by module number
+    module_tuples.sort()
+
+    # Create a new dictionary with sorted keys and values
+    sorted_result_dict = {tuple_[1]: tuple_[2] for tuple_ in module_tuples}
+
+    # Update the original result_dict with the sorted data
+    result_dict.clear()  # Clear the existing data
+    result_dict.update(sorted_result_dict)
+
+
+
+
+
     all_responses_string = ""
     for file_data in result_dict.values():
         all_responses_string += file_data["response"]
+
+
 
     # 2. Calculate the sum of all iint and oint in metadata_dict
     total_iint = 0
