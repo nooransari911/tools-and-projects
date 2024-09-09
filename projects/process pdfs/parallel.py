@@ -51,7 +51,7 @@ def presults():
             if not active_processes_L0:
                 # Processes have completed
                 all_responses_string, iint, oint, total_time = putil(RESULT_DICT, METADATA_DICT)
-                return render_template('pgemini_responses.html',
+                return render_template('random_html.html',
                                        directory=directory, responses=all_responses_string, iint=iint, oint=oint, total_time=total_time)
             else:
                 # Processes are still running
@@ -80,6 +80,7 @@ def pprocess_status():
                 #PPROCESS.clear()  # Clear the list only once
             elif not active_processes:
                 # Keep yielding "done" until the connection is closed by the client
+                #process = multiprocessing.Process (target=redirect, args=("/parallel/results",))
                 status_string = "data: status: done\n\n"
             else:
                 status_string = "data: status: processing\n\n"

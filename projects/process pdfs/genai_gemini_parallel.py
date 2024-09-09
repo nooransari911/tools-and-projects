@@ -143,7 +143,7 @@ def putil (result_dict, metadata_dict):
     keys = list(result_dict.keys())
     values = list(result_dict.values())
 
-    # Extract the module number from each key
+    """# Extract the module number from each key
     module_numbers = [int(key.split(' ')[1].split('.')[0]) for key in keys]
 
     # Create a list of tuples (module_number, key, value)
@@ -157,7 +157,7 @@ def putil (result_dict, metadata_dict):
 
     # Update the original result_dict with the sorted data
     result_dict.clear()  # Clear the existing data
-    result_dict.update(sorted_result_dict)
+    result_dict.update(sorted_result_dict)"""
 
 
 
@@ -182,7 +182,7 @@ def putil (result_dict, metadata_dict):
     #print("All responses string:", all_responses_string)
     print("Total input tokens:", total_iint)
     print("Total output tokens:", total_oint)
-    print("Total output tokens:", total_time)
+    print("Total time taken:", total_time)
     print ("All keys in result_dict:", result_dict.keys())
 
     return all_responses_string, total_iint, total_oint, total_time
@@ -196,20 +196,26 @@ def putil (result_dict, metadata_dict):
 def sse_json_processes ():
     active_processes_L0 = [p for p in PROCESS_L0 if psutil.pid_exists(p)]
     active_processes_L1 = [p for p in PROCESS_L1 if psutil.pid_exists(p)]
+    if not active_processes_L1 and not active_processes_L1:
+        latest_status = "done"
+    else:
+        latest_status = "processing"
+
+
     active_processes_dict = {
 
         "h2_data": [
-            "L0_target: pgemini_chain_all_files()",
-            "L1_target: psingle_file()"
+            "table0 heading: Active Processes",
+            "table1 heading: All Processes"
         ],
 
 
         "table0_headers":[
-            "thleft: Active processes in L0",
+            "thleft: Active processes",
             "thright: PID"
         ],
         "table1_headers":[
-            "thleft: Active processes in L1",
+            "thleft: All processes",
             "thright: PID"
         ],
 
@@ -221,7 +227,10 @@ def sse_json_processes ():
         "table1_data": [
             f"active_level_L0: {PROCESS_L0}",
             f"active_level_L1: {PROCESS_L1}"
-        ]
+        ],
+
+
+        "status": latest_status
     }
     return active_processes_dict
 

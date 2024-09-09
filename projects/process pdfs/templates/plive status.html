@@ -67,8 +67,8 @@
     <br>
     <p>Your request is being processed. Please wait...</p>
 
-    <div id="status">Waiting for status...</div>
-    <script>
+
+    <!-- <script>
         const statusDiv = document.getElementById('status');
 
         // Create EventSource to connect to /events endpoint
@@ -120,6 +120,94 @@
                 console.log('Reconnecting...');
             }
         };
+    </script> -->
+    <div id="status"></div> <!-- Status div -->
+
+    <script>
+            directory = "{{ directory | safe }}"
+            const statusDiv = document.getElementById('status');
+            var eventData = "start";
+
+
+            // Create EventSource to connect to /events endpoint
+            let eventSource = new EventSource('/parallel/events');
+
+            // Handle the open event (when connection is established)
+            eventSource.onopen = function() {
+                console.log('Connection to /events opened.');
+            };
+
+            // Handle incoming messages from the server
+            eventSource.onmessage = function(event) {
+                console.log('Received data:', event.data);
+                statusDiv.textContent = event.data;  // Update the page with the correct status
+                eventData = event.data;
+                redirect();
+            }
+
+            function redirect() {
+                if (eventData === 'status: done') {
+                    console.log('Correct status received, proceeding to redirect...');
+
+                    statusDiv.textContent = 'Redirecting to /parallel/results...';
+
+                    if (typeof directory === 'undefined' || directory === null) {
+                        console.error('directory is not defined');
+                        statusDiv.textContent = 'Error: directory is not defined';
+                        return;
+                    }
+
+                    console.log('Sending POST request with directory:', directory);
+
+                    // Fallback to form-based redirection for POST
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = '/parallel/results';
+
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'dir';
+                    input.value = directory;
+
+                    form.appendChild(input);
+                    document.body.appendChild(form);
+                    // Close the EventSource connection before redirecting
+                    if (eventSource) {
+                        console.log('Closing EventSource connection...');
+                        eventSource.close();
+                    }
+                    form.submit();  // Perform the form submission (which will use POST)
+                }
+            }
+
+
+
+
+
+             document.addEventListener('DOMContentLoaded', () => {
+                    console.log('DOMContentLoaded event fired');
+                    redirect();
+             });
+
+
+
+
+
+
+
+            // Handle errors and check readyState
+            eventSource.onerror = function(event) {
+                console.error('Error occurred:', event);
+
+                // Only display error if the connection is permanently closed
+                if (eventSource.readyState === EventSource.CLOSED) {
+                    statusDiv.textContent = 'Error connecting to server.';
+                } else if (eventSource.readyState === EventSource.CONNECTING) {
+                    // Ignore transient connection issues
+                    console.log('Reconnecting...');
+                }
+            };
+
     </script>
 
 </body>

@@ -28,7 +28,8 @@
 
         h2 {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            margin-top: 40px;
             font-weight: 600;
             letter-spacing: 4px;  /* Increases spacing by 4 pixels */
             color: rgb(255, 0, 128); /* Magenta heading */
@@ -86,7 +87,7 @@
 
 <body>
 
-
+        <h1>Test Results</h1>
         <h2 id="heading0"></h2>
         <table id="table0">
             <thead>
@@ -111,7 +112,7 @@
 
 
 
-      <div class="summary" id="summaryText">Summary: done</div>
+      <div class="summary" id="summaryText"></div>
 
             <script>
                 const eventSource = new EventSource("{{ url_for('events.sse_stream_process') }}");
@@ -140,13 +141,27 @@
                             const tableData = data[key];
                             const tableBody = document.querySelector(`#table${tableIndex}_body`);
                             tableBody.innerHTML = '';  // Clear existing rows
+
                             if (Array.isArray(tableData)) {
                                 tableData.forEach(item => {
-                                    const [process, pid] = item.split(": ");
-                                    const row = `<tr><td>${process || 'No Data'}</td><td>${pid || 'No Data'}</td></tr>`;
-                                    tableBody.insertAdjacentHTML('beforeend', row);
+                                    // Split the item into label and list part
+                                    const [label, listPart] = item.split(": ");
+                                    if (listPart) {
+                                        // Remove square brackets and extra spaces from the list part
+                                        const numbers = listPart.replace(/[\[\]\s]/g, '').split(',');
+                                        numbers.forEach(number => {
+                                            // Create a new row for each number
+                                            const row = `<tr><td>${label || 'No Data'}</td><td>${number || 'No Data'}</td></tr>`;
+                                            // Insert the row into the table body
+                                            tableBody.insertAdjacentHTML('beforeend', row);
+                                        });
+                                    } else {
+                                        // Handle case where item does not have a list part
+                                        tableBody.insertAdjacentHTML('beforeend', '<tr><td colspan="2">Invalid Data</td></tr>');
+                                    }
                                 });
                             } else {
+                                // If tableData is not an array, show a single "No Data" row
                                 tableBody.insertAdjacentHTML('beforeend', '<tr><td colspan="2">No Data</td></tr>');
                             }
                         }

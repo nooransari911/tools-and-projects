@@ -133,3 +133,9 @@ def split_file():
 @test_blueprint.route ("/process")
 def test_all_processes ():
     return render_template ("ge_te_re_3.html", route="/json/process/")
+
+
+
+@test_blueprint.route ("/gcp-log")
+def test_all_processes ():
+    return render_template ("ge_te_re_3.html", route="/json/process/")
