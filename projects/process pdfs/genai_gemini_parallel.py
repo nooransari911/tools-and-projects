@@ -9,7 +9,8 @@ import concurrent.futures
 parallel_blueprint = Blueprint('parallel', __name__)
 manager = Manager()
 task_results = manager.dict()
-PROCESS: list[multiprocessing.Process] = []
+PROCESS_L0 = manager.list()
+PROCESS_L1 = manager.list()
 
 
 genai.configure(api_key=os.environ["API_KEY_FREE"])
@@ -89,7 +90,7 @@ def pgemini_chain (prompt_list, file=None):
 
 
 
-@timestamped_print
+#@timestamped_print
 def psingle_file (file, directory, prompt_list, result_dict, metadata_dict):
     print(f"Processing file {file.display_name}")
     time_start = time.time_ns()
@@ -121,9 +122,9 @@ def psingle_file (file, directory, prompt_list, result_dict, metadata_dict):
 
 
 
-@timestamped_print
+#@timestamped_print
 def pgemini_chain_all_files (directory, prompt_list, result_dict, metadata_dict):
-    upload_directory_to_genai(directory)
+    #upload_directory_to_genai(directory)
 
 
     for file in genai.list_files():
@@ -131,6 +132,7 @@ def pgemini_chain_all_files (directory, prompt_list, result_dict, metadata_dict)
             target=psingle_file, args=(file, directory, prompt_list, result_dict, metadata_dict)
         ))
         process.start()
+        PROCESS_L1.append (process.pid)
         print (f"for psingle_file: {process.pid}")
 
 

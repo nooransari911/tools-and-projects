@@ -1,7 +1,8 @@
 from flask import Flask
 from genai_gemini_app import root_blueprint
 from test import test_blueprint
-from parallel import parallel_blueprint, PPROCESS
+from json_blueprints import json_blueprint
+from parallel import parallel_blueprint, PROCESS_L0
 from utils import *
 
 
@@ -9,6 +10,7 @@ app = Flask(__name__)
 app.register_blueprint (root_blueprint, url_prefix="/")
 app.register_blueprint (test_blueprint, url_prefix="/test")
 app.register_blueprint (parallel_blueprint, url_prefix="/parallel")
+app.register_blueprint (json_blueprint, url_prefix="/json")
 
 
 
@@ -33,7 +35,7 @@ def signal_handler(sig, frame):
     print('You pressed Ctrl+C!')
 
     # Terminate child processes
-    for process in PPROCESS:
+    for process in PROCESS_L0:
         try:
             p = psutil.Process(process.pid)
             p.terminate()

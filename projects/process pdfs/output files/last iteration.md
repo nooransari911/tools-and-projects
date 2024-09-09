@@ -1,303 +1,258 @@
-2024-09-08 18:14:08.600462;
+2024-09-09 11:59:07.723195;
 
-## 2. Data Fundamentals: The Five Vs
+## Data Ingestion and Preparation: ETL, ELT, and Data Wrangling
 
-This module introduces the foundational concepts of data, focusing on the five Vs: **Volume, Velocity, Variety, Veracity, and Value.** Understanding these characteristics is crucial for designing and building efficient and effective data pipelines. 
+### 1.1 Introduction
 
-### 2.1 Introduction
+This module explores the essential processes of ingesting and preparing data for use in data pipelines, focusing on two primary approaches: Extract, Transform, Load (ETL) and Extract, Load, Transform (ELT). We'll delve into the intricacies of data wrangling, a multifaceted process involving various steps to transform raw data into valuable datasets for downstream analysis.
 
-This module lays the groundwork for understanding the key properties of data that impact data pipeline design and execution. You'll learn about the different dimensions of data and how they influence decisions related to data ingestion, processing, storage, analysis, and visualization.
+### 1.2 Ingesting Data: A Foundation for Data Pipelines
 
-### 2.2 Module Objectives
+Data ingestion is the crucial first step in building a data pipeline. It involves extracting data from external sources, loading it into the pipeline's storage, and transforming it to meet the specific needs of downstream processes.
 
-By completing this module, you will be able to:
+#### 1.2.1 ETL and ELT: Two Contrasting Approaches
 
-* **Identify the five Vs of data and their significance in data pipelines.**
-* **Explain the impact of volume and velocity on data pipeline design.**
-* **Differentiate between structured, semi-structured, and unstructured data types.**
-* **Recognize common data sources used in data pipelines.**
-* **Evaluate the veracity of data and its impact on data value.**
-* **Propose methods to improve data veracity and maximize its value.**
+**Extract, Transform, Load (ETL)** is the traditional data ingestion method. It involves extracting data from its source, transforming it into a structured format suitable for analytics applications, and then loading it into a structured storage system like a data warehouse.
 
-This module provides a fundamental vocabulary for thinking about the various data sources that feed your pipeline. You'll learn how each "V" influences the choices you make throughout your pipeline construction.
+**Extract, Load, Transform (ELT)** is a newer approach, driven by the emergence of data lakes for handling large volumes of unstructured and semi-structured data.  ELT extracts data from its source, performs minimal initial transformations to store it in a relatively raw state within a data lake. Data is then transformed as needed for specific use cases as consumers access and analyze it.
 
-### 2.3 Module Overview
+#### 1.2.2 Comparing ETL and ELT: Choosing the Right Approach
 
-#### 2.3.1 Key Concepts
+The choice between ETL and ELT depends largely on your business needs, the nature of your data, and the type of analysis you plan to perform.
 
-* **The Five Vs of Data:**  A framework for understanding data characteristics.
-    * **Volume:** The amount of data generated and processed.
-    * **Velocity:** The speed at which data is generated and processed.
-    * **Variety:** The different types and formats of data.
-    * **Veracity:** The accuracy, reliability, and trustworthiness of data.
-    * **Value:** The insights and benefits derived from data.
-* **Data Types:** 
-    * **Structured:** Data organized in a tabular format, such as relational databases.
-    * **Semi-structured:** Data with some inherent structure but not as rigid as structured data, like JSON or XML files.
-    * **Unstructured:** Data without predefined formats, including images, videos, and audio files.
-* **Data Sources:**  
-    * **On-premises databases or file stores:**  Data managed within an organization.
-    * **Public datasets:**  Aggregated data available for public use, like census or health data.
-    * **Events, IoT devices, and sensors:**  Data generated continuously, often with a time-based component.
+**ETL Advantages:**
 
-#### 2.3.2 Activities
+* **Automated Routine Transformations:** ETL saves time for analysts by storing data in a ready-to-analyze format.
+* **Filtering Sensitive Data:** Performing transformations upfront allows you to filter out sensitive information (e.g., personally identifiable information), reducing compliance risks.
 
-* **Planning Your Pipeline:** A hands-on exercise to apply the concepts of data types and sources to a real-world scenario.
+**ETL is well-suited for structured data destined for a data warehouse.** By performing transformations upfront, you can streamline analysis and mitigate security concerns.
 
-#### 2.3.3 Assessments
+**ELT Advantages:**
 
-* **Online Knowledge Check:**  A self-assessment to test your understanding of the module's concepts.
-* **Sample Exam Question:**  An example of a question that might be found on a larger assessment.
+* **Faster Ingestion:** ELT can expedite the ingestion process by delaying transformations until later.
+* **Greater Flexibility:** ELT provides greater flexibility for creating new queries by allowing access to raw data.
 
-### 2.4 Common Data Pipeline Questions
+**ELT is well-suited for unstructured data destined for a data lake.** It offers faster ingestion and increased flexibility for data exploration.
 
-Data engineers and data scientists need to ask critical questions to effectively manage and leverage data.  These questions often revolve around the five Vs of data:
+#### 1.2.3 The Dynamic Nature of Ingestion Processes
 
-**Data Engineer:**
+It's important to remember that the ingestion process is dynamic. As your understanding of the data evolves and usage patterns change, the pipeline's transformations and processes might need adjustments to optimize performance and value.
 
-* **Ingestion:**  How much data will be ingested?  How often will it be ingested?  What format is the data in?
-* **Processing:** What transformations are necessary?  What tools and technologies are appropriate?  How can we ensure data quality during processing?
-* **Storage:**  How much storage space is required?  What type of storage solution is suitable? 
-* **Analysis & Visualization:** What type of analysis is needed?  What tools and visualizations are best for the data? 
+**For instance:**
 
-**Data Scientist:**
+* Data engineers might automate a nightly batch process to ingest support ticket data.
+* Data scientists might later request that comment fields are no longer truncated, as they are necessary for sentiment analysis.
+* Data analysts might routinely apply a common date format transformation, leading to its inclusion in the ingestion process.
 
-* **Insights:** What questions can be answered with the data?  What insights are valuable for decision-making? 
-* **Evaluation:** How can we validate the accuracy of our analysis?  What metrics are important to consider? 
+Modern data architectures often blur the lines between ETL and ELT. Different roles might perform different parts of the ingestion and transformation process using various tools and access methods. For example:
 
-Answering these questions requires a deep understanding of the five Vs of data, as each "V" influences the design and implementation of a data pipeline.
+* Data engineers might use ingestion tools to handle common transformations before loading data into a data lake.
+* Data analysts might apply transformations on ingested data to prepare it for specific reports.
+* Data scientists might perform additional discovery and transformation to investigate data relationships.
 
-### 2.5 The Five Vs of Data - Volume, Velocity, Variety, Veracity, and Value
+### 1.3 Data Wrangling: The Art of Transforming Raw Data into Insights
 
-The five Vs of data provide a comprehensive framework for understanding the characteristics of data that drive infrastructure decisions.
+Data wrangling encompasses the complex processes involved in transforming large amounts of unstructured or structured raw data from diverse sources into a meaningful and valuable dataset for downstream processes or users. While data wrangling can be performed by data engineers, data scientists, and data analysts, each role might perform different types of wrangling based on their needs and the initial state of the data.
 
-### 2.6 Data Characteristics That Drive Infrastructure Decisions
+#### 1.3.1  Data Wrangling: Addressing Data Variety
 
-#### 2.6.1 Volume
+Data wrangling is essential for managing data variety. For example, a company might combine various data types to personalize customer experiences. Imagine a company that wants to leverage data to provide personalized health recommendations:
 
-* **How big is the dataset?**
-* **How much new data is generated?**
+* **Querying an On-premises Database:** The company queries its database to identify patients overdue for visits.
+* **Combining Public Health Data:** Public health data is combined with customer data to identify demographic risk factors for heart attacks.
+* **Real-time Mobile App Monitoring:** Real-time heart monitoring data from a mobile app is evaluated for anomalies, potentially alerting patients or their doctors.
 
-High volume data requires robust storage solutions and efficient processing techniques.
+To deliver personalized predictions, data engineers must bring all this data together and make it available in the data pipeline, enabling data scientists to build machine learning (ML) models.
 
-#### 2.6.2 Velocity
+#### 1.3.2 Data Wrangling Steps:  A Detailed Breakdown
 
-* **How frequently is new data generated and ingested?**
+The data wrangling process generally aligns with ETL processing, but there are crucial distinctions.
 
-High velocity data necessitates real-time or near real-time processing capabilities.
+* **Traditional ETL:** Data engineers typically focused on scripting and automating transformations with batch jobs, while analysts and data scientists worked with refined data.
+* **Data Wrangling:** More associated with an ELT flow, allowing business users or data scientists to transform datasets within the pipeline storage layer before refinement for specific use cases.
 
-#### 2.6.3 Variety
+Cloud tools and services are increasingly abstracting infrastructure and coding tasks, giving more users direct access to data extraction and transformation. Data engineers must still build complete analytics pipelines and transform data, but they also need to stay informed about tools that empower greater autonomy for analysts and data scientists.
 
-* **What types and formats of data exist?**
-* **How many different sources does the data come from?**
+#### 1.3.3 Example: ELT and Data Wrangling in a Modern Data Architecture
 
-Variety requires flexibility in data handling, including data transformation and integration.
+Let's illustrate how data wrangling steps can be integrated into a modern data architecture using an ELT flow. Consider this example architecture:
 
-#### 2.6.4 Veracity
+* **Data Ingestion:** Data is ingested into a storage layer consisting of an Amazon S3 data lake and an Amazon Redshift data warehouse.
+* **S3 Buckets as Zones:** S3 buckets serve as zones within the data lake, storing data in different states:
+    * **Landing Zone:**  Temporary storage for initial cleaning and validation.
+    * **Raw Zone:**  Permanent storage for ingested data in its relatively raw state.
+    * **Trusted Zone:** Data structured for use in the data warehouse.
+    * **Curated Layer:** Data enriched and validated for low-latency access and complex querying in Amazon Redshift.
 
-* **How accurate, precise, and trusted is the data?**
+**Wrangling Steps in the Example Architecture:**
 
-Veracity is crucial for making accurate decisions. Data quality issues can lead to faulty conclusions.
+* **Landing Zone:** Data is cleaned and validated before being stored in the raw zone.
+* **Raw Zone:** Data in the raw zone can be used for additional use cases.
+* **Trusted Zone:** Data is structured, enriched, and validated before being stored in the curated layer.
+* **Curated Layer:** Datasets are ready for ingestion into the Amazon Redshift data warehouse.
 
-#### 2.6.5 Value
+**Comparison to ETL:**
 
-* **What insights can be pulled from the data?**
-* **What is the business value of the data?**
+* The same wrangling tasks would still be necessary in a traditional ETL flow.
+* In ETL, all transformations would be performed on the data in a temporary staging location before loading it directly into the data warehouse.
+* Raw data would not be available to users until processing is complete.
 
-Data should be valuable for decision-making and should lead to actionable insights.
+### 1.4 Data Wrangling Steps: A Detailed Examination
 
-### 2.7 Strategies for Maximizing Data Value
+#### 1.4.1 Data Discovery:  Understanding Your Data Sources
 
-* **Confirm available data meets needs:**  Ensure that the data you have aligns with your business objectives.
-* **Evaluate data acquisition feasibility:**  Determine if acquiring additional data is necessary and feasible.
-* **Match pipeline design to data:**  Align your pipeline architecture with the characteristics of the data.
-* **Balance throughput and cost:**  Optimize for performance while considering budget constraints.
-* **Enable user focus on business:**  Streamline user interfaces and provide tools that facilitate analysis and insight.
-* **Catalog data and metadata:**  Create a centralized repository of data descriptions and information for easy access.
-* **Implement governance:** Establish policies and procedures to maintain data quality and integrity.
+Data discovery is the initial step in data wrangling, and it's an iterative process that involves different roles (analyst, data scientist, data engineer) focusing on different aspects. As a data engineer, your responsibility is to identify potential sources, query them, and analyze the raw data to determine its value for your business purpose.
 
-### 2.8 Volume and Velocity: Scaling Your Pipeline
+**Key Tasks During Data Discovery:**
 
-Volume and velocity are intertwined, influencing how your pipeline scales to handle large datasets and rapid data flows. 
+* **Determine if a Source Serves Your Business Purpose:**
+    * Identify relationships within and between data sources.
+    * Identify data formats (e.g., CSV, Parquet, ORC).
+    * Determine the desired data range from each source (e.g., time period or range of attribute values).
+* **Determine Data Organization:**
+    * Choose appropriate folder structures and file sizes.
+    * Establish partitions for target database tables.
+    * Consider access control and security measures.
+* **Determine Required Tools and Skills:**
+    * Assess existing tools for storing, securing, transforming, and querying the data.
+    * Determine if you have the necessary skills and resources to extract and prepare the data.
+* **Decide Whether to Proceed:**
+    * Based on analysis, you might decide to work with the source or determine that the effort and cost don't justify the value.
 
-#### 2.8.1 Ingestion Decisions
+#### 1.4.2 Data Discovery Example Scenario
 
-* **Which ingestion method best suits the volume and velocity of data?**
-    * **Streaming Ingestion:**  For continuous, high-volume data streams, like website clickstream data.
-    * **Batch Ingestion:**  For periodic, large-scale data updates, such as sales transaction data.
+Imagine a company with a SaaS product that acquires a startup with a different customer support system. A data analyst requests the ingestion of support ticket data from both products to analyze the relationships between support experiences, ticket volumes, and contract renewals. The analyst wants to know the number and types of technical issues for each customer in 2020, with regional sales teams accessing only their customers. The existing sales analytics pipeline uses AWS services and stores customer data in an Amazon Redshift data warehouse, but lacks customer support data.
 
-#### 2.8.2 Storage Decisions
+#### 1.4.3 Data Discovery Example: Querying Data Sources
 
-* **What storage types can accommodate the volume and provide the necessary access speeds?**
-    * **Long-term, Reporting Access:** For historical data used for trending analysis.
-    * **Short-term, Very Fast Access:** For real-time data used for immediate decision-making.
+**Tables:**
 
-#### 2.8.3 Processing Decisions
+* **Ticket table in existing support system (supp1):**
 
-* **How much data must be processed at once?**
-* **Does processing require a distributed system?**
-    * **Big Data Processing:**  For analyzing massive datasets, often using distributed frameworks like Hadoop or Spark.
-    * **Streaming Analytics:** For processing data in real-time, generating alerts or insights immediately.
+    |ticket_id|requestor_id|submitter_id|assignee_id|group|subject|status|priority|ticket_type|create_date|updated_date|solved_date|
+    |---|---|---|---|---|---|---|---|---|---|---|---|
+    ||||||||High|||||
+    ||||||||Low|||||
 
-#### 2.8.4 Analysis & Visualization Decisions
+* **Ticket table in acquired support system (supp2):**
 
-* **How much data should be visualized?**
-* **Do users need to drill down into details?**
-* **How quickly should data be available for analysis?**
-    * **Historical Analysis:**  Visualizing large datasets over time, allowing for drill-down capability.
-    * **Streaming IoT Data:**  Visualizing real-time data from sensors and devices, providing immediate insights.
+    |issue_id|cust_num|description|status|priority|create_date|updated_date|closed_date|
+    |---|---|---|---|---|---|---|---|
+    ||||1|||||
+    ||||3|||||
+    ||||5|||||
 
-### 2.9 Key Takeaways: Volume and Velocity
+* **Customer table in the data warehouse:**
 
-* **Volume:**  The amount of data.
-* **Velocity:** The speed of data arrival and processing.
-* **Combined Impact:**  These characteristics influence throughput and scaling requirements.
-* **Layered Evaluation:**  Assess volume and velocity needs at each stage of the pipeline.
-* **Cost-Benefit Analysis:**  Balance costs for throughput and storage with the timeliness and accuracy of results.
+    |customer_id|cust_name|primary_poc|status|sales_group|
+    |---|---|---|---|---|
 
-### 2.10 Variety: Data Types
+The data engineer would examine the fields and data in the source data for customer support tickets and identify related information in the data warehouse to determine how to get the desired data into the pipeline.
 
-Variety refers to the different types and formats of data. Understanding data types is essential for choosing appropriate processing and analysis techniques.
+#### 1.4.4 Data Discovery Tasks:  Example Scenario
 
-### 2.11 Designing for Data Variety
+||||||
+|---|---|---|---|---|
+|Identify relationships|Identify formats|Determine what you need/how to get it|Determine how to organize and access|Determine tools and skills available|
+|supp1 requestor_id = supp2 cust_num = customer|Ticket systems export .json files Storage target = S3 bucket|Ticket status = "open", "solved", "closed" Tickets where create_date or updated_date = 2020|Access is by sales region Create sales region prefixes in an S3 bucket Analysts will query with Amazon Redshift Spectrum or Amazon Athena|Based on the exploratory nature of the request, it needs a one-time extract with minimal automation The easiest option available is to use Microsoft Excel to wrangle the data Excel can import .json and export .csv files|
+|customer_id supp1 ticket_id = supp2 issue_id|||||
+|supp1 subject = supp2 description|||||
+|supp1 priority "High", "Medium", "Low" = supp2 priority 1, 2, 3|||||
 
-Data types influence pipeline design at every layer, from ingestion to analysis. Different data types require different processing methods and analysis techniques.
+This table summarizes the discovery activities for the example scenario, providing information for the data engineer to decide how to extract and structure the data for ingestion.
 
-### 2.12 Data Type Categories
+#### 1.4.5 Data Structuring:  Mapping and Organizing Your Data
 
-* **Structured:** Data with a well-defined schema, organized in rows and columns (e.g., relational databases).
-    * **Advantages:**  Easy to query and process.
-    * **Disadvantages:**  Limited flexibility.
+The data structuring step follows data discovery and focuses on mapping data from source files into a format that supports combining and storing it with other data. The goal is to optimize the structure of the raw dataset, minimizing costs and maximizing pipeline performance.
 
-* **Semi-structured:**  Data with some inherent structure but not as rigid as structured data (e.g., JSON, XML).
-    * **Advantages:**  More flexible than structured data.
-    * **Disadvantages:**  May require more preprocessing before analysis.
+**Key Tasks in Data Structuring:**
 
-* **Unstructured:** Data without a predefined structure (e.g., images, videos, audio).
-    * **Advantages:**  Highly flexible.
-    * **Disadvantages:**  Difficult to query and analyze.
+* **Organize Storage:** Create infrastructure, set up access controls, create IAM access policies, etc.
+* **Parse the Source File:** Convert defined strings or patterns in the source into formats suitable for structured tables or categorization in the data lake.
+* **Map Fields:** Match source fields to appropriate fields in the target storage.
+* **Manage File Size:** Optimize file size for storage and retrieval by splitting or combining files and applying compression.
 
-### 2.13 The Rise of Unstructured Data
+#### 1.4.6 Data Structuring Example: Parsing supp2 File and Mapping Fields
 
-* **Unstructured data comprises over 80% of available data.**
-* **Vast potential for untapped insights.**
-* **AI/ML techniques are crucial for extracting value from unstructured data.**
+In the example scenario, the structuring step involves exporting a .json file from the customer support ticket system, loading it into Excel, and letting Excel parse the file. The data engineer would modify the cust_num field to match the customer_id field in the data warehouse and modify other columns (issue_id, description, closed_date) to match those in supp1.
 
-### 2.14 Data Type Use Case Examples
+#### 1.4.7 Data Cleaning:  Ensuring Data Accuracy and Consistency
 
-* **Structured:**  Querying a database to report on customer service tickets.
-* **Semi-structured:** Analyzing customer comments from a chat application stored in JSON.
-* **Unstructured:** Performing sentiment analysis on customer service emails.
+The data cleaning step follows data structuring and focuses on preparing the raw data for use in the pipeline. Cleaning is usually performed per source, based on its characteristics.
 
-### 2.15 Key Takeaways: Variety - Data Types
+**Data Cleaning Tasks:**
 
-* **Structured, semi-structured, and unstructured data types.**
-* **Structured data is easy to query but less flexible.**
-* **Unstructured data is flexible but challenging to process.**
-* **Unstructured data represents the majority of data growth.**
+* **Removing Unwanted Data:** Removing columns with PII, irrelevant fields, duplicate values, corrupted data, or unwanted characters.
+* **Filling in Missing Data Values:** Converting blank fields to zeroes for numeric fields or adding generic values to fill mandatory fields.
+* **Validating and Modifying Data Types:** Ensuring data types in the source file match the target and modifying those that don't (e.g., converting text strings to properly formatted date fields).
+* **Fixing Outliers:** Identifying outliers and either removing them or fixing them at the source.
 
-### 2.16 Variety: Data Sources
+The methods and results of cleaning might differ depending on who performs it. For example, a data engineer might replace blank fields with values that fit the data type, while a data analyst might replace blanks with corrected values.
 
-Data can originate from diverse sources, each with its unique characteristics. Understanding data sources helps optimize ingestion and processing.
+#### 1.4.8 Data Cleaning Example: Removing and Fixing Data
 
-### 2.17 Common Data Source Types
+In the example scenario, the cleaning step would include:
 
-* **On-premises databases or file stores:** Data owned and managed by the organization.
-* **Public datasets:** Aggregated data available for public use, like census or health data.
-* **Events, IoT devices, and sensors:** Data generated continuously, often with a time-based component.
+* Replacing blank customer_id with a placeholder.
+* Removing corrupted data from a subject field.
+* Validating and modifying data types (numeric priority values and date fields).
 
-### 2.18 Pipeline Considerations Based on Data Source Type
+#### 1.4.9 Data Enriching:  Expanding and Combining Your Data
 
-* **On-premises databases or file stores:**
-    * **Advantages:**  Controlled by the organization, often structured.
-    * **Disadvantages:**  May contain private information, requiring security measures.
-* **Public datasets:**
-    * **Advantages:**  Widely available, often semistructured.
-    * **Disadvantages:**  May require cleaning and transformation, may contain irrelevant data.
-* **Events, IoT devices, and sensors:**
-    * **Advantages:**  Real-time data, valuable for monitoring and analysis.
-    * **Disadvantages:**  Requires streaming ingestion and storage for time-series data.
+The data enriching step follows cleaning and focuses on bringing together related data from disparate sources to create the necessary dataset for analysis.
 
-### 2.19 Data Source Use Case Examples
+**Key Tasks in Data Enriching:**
 
-* **On-premises databases:**  A healthcare company analyzes patient data to identify those who haven't received care lately.
-* **Public datasets:**  A healthcare company combines public health data with customer data to develop a personalized mobile app that identifies demographic risk factors.
-* **Events, IoT devices:**  A mobile app provides real-time heart rate monitoring and alerts when data matches a risk pattern.
+* **Merge Sources:** Combine data from cleaned source files into a single dataset.
+* **Supplement Data:** Add additional values to support analysis or desired visualization.
 
-### 2.20 Challenges of Data Variety
+Data enriching can be simple (merging similar files) or complex (combining data from multiple, different sources).
 
-* **Data formats and storage methods can hinder analysis.**
-* **Combining data from multiple sources can complicate ingestion and processing.**
-* **Maintaining data veracity can be difficult when merging data from different sources.**
+#### 1.4.10 Data Enriching Example:  Combining Disparate Sources
 
-### 2.21 Key Takeaways: Variety - Data Sources
+In the support ticket example, the primary enriching step is to combine the two sets of support ticket files into a single file. The data engineer might query the sales system to get the sales owner by customer_id and use this information to add a sales_region column to the combined file.
 
-* **Common data sources include organizational databases, public datasets, and time-series data.**
-* **Combining datasets can enhance analysis but also increase processing complexity.**
+#### 1.4.11 Data Validating:  Ensuring Data Integrity
 
-### 2.22 Veracity and Value: The Foundation of Trust
+The data validating step follows enriching and ensures the veracity of the dataset created for analytics or ML use cases.
 
-Veracity, the trustworthiness of data, is essential for deriving value from data. Without accurate and reliable data, decisions can be flawed.
+**Key Tasks in Data Validating:**
 
-### 2.23 Value Depends on Veracity
+* **Audit Your Work:**
+    * Count expected rows.
+    * Check consistency.
+    * Check expected formats and data types.
+    * Check for duplicates.
+    * Check for PII.
+    * Check for outliers.
+* **Fix the Data:**
+    * Address audit findings.
+    * Address issues at the source.
+    * Fix issues with integration tools or scripts.
 
-* **Bad data leads to worse decisions than no data.**
-* **Data integrity is critical for accurate insights and reliable decision-making.**
+Validating shares similarities with cleaning. Cleaning focuses on ensuring data is suitable for pipeline loading, while validating ensures the integrity of the combined dataset.
 
-### 2.24 Veracity Across the Data Pipeline
+#### 1.4.12 Data Publishing: Making Your Data Available
 
-* **Discover:**  Evaluate the quality and trustworthiness of the data source.
-* **Clean/Transform:**  Remove errors and inconsistencies, ensure data consistency.
-* **Ingestion:**  Maintain the integrity of data sources during ingestion.
-* **Storage:**  Protect data integrity during storage.
-* **Processing:**  Preserve data integrity during transformations, processing, and analysis.
+The data publishing step follows validating and focuses on making the wrangled dataset available to users for analysis or further processing.
 
-### 2.25 Data Issues That Impact Veracity
+**Key Tasks in Data Publishing:**
 
-* **Discovery:** Dated information, missing data, lack of lineage, ambiguity, statistical bias.
-* **Clean/Transform:**  Duplicates, abnormalities, source differences.
-* **Prevent:** Software bugs, tampering, human error.
+* **Determine the Target Destination:**
+    * Data lake (e.g., Amazon S3 bucket)
+    * Data warehouse (e.g., Amazon Redshift)
+    * Other data stores
+* **Configure Access Controls:**
+    * IAM policies
+    * Data access permissions
+    * Data sharing mechanisms
 
-### 2.26 Best Practices for Data Cleaning
+Publishing might involve:
 
-* **Define Clean:**  Establish a clear definition of "clean data" and apply it consistently.
-* **Trace Errors:**  Identify the source of errors and address the root cause.
-* **Change Thoughtfully:**  Make data changes with a clear understanding of their implications.
-* **Retain Auditable Data:**  Preserve raw data for auditing and traceability.
+* Loading the dataset into a data lake or data warehouse.
+* Creating a shared folder or directory for the dataset.
+* Publishing the dataset as a public API for external access.
 
-### 2.27 Data Transformation Example
+### 1.5 Conclusion:  Building Effective Data Pipelines
 
-* **Transforming data from an organizational database to a public dataset format.**
-* **Example:**  Replacing null values with zeros, converting state names to abbreviations.
-
-### 2.28 Comparing Aggregated Data vs. Raw Data Storage
-
-* **Aggregated data:**  Storing only summary statistics, like averages or counts.
-    * **Advantages:**  Reduces storage space, simplifies querying.
-    * **Disadvantages:**  Loss of detail, difficulty in analyzing trends, challenging error debugging.
-
-* **Raw data:**  Storing all original data records.
-    * **Advantages:**  Preserves detail, enables more flexible analysis, easier error identification.
-    * **Disadvantages:**  Larger storage requirements, more complex querying.
-
-### 2.29 The Benefits of Immutable Data
-
-* **Store data immutably:**  Write new records for each event, preserving historical values.
-* **Advantages:**  Retains detail, provides traceability, simplifies error isolation.
-
-### 2.30 Maintaining Data Integrity and Consistency
-
-* **Secure all pipeline layers:**  Implement security measures at every stage.
-* **Least privilege access:**  Grant only necessary access to users.
-* **Best practices for data integrity:**  Employ appropriate techniques for each data store.
-* **Audit trails:**  Track data changes and modifications.
-* **Data compliance and governance:**  Establish policies for data classification, cataloging, and single source of truth.
-
-### 2.31 Key Takeaways: Activities to Improve Veracity and Value
-
-* **Evaluate data source trustworthiness and lineage.**
-* **Clean and transform data to improve quality.**
-* **Implement safeguards to prevent unwanted changes.**
-* **Maintain a single source of truth for critical data elements.**
-
-This module provides a comprehensive overview of data fundamentals, laying the foundation for understanding the critical characteristics of data and their influence on data pipeline design and implementation. The next modules in the course will delve deeper into specific data processing and analysis techniques.
+Data ingestion and preparation are fundamental steps in creating valuable data pipelines. By mastering the key concepts and steps involved in ETL, ELT, and data wrangling, you can effectively ingest and prepare data for various analytics and ML use cases. 

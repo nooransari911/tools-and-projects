@@ -128,3 +128,8 @@ def split_file():
                                thleft="match", thright="filename", directory=directory)
     else:
         return render_template("gemini_app.html")
+
+
+@test_blueprint.route ("/process")
+def test_all_processes ():
+    return render_template ("generic_test_results.html")

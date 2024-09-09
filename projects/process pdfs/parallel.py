@@ -3,7 +3,7 @@ from genai_gemini_parallel import *
 
 RESULT_DICT = Manager().dict()
 METADATA_DICT = Manager().dict()
-PPROCESS = []
+
 
 
 
@@ -22,7 +22,7 @@ def phome_async():
             #print("Directory exists!!")
             process = multiprocessing.Process(target=pgemini_chain_all_files, args=(directory, PROMPT_LIST, RESULT_DICT, METADATA_DICT))
             process.start()
-            PPROCESS.append(process)
+            PROCESS_L0.append(process.pid)
             print (f"for pgemini_chain_all_files: {process.pid}")
             return render_template('plive status.html', directory=directory)
         else:
@@ -38,13 +38,17 @@ def phome_async():
 def presults():
     if request.method == 'POST':
         directory = request.form.get('dir')
-        print("presults; PPROCESS: ", PPROCESS)
+        print("presults; PROCESS_L0: ", PROCESS_L0)
+        print("presults; PROCESS_L1: ", PROCESS_L1)
 
-        if PPROCESS:
-            active_processes = [p for p in PPROCESS if psutil.pid_exists(p.pid)]
-            print("presults; PPROCESS: ", PPROCESS)
-            print("presults; active process: ", active_processes)
-            if not active_processes:
+
+        if PROCESS_L0:
+            active_processes_L0 = [p for p in PROCESS_L0 if psutil.pid_exists(p)]
+            active_processes_L1 = [p for p in PROCESS_L1 if psutil.pid_exists(p)]
+            print("presults; PROCESS: ", PROCESS_L0)
+            print("presults; active process L0: ", active_processes_L0)
+            print("presults; active process L1: ", active_processes_L1)
+            if not active_processes_L0:
                 # Processes have completed
                 all_responses_string, iint, oint, total_time = putil(RESULT_DICT, METADATA_DICT)
                 return render_template('pgemini_responses.html',
@@ -66,10 +70,10 @@ def pprocess_status():
     done_sent = False  # Flag to track if "done" has been sent
 
     while True:
-        if not PPROCESS:
+        if not PROCESS_L0:
             status_string = "data: status: idle\n\n"
         else:
-            active_processes = [p for p in PPROCESS if psutil.pid_exists(p.pid)]
+            active_processes = [p for p in PROCESS_L0 if psutil.pid_exists(p)]
             if not active_processes and not done_sent:
                 status_string = "data: status: done\n\n"
                 done_sent = True  # Set the flag to True
@@ -89,3 +93,14 @@ def pprocess_status():
 @parallel_blueprint.route("/events")
 def pevents():
     return Response(pprocess_status(), content_type='text/event-stream')
+
+
+
+@parallel_blueprint.route ("/up", methods=["GET", "POST"])
+def pup ():
+    if request.method == 'POST':
+        directory = request.form.get('dir')
+        upload_directory_to_genai (directory)
+        return ("Uploaded all files successfully")
+    else:
+        return render_template("gemini_app.html")

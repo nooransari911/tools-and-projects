@@ -1,7 +1,7 @@
 # exec ssh-agent bash
 # ssh-add ~/.ssh/github_key_1
 
-
+echo "$(date '+%Y-%m-%d %H:%M:%S') Script started"
 ssh -T git@github.com
 git add .gitignore
 git add .
