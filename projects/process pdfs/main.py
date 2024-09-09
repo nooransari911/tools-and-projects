@@ -1,16 +1,20 @@
 from flask import Flask
+from flask_cors import CORS
 from genai_gemini_app import root_blueprint
 from test import test_blueprint
 from json_blueprints import json_blueprint
+from events_blueprints import events_blueprint
 from parallel import parallel_blueprint, PROCESS_L0
 from utils import *
 
 
 app = Flask(__name__)
+CORS(app)
 app.register_blueprint (root_blueprint, url_prefix="/")
 app.register_blueprint (test_blueprint, url_prefix="/test")
 app.register_blueprint (parallel_blueprint, url_prefix="/parallel")
 app.register_blueprint (json_blueprint, url_prefix="/json")
+app.register_blueprint (events_blueprint, url_prefix="/events")
 
 
 

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test results</title>
+
+    <style>
+            body {
+            font-family: 'Source Code Pro', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+            padding-left: 40px;
+            min-height: 100vh;
+            background-color: #000000; /* Dark background */
+            color: #eee; /* Light text color */
+        }
+
+
+        h1 {
+            text-align: left;
+            margin-bottom: 80px;
+            font-weight: 600;
+            letter-spacing: 4px;  /* Increases spacing by 4 pixels */
+            color: #00ffff; /* Cyan heading */
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 4px;  /* Increases spacing by 4 pixels */
+            color: rgb(255, 0, 128); /* Magenta heading */
+        }
+
+        h4 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 4px;  /* Increases spacing by 4 pixels */
+            color: rgb(255, 0, 128); /* Magenta heading */
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ffffff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333333;
+            color: rgb(255, 0, 128);
+        }
+
+        td {
+            background-color: #282c34;
+            color: #ffffff;
+        }
+
+        .summary {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00ff99;
+        }
+
+
+        #status {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+        <h2 id="heading0"></h2>
+        <table id="table0">
+            <thead>
+                <tr>
+                    <th id="table0_thleft"></th>
+                    <th id="table0_thright"></th>
+                </tr>
+            </thead>
+            <tbody id="table0_body"></tbody>
+        </table>
+
+        <h2 id="heading1"></h2>
+        <table id="table1">
+            <thead>
+                <tr>
+                    <th id="table1_thleft"></th>
+                    <th id="table1_thright"></th>
+                </tr>
+            </thead>
+            <tbody id="table1_body"></tbody>
+        </table>
+
+
+
+      <div class="summary" id="summaryText">Summary: Loading...</div>
+
+        <script>
+
+        // Ensure you're passing the correct route dynamically using Jinja2
+        const jsonRoute = "{{ url_for('json.json_processes') }}"; // Replace 'json_blueprint.process' with the correct route name
+            fetch(jsonRoute, {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => response.text())
+            .then(text => {
+                console.log(text); // Log the response before parsing
+                return JSON.parse(text);
+            })
+            .then(data => {
+                // Pretty print the response JSON
+                console.log(JSON.stringify(data, null, 4));
+
+                // Set H2 headings
+                document.getElementById('heading0').textContent = data.h2_data[0].split(": ")[1];
+                document.getElementById('heading1').textContent = data.h2_data[1].split(": ")[1];
+
+                // Set table headers for table 0
+                document.getElementById('table0_thleft').textContent = data.table0_headers[0].split(": ")[1];
+                document.getElementById('table0_thright').textContent = data.table0_headers[1].split(": ")[1];
+
+                // Set table headers for table 1
+                document.getElementById('table1_thleft').textContent = data.table1_headers[0].split(": ")[1];
+                document.getElementById('table1_thright').textContent = data.table1_headers[1].split(": ")[1];
+
+                // Populate table 0 data
+                const table0Body = document.getElementById('table0_body');
+                for (let i = 0; i < data.table0_data.length; i++) {
+                    const [process, pid] = data.table0_data[i].split(": ");
+                    const row = `<tr><td>${process}</td><td>${pid}</td></tr>`;
+                    table0Body.insertAdjacentHTML('beforeend', row);
+                }
+
+                // Populate table 1 data
+                const table1Body = document.getElementById('table1_body');
+                for (let i = 0; i < data.table1_data.length; i++) {
+                    const [process, pid] = data.table1_data[i].split(": ");
+                    const row = `<tr><td>${process}</td><td>${pid}</td></tr>`;
+                    table1Body.insertAdjacentHTML('beforeend', row);
+                }
+            })
+            .catch(error => console.error('Error parsing the JSON data:', error));
+        </script>
+
+</body>
+
+
+
+
+
+</html>

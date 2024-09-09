@@ -186,3 +186,43 @@ def putil (result_dict, metadata_dict):
     print ("All keys in result_dict:", result_dict.keys())
 
     return all_responses_string, total_iint, total_oint, total_time
+
+
+
+
+
+
+
+def sse_json_processes ():
+    active_processes_L0 = [p for p in PROCESS_L0 if psutil.pid_exists(p)]
+    active_processes_L1 = [p for p in PROCESS_L1 if psutil.pid_exists(p)]
+    active_processes_dict = {
+
+        "h2_data": [
+            "L0_target: pgemini_chain_all_files()",
+            "L1_target: psingle_file()"
+        ],
+
+
+        "table0_headers":[
+            "thleft: Active processes in L0",
+            "thright: PID"
+        ],
+        "table1_headers":[
+            "thleft: Active processes in L1",
+            "thright: PID"
+        ],
+
+
+        "table0_data": [
+            f"active_level_L0: {active_processes_L0}",
+            f"active_level_L1: {active_processes_L1}"
+        ],
+        "table1_data": [
+            f"active_level_L0: {PROCESS_L0}",
+            f"active_level_L1: {PROCESS_L1}"
+        ]
+    }
+    return active_processes_dict
+
+
