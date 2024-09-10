@@ -1,5 +1,5 @@
 #from genai_gemini import *
-from genai_gemini_parallel import *
+from .base_gemini.genai_gemini_parallel import *
 
 test_blueprint = Blueprint('test', __name__)
 
@@ -76,7 +76,7 @@ def test():
 def count_characters ():
     """Counts the number of characters in a text file."""
     count = 0
-    filename = "./ex-input files/merge all.md"
+    filename = "../../ex-input files/merge all.md"
     file_char_count = []
 
     with open(filename, 'r') as file:

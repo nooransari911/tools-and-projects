@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Prompts</title>
+    <title>Directory Selector</title>
     <style>
         body {
             font-family: 'Source Code Pro', monospace;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             min-height: 100vh;
             background-color: #000000; /* Dark background */
             color: #eee; /* Light text color */
@@ -22,8 +21,6 @@
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
             width: 800px;
-            margin-top: 80px;
-            margin-bottom: 160px;
         }
 
         h1 {
@@ -79,68 +76,31 @@
             margin-top: 20px;
             font-weight: 500;
         }
-
-
-        .prompts body {
-            font-family: 'Source Code Pro', monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            align-items: left;
-            padding-left: 40px;
-            min-height: 100vh;
-            background-color: #000000; /* Dark background */
-            color: #eee; /* Light text color */
-        }
-
-
-        .prompts h1 {
-            text-align: left;
-            margin-bottom: 80px;
-            font-weight: 600;
-            letter-spacing: 4px;  /* Increases spacing by 4 pixels */
-            color: cyan; /* Cyan heading */
-        }
-
-        .prompts h2 {
-            text-align: left;
-            margin-bottom: 20px;
-            font-weight: 600;
-            letter-spacing: 4px;  /* Increases spacing by 4 pixels */
-            color: rgb(255, 0, 128); /* Magenta heading */
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-        .prompts {
-            text-align: left;
-            background-color: #1e1e1e; /* Darker grey background for list items */
-            color: #eee; /* Light text color */
-            border: 1px solid #555; /* Darker border */
-            border-radius: 4px;
-            padding: 40px;
-            margin-bottom: 80px;
-            max-width: 1200px;
-        }
     </style>
 </head>
 <body>
     <form method="post" enctype="multipart/form-data">
-        <h1>Enter Prompts</h1>
-        <label for="prompt"><h2>Enter prompt to add</h2></label>
-        <input type="text" name="prompt" id="prompt"/>
+        <h1>Enter Absolute Path of Directory</h1>
+        <label for="dir"><h2>Enter directory</h2></label>
+        <input type="text" name="dir" id="dir" required/>
         <input type="submit" value="Submit">
     </form>
 
 
 
-    <br><br>
-    {% if prompt_list %}
-        <h1>List of prompts</h1>
-        <br><br>
-        {% for prompt in prompt_list %}
-            <h2>Prompt {{ loop.index }}</h2>
-            <div class="prompts">{{ prompt }}</div>
-            <br><br>
+
+    <br><br><br><br>
+    <h2>{{ heading }}</h2>
+    {% if dir %}
+        <h4>{{ dir }}</h4>
+    {% endif %}
+
+
+    <br><br><br><br>
+    {% if files_info %}
+        <h2>List of files uploaded to GenAI</h2>
+        {% for file_info in files_info %}
+            <h4>{{ file_info }}</h4>
         {% endfor %}
     {% endif %}
 </body>

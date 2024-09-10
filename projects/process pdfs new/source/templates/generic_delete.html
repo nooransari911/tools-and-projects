@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Prompts</title>
+    <title>Generic Delete</title>
     <style>
         body {
             font-family: 'Source Code Pro', monospace;
@@ -124,11 +124,12 @@
     </style>
 </head>
 <body>
-    <form method="post" enctype="multipart/form-data">
-        <h1>Enter Prompts</h1>
-        <label for="prompt"><h2>Enter prompt to add</h2></label>
-        <input type="text" name="prompt" id="prompt"/>
-        <input type="submit" value="Submit">
+    <form method="post" enctype="multipart/form-data" action="/delete-files">
+        <input type="submit" value="Delete all files">
+    </form>
+
+    <form method="post" enctype="multipart/form-data" action="/delete-prompts">
+        <input type="submit" value="Delete all prompts">
     </form>
 
 
