@@ -1,0 +1,845 @@
+2024-09-21 20:27:08 - Creating destination directory on EC2...
+2024-09-21 20:27:09 - Failed to create destination directory on EC2.
+2024-09-21 20:27:27 - Creating destination directory on EC2...
+2024-09-21 20:27:28 - Destination directory created.
+2024-09-21 20:27:28 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:27:28 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:27:28 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:27:28 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:27:29 -   -> Copy failed for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:27:54 - Creating destination directory on EC2...
+2024-09-21 20:27:55 - Destination directory created.
+2024-09-21 20:27:55 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:27:55 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:27:55 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:27:55 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:27:56 -   -> Copy failed for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:33 - Creating destination directory on EC2...
+2024-09-21 20:29:34 - Destination directory created.
+2024-09-21 20:29:34 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:29:34 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:34 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:34 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:29:35 -   -> Copy failed for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:54 - Creating destination directory on EC2...
+2024-09-21 20:29:55 - Destination directory created.
+2024-09-21 20:29:55 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:29:55 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:55 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:29:55 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:29:56 -   -> Copy failed for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:32:49 - Creating destination directory on EC2...
+2024-09-21 20:32:50 - Destination directory created.
+2024-09-21 20:32:50 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:32:50 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:32:50 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:32:50 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:32:51 -   -> Copy failed for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:34:09 - Creating destination directory on EC2...
+2024-09-21 20:34:10 - Destination directory created.
+2024-09-21 20:34:10 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:34:10 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:34:10 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:34:10 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:34:11 -   -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:34:11 - Processing directory: /home/ansarimn/Downloads/Personal
+2024-09-21 20:34:11 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Personal
+2024-09-21 20:34:11 -   -> Creating destination directory: /home/ec2-user/fedora//Personal
+2024-09-21 20:34:13 -   -> Copy complete for /home/ansarimn/Downloads/Personal
+2024-09-21 20:34:13 - Processing directory: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:34:13 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:34:13 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects
+2024-09-21 20:34:14 -   -> Copy complete for /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:34:14 - Processing directory: /home/ansarimn/Downloads/notes
+2024-09-21 20:34:14 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+2024-09-21 20:34:14 -   -> Creating destination directory: /home/ec2-user/fedora//notes
+2024-09-21 20:34:16 -   -> Copy failed for /home/ansarimn/Downloads/notes
+2024-09-21 20:35:04 - Creating destination directory on EC2...
+2024-09-21 20:35:06 - Destination directory created.
+2024-09-21 20:35:06 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:35:06 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:06 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:06 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:35:07 -   -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:07 - Processing directory: /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:07 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:07 -   -> Creating destination directory: /home/ec2-user/fedora//Personal
+2024-09-21 20:35:09 -   -> Copy complete for /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:09 - Processing directory: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:09 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:09 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects
+2024-09-21 20:35:10 -   -> Copy complete for /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:10 - Processing directory: /home/ansarimn/Downloads/notes
+2024-09-21 20:35:10 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+2024-09-21 20:35:10 -   -> Creating destination directory: /home/ec2-user/fedora//notes
+2024-09-21 20:35:12 -   -> Copy complete for /home/ansarimn/Downloads/notes
+2024-09-21 20:35:12 - Processing directory: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:35:12 -   -> Detected git repository: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:35:12 -   -> Creating destination directory: /home/ec2-user/fedora//DSA3
+2024-09-21 20:35:14 -   -> Copy complete for /home/ansarimn/Downloads/DSA3
+2024-09-21 20:35:14 - Processing directory: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:35:14 -   -> Detected git repository: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:35:14 -   -> Creating destination directory: /home/ec2-user/fedora//DSA4
+2024-09-21 20:35:15 -   -> Copy complete for /home/ansarimn/Downloads/DSA4
+2024-09-21 20:35:15 - Processing directory: /home/ansarimn/Downloads/cic
+2024-09-21 20:35:15 -   -> Detected git repository: /home/ansarimn/Downloads/cic
+2024-09-21 20:35:15 -   -> Creating destination directory: /home/ec2-user/fedora//cic
+2024-09-21 20:35:17 -   -> Copy complete for /home/ansarimn/Downloads/cic
+2024-09-21 20:35:17 - Processing directory: /home/ansarimn/Downloads/fyle-interview-backend
+2024-09-21 20:35:17 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/fyle-interview-backend
+2024-09-21 20:35:17 -   -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-backend
+2024-09-21 20:35:18 -   -> Copy failed for /home/ansarimn/Downloads/fyle-interview-backend
+2024-09-21 20:35:52 - Creating destination directory on EC2...
+2024-09-21 20:35:53 - Destination directory created.
+2024-09-21 20:35:53 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:35:53 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:53 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:53 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+2024-09-21 20:35:54 -   -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:35:54 - Processing directory: /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:54 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:54 -   -> Creating destination directory: /home/ec2-user/fedora//Personal
+2024-09-21 20:35:56 -   -> Copy complete for /home/ansarimn/Downloads/Personal
+2024-09-21 20:35:56 - Processing directory: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:56 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:56 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects
+2024-09-21 20:35:57 -   -> Copy complete for /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:35:57 - Processing directory: /home/ansarimn/Downloads/notes
+2024-09-21 20:35:57 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+2024-09-21 20:35:57 -   -> Creating destination directory: /home/ec2-user/fedora//notes
+2024-09-21 20:35:59 -   -> Copy complete for /home/ansarimn/Downloads/notes
+2024-09-21 20:35:59 - Processing directory: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:35:59 -   -> Detected git repository: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:35:59 -   -> Creating destination directory: /home/ec2-user/fedora//DSA3
+2024-09-21 20:36:00 -   -> Copy complete for /home/ansarimn/Downloads/DSA3
+2024-09-21 20:36:00 - Processing directory: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:36:00 -   -> Detected git repository: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:36:00 -   -> Creating destination directory: /home/ec2-user/fedora//DSA4
+2024-09-21 20:36:02 -   -> Copy complete for /home/ansarimn/Downloads/DSA4
+2024-09-21 20:36:02 - Processing directory: /home/ansarimn/Downloads/cic
+2024-09-21 20:36:02 -   -> Detected git repository: /home/ansarimn/Downloads/cic
+2024-09-21 20:36:02 -   -> Creating destination directory: /home/ec2-user/fedora//cic
+2024-09-21 20:36:03 -   -> Copy complete for /home/ansarimn/Downloads/cic
+2024-09-21 20:36:03 - Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:36:03 -   -> Detected git repository: /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:36:03 -   -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-intern-backend
+2024-09-21 20:36:05 -   -> Copy complete for /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:36:05 - Processing directory: /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:36:05 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:36:05 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Cloud
+2024-09-21 20:36:07 -   -> Copy complete for /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:36:07 - Processing directory: /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:36:07 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:36:07 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Data Engineering
+2024-09-21 20:36:08 -   -> Copy complete for /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:36:08 - Processing directory: /home/ansarimn/Downloads/datasheets
+2024-09-21 20:36:08 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/datasheets
+2024-09-21 20:36:08 -   -> Creating destination directory: /home/ec2-user/fedora//datasheets
+2024-09-21 20:36:10 -   -> Copy complete for /home/ansarimn/Downloads/datasheets
+2024-09-21 20:36:15 - Backup operation to EC2 completed.
+2024-09-21 20:41:46 - Creating destination directory on EC2...
+2024-09-21 20:41:47 - Destination directory created.
+2024-09-21 20:41:47 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+2024-09-21 20:41:47 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:41:47 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:41:47 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/44)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/44) 
+
+sent 1,011 bytes  received 13 bytes  409.60 bytes/sec
+total size is 4,885,203  speedup is 4,770.71
+2024-09-21 20:41:49 -   -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+2024-09-21 20:41:49 - Processing directory: /home/ansarimn/Downloads/Personal
+2024-09-21 20:41:49 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/Personal
+2024-09-21 20:41:49 -   -> Creating destination directory: /home/ec2-user/fedora//Personal
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=134/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=132/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=102/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=24/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=22/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=16/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=11/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=1/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/146)
+
+sent 7,801 bytes  received 24 bytes  5,216.67 bytes/sec
+total size is 1,690,033,436  speedup is 215,978.71
+2024-09-21 20:41:50 -   -> Copy complete for /home/ansarimn/Downloads/Personal
+2024-09-21 20:41:50 - Processing directory: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:41:50 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:41:51 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)
+
+sent 11,389 bytes  received 12 bytes  7,600.67 bytes/sec
+total size is 26,328,586  speedup is 2,309.32
+2024-09-21 20:41:52 -   -> Copy complete for /home/ansarimn/Downloads/tools and projects
+2024-09-21 20:41:52 - Processing directory: /home/ansarimn/Downloads/notes
+2024-09-21 20:41:52 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+2024-09-21 20:41:52 -   -> Creating destination directory: /home/ec2-user/fedora//notes
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)
+
+sent 9,973 bytes  received 12 bytes  6,656.67 bytes/sec
+total size is 46,565,952  speedup is 4,663.59
+2024-09-21 20:41:54 -   -> Copy complete for /home/ansarimn/Downloads/notes
+2024-09-21 20:41:54 - Processing directory: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:41:54 -   -> Detected git repository: /home/ansarimn/Downloads/DSA3
+2024-09-21 20:41:54 -   -> Creating destination directory: /home/ec2-user/fedora//DSA3
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)
+
+sent 1,129 bytes  received 12 bytes  760.67 bytes/sec
+total size is 146,182  speedup is 128.12
+2024-09-21 20:41:55 -   -> Copy complete for /home/ansarimn/Downloads/DSA3
+2024-09-21 20:41:55 - Processing directory: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:41:55 -   -> Detected git repository: /home/ansarimn/Downloads/DSA4
+2024-09-21 20:41:55 -   -> Creating destination directory: /home/ec2-user/fedora//DSA4
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)
+
+sent 1,309 bytes  received 12 bytes  528.40 bytes/sec
+total size is 156,493  speedup is 118.47
+2024-09-21 20:41:57 -   -> Copy complete for /home/ansarimn/Downloads/DSA4
+2024-09-21 20:41:57 - Processing directory: /home/ansarimn/Downloads/cic
+2024-09-21 20:41:57 -   -> Detected git repository: /home/ansarimn/Downloads/cic
+2024-09-21 20:41:57 -   -> Creating destination directory: /home/ec2-user/fedora//cic
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)
+
+sent 582 bytes  received 12 bytes  396.00 bytes/sec
+total size is 20,673  speedup is 34.80
+2024-09-21 20:41:58 -   -> Copy complete for /home/ansarimn/Downloads/cic
+2024-09-21 20:41:58 - Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:41:58 -   -> Detected git repository: /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:41:58 -   -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-intern-backend
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)
+
+sent 1,930 bytes  received 12 bytes  776.80 bytes/sec
+total size is 85,412  speedup is 43.98
+2024-09-21 20:42:00 -   -> Copy complete for /home/ansarimn/Downloads/fyle-interview-intern-backend
+2024-09-21 20:42:00 - Processing directory: /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:42:00 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:42:00 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Cloud
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=14/16)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/16) 
+
+sent 409 bytes  received 13 bytes  168.80 bytes/sec
+total size is 99,210,571  speedup is 235,096.14
+2024-09-21 20:42:02 -   -> Copy complete for /home/ansarimn/Downloads/AWS Cloud
+2024-09-21 20:42:02 - Processing directory: /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:42:02 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:42:02 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Data Engineering
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=9/11)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/11)
+
+sent 296 bytes  received 13 bytes  206.00 bytes/sec
+total size is 12,935,147  speedup is 41,861.32
+2024-09-21 20:42:04 -   -> Copy complete for /home/ansarimn/Downloads/AWS Data Engineering
+2024-09-21 20:42:04 - Processing directory: /home/ansarimn/Downloads/datasheets
+2024-09-21 20:42:04 -   -> Not a git repository, copying all files: /home/ansarimn/Downloads/datasheets
+2024-09-21 20:42:04 -   -> Creating destination directory: /home/ec2-user/fedora//datasheets
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=111/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=104/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=94/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=91/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=89/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=87/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=85/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=78/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=70/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=69/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=68/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=67/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=65/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=61/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=59/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=56/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=52/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=43/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=39/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=37/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=35/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=27/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=25/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=18/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=15/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=12/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=10/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=6/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=3/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/122)
+
+sent 4,026 bytes  received 45 bytes  2,714.00 bytes/sec
+total size is 96,843,853  speedup is 23,788.71
+2024-09-21 20:42:05 -   -> Copy complete for /home/ansarimn/Downloads/datasheets
+2024-09-21 20:42:07 - Backup operation to EC2 completed.
+
+2024-09-21 20:45:23 - Starting EC2 backup operation...
+
+
+2024-09-21 20:45:23 - Creating destination directory on EC2...
+
+
+2024-09-21 20:45:25 - Destination directory created successfully.
+
+
+2024-09-21 20:45:25 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md...
+
+
+2024-09-21 20:45:25 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes...
+
+
+2024-09-21 20:45:25 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+
+
+2024-09-21 20:45:25 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/44)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/44) 
+
+sent 1,011 bytes  received 13 bytes  682.67 bytes/sec
+total size is 4,885,203  speedup is 4,770.71
+
+2024-09-21 20:45:26 -   -> Copy completed successfully for /home/ansarimn/Downloads/Sun Tzu memes
+
+
+2024-09-21 20:45:26 - Processing directory: /home/ansarimn/Downloads/Personal...
+
+
+2024-09-21 20:45:26 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/Personal
+
+
+2024-09-21 20:45:26 -   -> Creating destination directory: /home/ec2-user/fedora//Personal on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=134/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=132/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=102/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=24/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=22/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=16/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=11/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=1/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/146)
+
+sent 7,801 bytes  received 24 bytes  5,216.67 bytes/sec
+total size is 1,690,033,436  speedup is 215,978.71
+
+2024-09-21 20:45:27 -   -> Copy completed successfully for /home/ansarimn/Downloads/Personal
+
+
+2024-09-21 20:45:28 - Processing directory: /home/ansarimn/Downloads/tools and projects...
+
+
+2024-09-21 20:45:28 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+
+
+2024-09-21 20:45:28 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)
+
+sent 11,389 bytes  received 12 bytes  7,600.67 bytes/sec
+total size is 26,328,586  speedup is 2,309.32
+
+2024-09-21 20:45:29 -   -> Copy completed successfully for /home/ansarimn/Downloads/tools and projects
+
+
+2024-09-21 20:45:29 - Processing directory: /home/ansarimn/Downloads/notes...
+
+
+2024-09-21 20:45:29 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+
+
+2024-09-21 20:45:29 -   -> Creating destination directory: /home/ec2-user/fedora//notes on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)
+
+sent 9,973 bytes  received 12 bytes  6,656.67 bytes/sec
+total size is 46,565,952  speedup is 4,663.59
+
+2024-09-21 20:45:31 -   -> Copy completed successfully for /home/ansarimn/Downloads/notes
+
+
+2024-09-21 20:45:31 - Processing directory: /home/ansarimn/Downloads/DSA3...
+
+
+2024-09-21 20:45:31 -   -> Detected git repository: /home/ansarimn/Downloads/DSA3
+
+
+2024-09-21 20:45:31 -   -> Creating destination directory: /home/ec2-user/fedora//DSA3 on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)
+
+sent 1,129 bytes  received 12 bytes  760.67 bytes/sec
+total size is 146,182  speedup is 128.12
+
+2024-09-21 20:45:32 -   -> Copy completed successfully for /home/ansarimn/Downloads/DSA3
+
+
+2024-09-21 20:45:32 - Processing directory: /home/ansarimn/Downloads/DSA4...
+
+
+2024-09-21 20:45:32 -   -> Detected git repository: /home/ansarimn/Downloads/DSA4
+
+
+2024-09-21 20:45:32 -   -> Creating destination directory: /home/ec2-user/fedora//DSA4 on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)
+
+sent 1,309 bytes  received 12 bytes  528.40 bytes/sec
+total size is 156,493  speedup is 118.47
+
+2024-09-21 20:45:34 -   -> Copy completed successfully for /home/ansarimn/Downloads/DSA4
+
+
+2024-09-21 20:45:34 - Processing directory: /home/ansarimn/Downloads/cic...
+
+
+2024-09-21 20:45:34 -   -> Detected git repository: /home/ansarimn/Downloads/cic
+
+
+2024-09-21 20:45:34 -   -> Creating destination directory: /home/ec2-user/fedora//cic on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)
+
+sent 582 bytes  received 12 bytes  396.00 bytes/sec
+total size is 20,673  speedup is 34.80
+
+2024-09-21 20:45:35 -   -> Copy completed successfully for /home/ansarimn/Downloads/cic
+
+
+2024-09-21 20:45:35 - Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend...
+
+
+2024-09-21 20:45:35 -   -> Detected git repository: /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+2024-09-21 20:45:35 -   -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-intern-backend on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)
+
+sent 1,930 bytes  received 12 bytes  776.80 bytes/sec
+total size is 85,412  speedup is 43.98
+
+2024-09-21 20:45:37 -   -> Copy completed successfully for /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+2024-09-21 20:45:37 - Processing directory: /home/ansarimn/Downloads/AWS Cloud...
+
+
+2024-09-21 20:45:37 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/AWS Cloud
+
+
+2024-09-21 20:45:37 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Cloud on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=14/16)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/16) 
+
+sent 409 bytes  received 13 bytes  281.33 bytes/sec
+total size is 99,210,571  speedup is 235,096.14
+
+2024-09-21 20:45:38 -   -> Copy completed successfully for /home/ansarimn/Downloads/AWS Cloud
+
+
+2024-09-21 20:45:38 - Processing directory: /home/ansarimn/Downloads/AWS Data Engineering...
+
+
+2024-09-21 20:45:38 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/AWS Data Engineering
+
+
+2024-09-21 20:45:38 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Data Engineering on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=9/11)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/11)
+
+sent 296 bytes  received 13 bytes  123.60 bytes/sec
+total size is 12,935,147  speedup is 41,861.32
+
+2024-09-21 20:45:40 -   -> Copy completed successfully for /home/ansarimn/Downloads/AWS Data Engineering
+
+
+2024-09-21 20:45:40 - Processing directory: /home/ansarimn/Downloads/datasheets...
+
+
+2024-09-21 20:45:40 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/datasheets
+
+
+2024-09-21 20:45:40 -   -> Creating destination directory: /home/ec2-user/fedora//datasheets on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=111/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=104/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=94/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=91/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=89/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=87/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=85/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=78/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=70/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=69/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=68/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=67/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=65/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=61/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=59/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=56/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=52/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=43/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=39/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=37/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=35/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=27/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=25/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=18/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=15/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=12/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=10/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=6/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=3/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/122)
+
+sent 4,026 bytes  received 45 bytes  2,714.00 bytes/sec
+total size is 96,843,853  speedup is 23,788.71
+
+2024-09-21 20:45:41 -   -> Copy completed successfully for /home/ansarimn/Downloads/datasheets
+
+
+2024-09-21 20:45:44 - Backup operation to EC2 completed successfully.
+
+
+2024-09-21 20:50:41 - Starting EC2 backup operation...
+
+
+2024-09-21 20:50:41 - Creating destination directory on EC2...
+
+
+2024-09-21 20:50:42 - Destination directory created successfully.
+
+
+2024-09-21 20:50:42 - Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md...
+
+
+2024-09-21 20:50:42 - Processing directory: /home/ansarimn/Downloads/Sun Tzu memes...
+
+
+2024-09-21 20:50:42 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+
+
+2024-09-21 20:50:42 -   -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/44)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/44) 
+
+sent 1,011 bytes  received 13 bytes  682.67 bytes/sec
+total size is 4,885,203  speedup is 4,770.71
+
+2024-09-21 20:50:44 -   -> Copy completed successfully for /home/ansarimn/Downloads/Sun Tzu memes
+
+
+2024-09-21 20:50:44 - Processing directory: /home/ansarimn/Downloads/Personal...
+
+
+2024-09-21 20:50:44 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/Personal
+
+
+2024-09-21 20:50:44 -   -> Creating destination directory: /home/ec2-user/fedora//Personal on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=134/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=132/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=102/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=24/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=22/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=16/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=11/146)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=1/146)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/146)
+
+sent 7,801 bytes  received 24 bytes  5,216.67 bytes/sec
+total size is 1,690,033,436  speedup is 215,978.71
+
+2024-09-21 20:50:45 -   -> Copy completed successfully for /home/ansarimn/Downloads/Personal
+
+
+2024-09-21 20:50:45 - Processing directory: /home/ansarimn/Downloads/tools and projects...
+
+
+2024-09-21 20:50:45 -   -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+
+
+2024-09-21 20:50:45 -   -> Creating destination directory: /home/ec2-user/fedora//tools and projects on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/392)
+
+sent 11,389 bytes  received 12 bytes  4,560.40 bytes/sec
+total size is 26,328,586  speedup is 2,309.32
+
+2024-09-21 20:50:47 -   -> Copy completed successfully for /home/ansarimn/Downloads/tools and projects
+
+
+2024-09-21 20:50:47 - Processing directory: /home/ansarimn/Downloads/notes...
+
+
+2024-09-21 20:50:47 -   -> Detected git repository: /home/ansarimn/Downloads/notes
+
+
+2024-09-21 20:50:47 -   -> Creating destination directory: /home/ec2-user/fedora//notes on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/390)
+
+sent 9,973 bytes  received 12 bytes  6,656.67 bytes/sec
+total size is 46,565,952  speedup is 4,663.59
+
+2024-09-21 20:50:48 -   -> Copy completed successfully for /home/ansarimn/Downloads/notes
+
+
+2024-09-21 20:50:48 - Processing directory: /home/ansarimn/Downloads/DSA3...
+
+
+2024-09-21 20:50:48 -   -> Detected git repository: /home/ansarimn/Downloads/DSA3
+
+
+2024-09-21 20:50:48 -   -> Creating destination directory: /home/ec2-user/fedora//DSA3 on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/47)
+
+sent 1,129 bytes  received 12 bytes  456.40 bytes/sec
+total size is 146,182  speedup is 128.12
+
+2024-09-21 20:50:50 -   -> Copy completed successfully for /home/ansarimn/Downloads/DSA3
+
+
+2024-09-21 20:50:50 - Processing directory: /home/ansarimn/Downloads/DSA4...
+
+
+2024-09-21 20:50:50 -   -> Detected git repository: /home/ansarimn/Downloads/DSA4
+
+
+2024-09-21 20:50:50 -   -> Creating destination directory: /home/ec2-user/fedora//DSA4 on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/59)
+
+sent 1,309 bytes  received 12 bytes  880.67 bytes/sec
+total size is 156,493  speedup is 118.47
+
+2024-09-21 20:50:51 -   -> Copy completed successfully for /home/ansarimn/Downloads/DSA4
+
+
+2024-09-21 20:50:51 - Processing directory: /home/ansarimn/Downloads/cic...
+
+
+2024-09-21 20:50:51 -   -> Detected git repository: /home/ansarimn/Downloads/cic
+
+
+2024-09-21 20:50:51 -   -> Creating destination directory: /home/ec2-user/fedora//cic on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/21)
+
+sent 582 bytes  received 12 bytes  237.60 bytes/sec
+total size is 20,673  speedup is 34.80
+
+2024-09-21 20:50:53 -   -> Copy completed successfully for /home/ansarimn/Downloads/cic
+
+
+2024-09-21 20:50:53 - Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend...
+
+
+2024-09-21 20:50:53 -   -> Detected git repository: /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+2024-09-21 20:50:53 -   -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-intern-backend on EC2...
+
+building file list ... done
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/67)
+
+sent 1,930 bytes  received 12 bytes  1,294.67 bytes/sec
+total size is 85,412  speedup is 43.98
+
+2024-09-21 20:50:54 -   -> Copy completed successfully for /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+2024-09-21 20:50:54 - Processing directory: /home/ansarimn/Downloads/AWS Cloud...
+
+
+2024-09-21 20:50:54 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/AWS Cloud
+
+
+2024-09-21 20:50:54 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Cloud on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=14/16)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/16) 
+
+sent 409 bytes  received 13 bytes  168.80 bytes/sec
+total size is 99,210,571  speedup is 235,096.14
+
+2024-09-21 20:50:56 -   -> Copy completed successfully for /home/ansarimn/Downloads/AWS Cloud
+
+
+2024-09-21 20:50:56 - Processing directory: /home/ansarimn/Downloads/AWS Data Engineering...
+
+
+2024-09-21 20:50:56 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/AWS Data Engineering
+
+
+2024-09-21 20:50:56 -   -> Creating destination directory: /home/ec2-user/fedora//AWS Data Engineering on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=9/11)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/11)
+
+sent 296 bytes  received 13 bytes  206.00 bytes/sec
+total size is 12,935,147  speedup is 41,861.32
+
+2024-09-21 20:50:57 -   -> Copy completed successfully for /home/ansarimn/Downloads/AWS Data Engineering
+
+
+2024-09-21 20:50:57 - Processing directory: /home/ansarimn/Downloads/datasheets...
+
+
+2024-09-21 20:50:57 -   -> Not a git repository. Copying all files: /home/ansarimn/Downloads/datasheets
+
+
+2024-09-21 20:50:57 -   -> Creating destination directory: /home/ec2-user/fedora//datasheets on EC2...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=111/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=104/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=94/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=91/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=89/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=87/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=85/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=78/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=70/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=69/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=68/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=67/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=65/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=61/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=59/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=56/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=52/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=43/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=39/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=37/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=35/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=33/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=31/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=29/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=27/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=25/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=18/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=15/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=12/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=10/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=6/122)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=3/122)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/122)
+
+sent 4,026 bytes  received 45 bytes  1,628.40 bytes/sec
+total size is 96,843,853  speedup is 23,788.71
+
+2024-09-21 20:50:59 -   -> Copy completed successfully for /home/ansarimn/Downloads/datasheets
+
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+
+2024-09-21 15:21:00 - Creating additional directories on EC2...
+
+
+2024-09-21 15:21:00 - Listing contents of /home/ec2-user/fedora/...
+
+total 28884
+drwxr-xr-x. 14 ec2-user ec2-user   16384 Sep 21 15:06 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user     175 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user     153 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user     183 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user       6 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 15:06 fyle-interview-intern-backend
+drwxrwxr-x. 11 ec2-user ec2-user   16384 Sep 21 15:05 notes
+drwxrwxr-x.  3 ec2-user ec2-user     157 Sep 21 14:48 tools and projects
+
+2024-09-21 15:21:00 - Listing contents of /home/ec2-user/efs/...
+
+total 28840
+drwxr-xr-x. 14 ec2-user ec2-user    6144 Sep 21 15:06 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user    6144 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user    6144 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user    6144 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 15:06 fyle-interview-intern-backend
+drwxrwxr-x. 11 ec2-user ec2-user    6144 Sep 21 15:05 notes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:48 tools and projects
+
+2024-09-21 15:21:00 - Mounting EFS...
+
+/home/ec2-user/efs is already mounted, please run 'mount' command to verify
+
+2024-09-21 15:21:00 - EFS mounted successfully.
+
+
+2024-09-21 15:21:00 - Syncing files from /home/ec2-user/fedora/ to /home/ec2-user/efs/...
+
+sending incremental file list
+              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1037)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1039)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1055)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1055)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1065)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1075)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1075)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1080)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1080)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1083)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1010/1094)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1005/1094)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1100)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1109)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1109)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1119)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1125)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1125)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1127)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1133)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1133)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1137)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1137)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1141)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1141)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1147)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1155)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1166)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1166)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1001/1176)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1003/1180)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1013/1220)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1009/1277)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1009/1277)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1004/1282)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1002/1282)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1012/1297)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1010/1297)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1004/1297)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1015/1313)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1005/1313)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1004/1313)              0   0%    0.00kB/s    0:00:00 (xfr#0, ir-chk=1000/1319)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=971/1323)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=959/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=953/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=951/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=941/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=934/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=924/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=921/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=919/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=917/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=915/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=908/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=900/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=899/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=898/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=897/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=895/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=891/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=889/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=886/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=882/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=873/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=871/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=869/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=867/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=865/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=863/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=861/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=859/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=857/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=855/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=848/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=845/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=842/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=840/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=836/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=833/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=830/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=830/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=818/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=810/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=805/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=800/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=797/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=793/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=788/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=785/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=778/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=769/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=766/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=753/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=744/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=739/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=736/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=732/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=725/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=721/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=717/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=715/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=713/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=711/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=705/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=700/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=667/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=666/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=665/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=664/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=663/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=662/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=661/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=660/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=659/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=658/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=657/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=656/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=655/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=654/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=653/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=640/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=637/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=625/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=615/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=605/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=602/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=599/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=596/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=593/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=589/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=586/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=583/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=579/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=576/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=573/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=568/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=566/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=564/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=562/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=560/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=558/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=554/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=537/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=530/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=523/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=510/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=490/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=489/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=487/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=486/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=459/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=457/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=446/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=443/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=437/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=434/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=429/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=427/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=426/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=424/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=417/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=416/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=402/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=397/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=394/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=391/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=390/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=384/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=377/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=361/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=354/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=353/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=350/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=349/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=343/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=342/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=334/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=328/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=326/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=324/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=314/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=313/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=311/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=310/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=309/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=308/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=307/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=306/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=305/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=304/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=302/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=292/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=286/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=284/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=280/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=279/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=275/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=272/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=268/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=264/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=258/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=256/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=253/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=248/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=243/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=240/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=229/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=223/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=221/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=220/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=214/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=213/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=204/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=198/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=196/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=195/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=190/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=186/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=182/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=176/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=170/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=168/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=157/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=147/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=143/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=135/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=130/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=126/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=124/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=120/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=118/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=103/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=101/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=75/1323)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=69/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=67/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=57/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=46/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=41/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=26/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=10/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=9/1323)               0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=6/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=4/1323)              0   0%    0.00kB/s    0:00:00 (xfr#0, to-chk=0/1323)
+
+sent 41,821 bytes  received 261 bytes  28,054.67 bytes/sec
+total size is 2,006,643,990  speedup is 47,684.14
+
+2024-09-21 15:21:01 - File sync completed successfully.
+
+
+2024-09-21 15:21:01 - Final listing of contents in /home/ec2-user/fedora/...
+
+total 28884
+drwxr-xr-x. 14 ec2-user ec2-user   16384 Sep 21 15:06 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user     175 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user     153 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user     183 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user       6 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 15:06 fyle-interview-intern-backend
+drwxrwxr-x. 11 ec2-user ec2-user   16384 Sep 21 15:05 notes
+drwxrwxr-x.  3 ec2-user ec2-user     157 Sep 21 14:48 tools and projects
+
+2024-09-21 15:21:01 - Final listing of contents in /home/ec2-user/efs/...
+
+total 28840
+drwxr-xr-x. 14 ec2-user ec2-user    6144 Sep 21 15:06 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user    6144 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user    6144 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user    6144 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 15:06 fyle-interview-intern-backend
+drwxrwxr-x. 11 ec2-user ec2-user    6144 Sep 21 15:05 notes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:48 tools and projects
+
+2024-09-21 20:51:01 - Backup operation to EC2 completed successfully.
+
