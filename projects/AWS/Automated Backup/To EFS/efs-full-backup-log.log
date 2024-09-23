@@ -1,0 +1,1441 @@
+./efs-ec2-backup\ log.sh
+Enter EC2 IP:
+Creating destination directory on EC2...
+Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/Sun Tzu memes
+  -> Creating destination directory: /home/ec2-user/fedora//Sun Tzu memes
+  -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+Processing directory: /home/ansarimn/Downloads/Personal
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/Personal
+  -> Creating destination directory: /home/ec2-user/fedora//Personal
+  -> Copy complete for /home/ansarimn/Downloads/Personal
+Processing directory: /home/ansarimn/Downloads/tools and projects
+  -> Detected git repository: /home/ansarimn/Downloads/tools and projects
+  -> Creating destination directory: /home/ec2-user/fedora//tools and projects
+  -> Copy complete for /home/ansarimn/Downloads/tools and projects
+Processing directory: /home/ansarimn/Downloads/notes
+  -> Detected git repository: /home/ansarimn/Downloads/notes
+  -> Creating destination directory: /home/ec2-user/fedora//notes
+
+rsync: [sender] link_stat "/home/ansarimn/Downloads/notes/AWS cloud virtual course/Module 1 onwards.md" failed: No such file or directory (2)
+rsync: [sender] link_stat "/home/ansarimn/Downloads/notes/AWS cloud virtual course/Module 12 onwards.md" failed: No such file or directory (2)
+rsync: [sender] link_stat "/home/ansarimn/Downloads/notes/AWS cloud virtual course/Module 14 onwards.md" failed: No such file or directory (2)
+rsync: [sender] link_stat "/home/ansarimn/Downloads/notes/AWS cloud virtual course/Module 5 onwards.md" failed: No such file or directory (2)
+rsync: [sender] link_stat "/home/ansarimn/Downloads/notes/AWS cloud virtual course/Module 9 Onwards.md" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.3.0]
+  -> Copy complete for /home/ansarimn/Downloads/notes
+Processing directory: /home/ansarimn/Downloads/DSA3
+  -> Detected git repository: /home/ansarimn/Downloads/DSA3
+  -> Creating destination directory: /home/ec2-user/fedora//DSA3
+  -> Copy complete for /home/ansarimn/Downloads/DSA3
+Processing directory: /home/ansarimn/Downloads/DSA4
+  -> Detected git repository: /home/ansarimn/Downloads/DSA4
+  -> Creating destination directory: /home/ec2-user/fedora//DSA4
+  -> Copy complete for /home/ansarimn/Downloads/DSA4
+Processing directory: /home/ansarimn/Downloads/cic
+  -> Detected git repository: /home/ansarimn/Downloads/cic
+  -> Creating destination directory: /home/ec2-user/fedora//cic
+  -> Copy complete for /home/ansarimn/Downloads/cic
+Processing directory: /home/ansarimn/Downloads/fyle-interview-backend
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/fyle-interview-backend
+  -> Creating destination directory: /home/ec2-user/fedora//fyle-interview-backend
+rsync: [sender] change_dir "/home/ansarimn/Downloads/fyle-interview-backend" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.3.0]
+  -> Copy complete for /home/ansarimn/Downloads/fyle-interview-backend
+Processing directory: /home/ansarimn/Downloads/AWS Cloud
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Cloud
+  -> Creating destination directory: /home/ec2-user/fedora//AWS Cloud
+  -> Copy complete for /home/ansarimn/Downloads/AWS Cloud
+Processing directory: /home/ansarimn/Downloads/AWS Data Engineering
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/AWS Data Engineering
+  -> Creating destination directory: /home/ec2-user/fedora//AWS Data Engineering
+  -> Copy complete for /home/ansarimn/Downloads/AWS Data Engineering
+Processing directory: /home/ansarimn/Downloads/datasheets
+  -> Not a git repository, copying all files: /home/ansarimn/Downloads/datasheets
+  -> Creating destination directory: /home/ec2-user/fedora//datasheets
+  -> Copy complete for /home/ansarimn/Downloads/datasheets
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Creating additional directories on EC2...
+Listing contents of /home/ec2-user/fedora/
+total 28868
+drwxr-xr-x. 13 ec2-user ec2-user   16384 Sep 21 14:51 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user     175 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user     153 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user     183 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user       6 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x. 10 ec2-user ec2-user   16384 Sep 21 14:49 notes
+drwxrwxr-x.  3 ec2-user ec2-user     157 Sep 21 14:48 tools and projects
+Listing contents of /home/ec2-user/efs/
+total 28792
+drwxr-xr-x. 2 ec2-user ec2-user    6144 Sep 21 10:34 .
+drwx------. 5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--. 1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--. 1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+Mounting EFS...
+/home/ec2-user/efs is already mounted, please run 'mount' command to verify
+Syncing files from /home/ec2-user/fedora/ to /home/ec2-user/efs/...
+sending incremental file list
+./
+AWS Cloud/
+AWS Cloud/archive/
+AWS Cloud/archive/modue1.pdf
+AWS Cloud/archive/module10.pdf
+AWS Cloud/archive/module11.pdf
+AWS Cloud/archive/module12.pdf
+AWS Cloud/archive/module13.pdf
+AWS Cloud/archive/module14.pdf
+AWS Cloud/archive/module2.pdf
+AWS Cloud/archive/module3.pdf
+AWS Cloud/archive/module4.pdf
+AWS Cloud/archive/module5.pdf
+AWS Cloud/archive/module6.pdf
+AWS Cloud/archive/module7.pdf
+AWS Cloud/archive/module8.pdf
+AWS Cloud/archive/module9.pdf
+AWS Data Engineering/
+AWS Data Engineering/archive/
+AWS Data Engineering/archive/module1.pdf
+AWS Data Engineering/archive/module11.pdf
+AWS Data Engineering/archive/module12.pdf
+AWS Data Engineering/archive/module13.pdf
+AWS Data Engineering/archive/module14.pdf
+AWS Data Engineering/archive/module2.pdf
+AWS Data Engineering/archive/module3.pdf
+AWS Data Engineering/archive/module4.pdf
+AWS Data Engineering/archive/module5.pdf
+DSA3/
+DSA3/DSA3.kdev4
+DSA3/Makefile
+DSA3/README.md
+DSA3/btree0.md
+DSA3/build1.sh
+DSA3/git_push.sh
+DSA3/resources.md
+DSA3/bin/
+DSA3/bin/main1
+DSA3/misc/
+DSA3/misc/basic_grub_recovery/
+DSA3/misc/basic_grub_recovery/chmod.sh
+DSA3/misc/basic_grub_recovery/grub_recov.sh
+DSA3/misc/basic_grub_recovery/umount.sh
+DSA3/misc/helix/
+DSA3/misc/helix/config.toml
+DSA3/misc/helix/languages.toml
+DSA3/misc/helix/themes/
+DSA3/misc/helix/themes/theme0.toml
+DSA3/misc/setup/
+DSA3/misc/setup/arch_packages.md
+DSA3/misc/setup/bash.md
+DSA3/misc/setup/bashrc.md
+DSA3/misc/setup/git_bash.md
+DSA3/misc/setup/network.md
+DSA3/obj/
+DSA3/obj/btree0.o
+DSA3/obj/btree1.o
+DSA3/obj/inits.o
+DSA3/obj/main1.o
+DSA3/obj/print.o
+DSA3/obj/stack_elle.o
+DSA3/obj/tests.o
+DSA3/obj/tests1.o
+DSA3/src/
+DSA3/src/btree0.c
+DSA3/src/btree1.c
+DSA3/src/header0.h
+DSA3/src/inits.c
+DSA3/src/print.c
+DSA3/src/stack_elle.c
+DSA3/src/tests.c
+DSA3/src/tests1.c
+DSA3/src/main/
+DSA3/src/main/main1.c
+DSA4/
+DSA4/Makefile
+DSA4/README.md
+DSA4/build1.sh
+DSA4/git_push.sh
+DSA4/resources.md
+DSA4/.idea/
+DSA4/.idea/.gitignore
+DSA4/.idea/customTargets.xml
+DSA4/.idea/makefile.xml
+DSA4/.idea/misc.xml
+DSA4/.idea/vcs.xml
+DSA4/bin/
+DSA4/bin/main1
+DSA4/misc/
+DSA4/misc/basic_grub_recovery/
+DSA4/misc/basic_grub_recovery/chmod.sh
+DSA4/misc/basic_grub_recovery/grub_recov.sh
+DSA4/misc/basic_grub_recovery/umount.sh
+DSA4/misc/helix/
+DSA4/misc/helix/config.toml
+DSA4/misc/helix/languages.toml
+DSA4/misc/helix/themes/
+DSA4/misc/helix/themes/theme0.toml
+DSA4/misc/notes/
+DSA4/misc/notes/CRLS/
+DSA4/misc/notes/CRLS/algorithms.md
+DSA4/misc/notes/CRLS/fr1.md
+DSA4/misc/notes/PBL/
+DSA4/misc/notes/PBL/mosfet.md
+DSA4/misc/notes/PBL/options.md
+DSA4/misc/notes/PBL/overview.md
+DSA4/misc/setup/
+DSA4/misc/setup/arch_packages.md
+DSA4/misc/setup/bash.md
+DSA4/misc/setup/bashrc.md
+DSA4/misc/setup/git_bash.md
+DSA4/misc/setup/network.md
+DSA4/obj/
+DSA4/obj/inits.o
+DSA4/obj/ins0.o
+DSA4/obj/ins1.o
+DSA4/obj/ins2.o
+DSA4/obj/main1.o
+DSA4/obj/print.o
+DSA4/obj/stack_elle.o
+DSA4/obj/tests.o
+DSA4/src/
+DSA4/src/header0.h
+DSA4/src/inits.c
+DSA4/src/ins0.c
+DSA4/src/ins1.c
+DSA4/src/ins2.c
+DSA4/src/print.c
+DSA4/src/stack_elle.c
+DSA4/src/tests.c
+DSA4/src/main/
+DSA4/src/main/main1.c
+Personal/
+Personal/Attorney resume.docx
+Personal/Resume Sep 24.docx
+Personal/Resume Sep 24.pdf
+Personal/Resume template reference.docx
+Personal/Resume v2.docx
+Personal/resumev1.docx
+Personal/resumev1.pdf
+Personal/Video 1/
+Personal/Video 1/Video 1/
+Personal/Video 1/Video 1/001   Surah Al Fatiha by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/055   Surah Ar Rahman by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/090   Surah Al Balad by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/091   Surah Ash Shams by Mishary Al Afasy (iRecite)_HIGH.mp4
+Personal/Video 1/Video 1/092   Surah Al Lail by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/093   Surah Ad Dhuha by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/094   Surah Al Inshira by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/095   Surah At Tin by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/096   Surah Al Alaq by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/097   Surah Al Qadr by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/098   Surah Al Baiyina by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/099   Surah Az Zilzal by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/100   Surah Al Adiyat by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/101   Surah Al Qaria by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/102   Surah At Takathur by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/103   Surah Al Asr by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/112   Surah Al Ikhlas by Mishary Al Afasy (iRecite).mp4
+Personal/Video 1/Video 1/Aye Khuda Lyrics _ Murder 2 _ Kshitij Tarey, Saim, Mithoon _ Emraan Hashmi, Jacq_HIGH.mp4
+Personal/Video 1/Video 1/Ilahi Teri Chokhat Per _ Junaid Jamshed _ Best Naat _ SAMAA TV.mp4
+Personal/Video 1/Video 1/Kabhi Aye Nowjawan Muslim (Allama Iqbal)_HD.mp4
+Personal/Video 1/Video 1/Kabhi aye nowjawan muslim [Eng. Subtitle]- Urdu poem by Dr. Iqbal.mp4
+Personal/Video 1/Video 1/MERA DIL BADAL DE - JUNAID JAMSHED - OFFICIAL HD VIDEO - HI-TECH ISLAMIC - BEAUT_low.mp4
+Personal/Video 1/Video 1/Maher Zain - Assalamu Alayka (Arabic) _ ماهر زين - السلام عليك _ Raqqat Aina Ya .smi
+Personal/Video 1/Video 1/Maher Zain - Ya Nabi Salam Alayka (Arabic) _ ماهر زين - يا نبي سلام عليك _ Offic.mp4
+Personal/Video 1/Video 1/Maher Zain - Ya Nabi Salam Alayka (Arabic) _ ماهر زين - يا نبي سلام عليك _ Offic.smi
+Personal/Video 1/Video 1/O Merciful - English Audio Naat with Lyrics - Junaid Jamshed_HD.mp4
+Personal/Video 1/Video 1/Sami Yusuf - Who Is the Loved one(Lyrics with English translation)__Al-Mu'allim__Full-HD.mp4
+Personal/Video 1/Video 1/Tarana-e-Milli (Allama Iqbal)_HIGH.mp4
+Personal/Video 1/Video 1/Tarana_e_Milli ( Allama Iqbal ) __ English subtitle___HD.mp4
+Personal/Video 1/Video 1/صلاة الجمعة من بيت الله الحرام بمكة المكرمة - الجمعة 1441-07-12هـ __ فضيلة الشيخ_HD.mp4
+Personal/Video 1/Video/
+Personal/Video 1/Video/'I’m not a cat'- lawyer gets stuck on Zoom kitten filter during court case_Full-HD.mp4
+Personal/Video 1/Video/'I’m not a cat'- lawyer gets stuck on Zoom kitten filter during court case_Full-HD.smi
+Personal/Video 1/Video/Adagio- Habibi- My Love-Majida el Roumi (arabic with english subtitles).mp4
+Personal/Video 1/Video/Baby I Love You - Tiffany Alvord (Official Video) (Original)_HD.mp4
+Personal/Video 1/Video/Best_Bayan_on_Akhlaq___Maulana_Tariq_Jameel_2017_Latest_Bayan_in_Ulama_and_Talaba(360p).mp4
+Personal/Video 1/Video/Captain America Elevator Meme compilation _HD.mp4
+Personal/Video 1/Video/Captain America Elevator Meme compilation _HD.smi
+Personal/Video 1/Video/Cat Bites Fork, Fork Hits Cat_HD.mp4
+Personal/Video 1/Video/Cat Bites Fork, Fork Hits Cat_HD.smi
+Personal/Video 1/Video/Cat hates tail_Full-HD.mp4
+Personal/Video 1/Video/Chief Architect Raja Koduri 'No Transistor Left Behind' Hot Chips 2020 Keynote __HD.smi
+Personal/Video 1/Video/Did I say you could move_'_Full-HD.mp4
+Personal/Video 1/Video/Efficient-core - Architecture Day 2021 _ Intel Technology_HIGH.smi
+Personal/Video 1/Video/Elissa ( Asaad wahda The happiest One) _Arabic Song with English subtitle..smi
+Personal/Video 1/Video/Every Kind of Internet User_Full-HD_60fps.mp4
+Personal/Video 1/Video/Girl is heartbroken when she realizes she can't marry her dad because he's taken_Full-HD.mp4
+Personal/Video 1/Video/Girl is heartbroken when she realizes she can't marry her dad because he's taken_Full-HD.smi
+Personal/Video 1/Video/Habibi - Magida El Roumi حبيبي - ماجدة الرومي_HD.mp4
+Personal/Video 1/Video/Habibi- Majida El Roumi (ENGLISH-ARABIC TRANSLATION_low.mp4
+Personal/Video 1/Video/Half-Life SFX- Cat_HIGH.mp4
+Personal/Video 1/Video/Half-Life SFX- Cat_HIGH.smi
+Personal/Video 1/Video/Hassa_beek_song_Nancy_ajram(720p).mp4
+Personal/Video 1/Video/Homer tells Bart about the Doom Slayer_HD.mp4
+Personal/Video 1/Video/Homer tells Bart about the Doom Slayer_HD.smi
+Personal/Video 1/Video/Introducing SUA – Demonstrating AMD TressFX_Full-HD.mp4
+Personal/Video 1/Video/Majida El Roumi - Al Ayam - ماجدة الرومي - الأيام_HIGH.mp4
+Personal/Video 1/Video/Majida El Roumi- Mata Ya'ati l'Masa'a       ماجدة الرومي - متى يأتي المساء.mp4
+Personal/Video 1/Video/Majida El Roumi- Mata Ya'ati l'Masa'a       ماجدة الرومي - متى يأتي المساء_HIGH.m4v
+Personal/Video 1/Video/Majida El-Roumi - Kalimat (Modern Standard Arabic) Lyrics + Translation - ماجدة _Full-HD.mp4
+Personal/Video 1/Video/Me Going to Secks your Mom with Music_Full-HD.mp4
+Personal/Video 1/Video/Me Going to Secks your Mom with Music_Full-HD.smi
+Personal/Video 1/Video/Meet Performance-Core - Architecture Day 2021 _ Intel Technology_HD.smi
+Personal/Video 1/Video/NASA Scientists Plan To Approach Girl By 2018_HIGH.mp4
+Personal/Video 1/Video/NASA Scientists Plan To Approach Girl By 2018_HIGH.smi
+Personal/Video 1/Video/Nancy Ajram - Aah W Noss.mp4
+Personal/Video 1/Video/Nancy Ajram _ Einy Aleik - My eyes are on you _ Arabic Love Song.mp4
+Personal/Video 1/Video/ONII CHAN!!_HD.mp4
+Personal/Video 1/Video/Revenge of the Sith but Kermit is Chancellor Palpatine_Full-HD.mp4
+Personal/Video 1/Video/Revenge of the Sith but Kermit is Chancellor Palpatine_Full-HD.smi
+Personal/Video 1/Video/Sapphire Rapids - Architecture Day 2021 _ Intel Technology_HD.smi
+Personal/Video 1/Video/School Explains_HIGH.mp4
+Personal/Video 1/Video/Steve Carell's That What She Said Speech.mp4
+Personal/Video 1/Video/Steve Carell's That What She Said Speech.smi
+Personal/Video 1/Video/The Internet In A Nutshell_HIGH.mp4
+Personal/Video 1/Video/TikTok is a bizzare place..._HIGH.mp4
+Personal/Video 1/Video/Twitch Thot reaches 100_ brain capacity_Full-HD.mp4
+Personal/Video 1/Video/Twitch Thot reaches 100_ brain capacity_Full-HD.smi
+Personal/Video 1/Video/Xe-HPC and Ponte Vecchio - Architecture Day 2021 _ Intel Technology.smi
+Personal/Video 1/Video/cat licks outlet_Full-HD.mp4
+Personal/Video 1/Video/half life cat_HD.mp4
+Personal/Video 1/Video/half life cat_HD.smi
+Personal/Video 1/Video/half-life cat.mp4
+Personal/Video 1/Video/half-life cat.smi
+Personal/Video 1/Video/my love  habibi  Majida El Roumi_engl subs.mp4
+Personal/Video 1/Video/nancy ajram lamset eed [english subtitles]_HIGH.smi
+Personal/Video 1/Video/toastercat.hl _ Half Life SFX_Full-HD.mp4
+Personal/Video 1/Video/toastercat.hl _ Half Life SFX_Full-HD.smi
+Personal/Video 1/Video/حبيبى يا راجعلى  ... فريحة وامير.mp4
+Personal/Video 1/Video/فيديو كليب يا كثر - نانسي عجرم و قصي خولي - قناة احموووش.mp4
+Personal/Video 1/Video/نانسي عجرم - يا كثر مترجمة انجليزي __ Nancy Ajram - Ya Kether - English Subtitle_HIGH.mp4
+Personal/Video 1/Video/.temp/
+Personal/certificates/
+Personal/certificates/Apr-Jun 24 AICTE internship.pdf
+Personal/certificates/Cisco Cyb Ess.pdf
+Personal/certificates/Cisco Intro to Cyb.pdf
+Personal/certificates/Cisco Intro to Pt.pdf
+Personal/certificates/Cisco Net Ess.pdf
+Personal/certificates/DoT awareness.pdf
+Personal/certificates/Flipkart unstop.pdf
+Personal/certificates/GDSC Cloud Campaign.jpeg
+Personal/certificates/IIRS feb 24.pdf
+Personal/certificates/Sinhgad digilogic.jpeg
+Personal/docs/
+Personal/docs/academic/
+Personal/docs/academic/ABCID.pdf
+Personal/docs/academic/WhatsApp Image 2024-04-01 at 09.55.19.jpeg
+Personal/docs/academic/WhatsApp Image 2024-04-01 at 09.55.20.jpeg
+Personal/docs/academic/WhatsApp Image 2024-06-21 at 16.28.37.jpeg
+Personal/docs/academic/antiragging_form.pdf
+Personal/docs/pdfs/
+Personal/docs/pdfs/PAN Card.pdf
+Personal/docs/pdfs/bank1.pdf
+Personal/records/
+Personal/records/SE SEM I.pdf
+Personal/records/SE SEM II.pdf
+Personal/records/TE ADFORM.pdf
+Personal/records/invoice digital communicaations.pdf
+Personal/records/camscanner/
+Personal/records/camscanner/Embedded computers compilation.pdf
+Personal/records/camscanner/The Art of Innovation.pdf
+Personal/records/camscanner/bank1.pdf
+Personal/records/camscanner/estimates.pdf
+Personal/records/camscanner/udemy courses.pdf
+Personal/records/statements/
+Personal/records/statements/01.jpg
+Personal/records/statements/APR24.csv
+Personal/records/statements/Aug-24.xlsx
+Personal/records/statements/Jun-24.xlsx
+Personal/records/statements/MAR24.csv
+Personal/records/statements/May-24.xlsx
+Personal/records/statements/jul-24.xlsx
+Personal/records/statements/project.png
+Personal/records/statements/statement summary.ipynb
+Personal/records/statements/.ipynb_checkpoints/
+Personal/records/statements/.ipynb_checkpoints/statement summary-checkpoint.ipynb
+Sun Tzu memes/
+Sun Tzu memes/STZU33.jpg
+Sun Tzu memes/STZU34.jpg
+Sun Tzu memes/STZU35.jpg
+Sun Tzu memes/STZU36.jpg
+Sun Tzu memes/STZU37.jpg
+Sun Tzu memes/STZU38.jpg
+Sun Tzu memes/STZU39.jpg
+Sun Tzu memes/STZU40.jpg
+Sun Tzu memes/STZU41.jpg
+Sun Tzu memes/archive/
+Sun Tzu memes/archive/STZU0.jpg
+Sun Tzu memes/archive/STZU1.jpg
+Sun Tzu memes/archive/STZU10.jpg
+Sun Tzu memes/archive/STZU11.jpg
+Sun Tzu memes/archive/STZU12.jpg
+Sun Tzu memes/archive/STZU13.jpg
+Sun Tzu memes/archive/STZU14.jpg
+Sun Tzu memes/archive/STZU15.jpg
+Sun Tzu memes/archive/STZU16.jpg
+Sun Tzu memes/archive/STZU17.jpg
+Sun Tzu memes/archive/STZU18.jpg
+Sun Tzu memes/archive/STZU19.jpg
+Sun Tzu memes/archive/STZU2.jpg
+Sun Tzu memes/archive/STZU20.jpg
+Sun Tzu memes/archive/STZU21.jpg
+Sun Tzu memes/archive/STZU22.jpg
+Sun Tzu memes/archive/STZU23.jpg
+Sun Tzu memes/archive/STZU24.jpg
+Sun Tzu memes/archive/STZU25.jpg
+Sun Tzu memes/archive/STZU26.jpg
+Sun Tzu memes/archive/STZU27.jpg
+Sun Tzu memes/archive/STZU28.jpg
+Sun Tzu memes/archive/STZU29.jpg
+Sun Tzu memes/archive/STZU3.jpg
+Sun Tzu memes/archive/STZU30.jpg
+Sun Tzu memes/archive/STZU31.jpg
+Sun Tzu memes/archive/STZU32.jpg
+Sun Tzu memes/archive/STZU4.jpg
+Sun Tzu memes/archive/STZU5.jpg
+Sun Tzu memes/archive/STZU6.jpg
+Sun Tzu memes/archive/STZU7.jpg
+Sun Tzu memes/archive/STZU8.jpg
+Sun Tzu memes/archive/STZU9.jpg
+cic/
+cic/.gitignore
+cic/Dockerfile
+cic/app.yaml
+cic/gcf_help.py
+cic/gcf_main.py
+cic/gcf_testim.py
+cic/gdrive_im.py
+cic/gdrive_te.py
+cic/git_push.sh
+cic/main.py
+cic/requirements.txt
+cic/.idea/
+cic/.idea/.gitignore
+cic/.idea/cic.iml
+cic/.idea/misc.xml
+cic/.idea/modules.xml
+cic/.idea/vcs.xml
+cic/.idea/inspectionProfiles/
+cic/.idea/inspectionProfiles/Project_Default.xml
+cic/.idea/inspectionProfiles/profiles_settings.xml
+datasheets/
+datasheets/HA5002.pdf
+datasheets/IQDH29NE.pdf
+datasheets/TMUX9616.pdf
+datasheets/[INR21700-48X] DATASHEET.pdf
+datasheets/lm675.pdf
+datasheets/opa541.pdf
+datasheets/designs/
+datasheets/designs/VESC_6.5.pdf
+datasheets/designs/VESC_6_mk5.pdf
+datasheets/designs/app notes.md
+datasheets/designs/forum sch 1 phase 1.gif
+datasheets/designs/forum sch 1 phase 2.gif
+datasheets/designs/forum sch 1 phase 3.gif
+datasheets/designs/app notes/
+datasheets/designs/app notes/ADI Large Current Source with High\#012Accuracy.pdf
+datasheets/designs/app notes/IR High Current Buffer.pdf
+datasheets/designs/app notes/IR high side gate driver application notes.pdf
+datasheets/designs/app notes/Infineon continuous current rating.pdf
+datasheets/designs/app notes/Infineon gate driver app note.pdf
+datasheets/designs/app notes/Ti Analysis of Improved Howland Current Pump.pdf
+datasheets/designs/app notes/Ti Cell Balancing MOSFET.pdf
+datasheets/designs/app notes/Ti Improved Howland current pump.pdf
+datasheets/designs/app notes/Ti mosfet Gate Driver app note.pdf
+datasheets/designs/app notes/BLDC motor/
+datasheets/designs/app notes/BLDC motor/BLDC motor commutation 2.pdf
+datasheets/designs/app notes/BLDC motor/BLDC motor commutation.pdf
+datasheets/designs/app notes/BLDC motor/COMPARISON COMMUTATION METHODS FOR PM BLDC motor.pdf
+datasheets/digital/
+datasheets/digital/buffers/
+datasheets/digital/buffers/SN74AC541.pdf
+datasheets/digital/buffers/SNx4HC126.pdf
+datasheets/digital/isolator/
+datasheets/digital/isolator/ISO774x.pdf
+datasheets/digital/isolator/ISO776x.pdf
+datasheets/drivers/
+datasheets/drivers/1 phase/
+datasheets/drivers/1 phase/2EDL803xG3C.pdf
+datasheets/drivers/1 phase/HIP2100.pdf
+datasheets/drivers/1 phase/HIP2210.pdf
+datasheets/drivers/1 phase/IR2104.pdf
+datasheets/drivers/1 phase/IRS2183.pdf
+datasheets/drivers/1 phase/MC34151.PDF
+datasheets/drivers/1 phase/MC34152.PDF
+datasheets/drivers/1 phase/UCC2732x.pdf
+datasheets/drivers/2 phase advanced/
+datasheets/drivers/2 phase advanced/LM5045.pdf
+datasheets/drivers/2 phase/
+datasheets/drivers/2 phase/MD1820.pdf
+datasheets/drivers/3 phase advanced/
+datasheets/drivers/3 phase advanced/MCF8329A.pdf
+datasheets/drivers/3 phase/
+datasheets/drivers/3 phase/DRV8300U.pdf
+datasheets/drivers/3 phase/DRV8301.pdf
+datasheets/drivers/IR series/
+datasheets/drivers/IR series/IR2010.pdf
+datasheets/drivers/IR series/IR2104.pdf
+datasheets/drivers/IR series/IR2110.pdf
+datasheets/drivers/IR series/IR2153D.pdf
+datasheets/drivers/isolated 1 phase/
+datasheets/drivers/isolated 1 phase/UCC2133x.pdf
+datasheets/drivers/isolated 1 phase/UCC21530.pdf
+datasheets/mosfets/
+datasheets/mosfets/high speed/
+datasheets/mosfets/high speed/2n7002.pdf
+datasheets/mosfets/high speed/BSS84P.pdf
+datasheets/mosfets/high speed/IRF9389.pdf
+datasheets/mosfets/high speed/Si7386DP.pdf
+datasheets/mosfets/high-performance/
+datasheets/mosfets/high-performance/100V/
+datasheets/mosfets/high-performance/100V/IPP026N10NF2S.pdf
+datasheets/mosfets/high-performance/100V/IPP129N10NF2S.pdf
+datasheets/mosfets/high-performance/1200V/
+datasheets/mosfets/high-performance/1200V/AIMZH120R010.pdf
+datasheets/mosfets/high-performance/1200V/AIMZH120R160.pdf
+datasheets/mosfets/high-performance/150V/
+datasheets/mosfets/high-performance/150V/IPP051N15N5.pdf
+datasheets/mosfets/high-performance/150V/IPP200N15N3.pdf
+datasheets/mosfets/high-performance/2000V/
+datasheets/mosfets/high-performance/2000V/IMYH200R012M1H.pdf
+datasheets/mosfets/high-performance/2000V/IMYH200R100M1H.pdf
+datasheets/mosfets/high-performance/200V/
+datasheets/mosfets/high-performance/200V/IPP069N20NM6.pdf
+datasheets/mosfets/high-performance/200V/IPP339N20NM6.pdf
+datasheets/mosfets/high-performance/250V/
+datasheets/mosfets/high-performance/250V/IPP200N25N3.pdf
+datasheets/mosfets/high-performance/250V/IPP600N25.pdf
+datasheets/mosfets/high-performance/40V/
+datasheets/mosfets/high-performance/40V/IPP011N04NF2S.pdf
+datasheets/mosfets/high-performance/40V/IPP015N04NF2S.pdf
+datasheets/mosfets/high-performance/800V/
+datasheets/mosfets/high-performance/800V/IPW80R290.pdf
+datasheets/mosfets/high-performance/800V/SPP08N80C3.pdf
+datasheets/mosfets/high-performance/80V/
+datasheets/mosfets/high-performance/80V/IPP016N08NF2S.pdf
+datasheets/mosfets/high-performance/80V/IPP055N08NF2S.pdf
+datasheets/mosfets/standard/
+datasheets/mosfets/standard/IRFZ24NPbF.pdf
+datasheets/mosfets/standard/100V/
+datasheets/mosfets/standard/100V/IRF100P218.pdf
+datasheets/mosfets/standard/100V/IRF7769L1TRPbF.pdf
+datasheets/mosfets/standard/100V/IRFI4212H-117P.pdf
+datasheets/mosfets/standard/150V/
+datasheets/mosfets/standard/150V/IRF150P220.pdf
+datasheets/mosfets/standard/150V/IRF7779L2PbF.pdf
+datasheets/mosfets/standard/150V/IRFB4019.pdf
+datasheets/mosfets/standard/200V/
+datasheets/mosfets/standard/200V/IRF200P222.pdf
+datasheets/mosfets/standard/200V/IRFB4020PbF.pdf
+datasheets/mosfets/standard/250V/
+datasheets/mosfets/standard/250V/IRF250P224.pdf
+datasheets/mosfets/standard/250V/IRF250P225.pdf
+datasheets/mosfets/standard/250V/IRFB4332PbF.pdf
+datasheets/mosfets/standard/250V/IRFP4768PbF.pdf
+datasheets/mosfets/standard/40V/
+datasheets/mosfets/standard/40V/IRF40B207.pdf
+datasheets/mosfets/standard/40V/IRFP7430PbF.pdf
+datasheets/mosfets/standard/40V/IRL7472L1.pdf
+datasheets/mosfets/standard/80V/
+datasheets/mosfets/standard/80V/IRFP4368PbF.pdf
+datasheets/mosfets/standard/80V/IRFU3607PbF.pdf
+datasheets/mosfets/standard/80V/NTMFS6H801N.pdf
+fyle-interview-backend/
+notes/
+notes/README.md
+notes/git_push.sh
+notes/papers.md
+notes/resources.md
+notes/.obsidian/
+notes/.obsidian/app.json
+notes/.obsidian/appearance.json
+notes/.obsidian/community-plugins.json
+notes/.obsidian/core-plugins-migration.json
+notes/.obsidian/core-plugins.json
+notes/.obsidian/hotkeys.json
+notes/.obsidian/workspace.json
+notes/.obsidian/plugins/
+notes/.obsidian/plugins/better-word-count/
+notes/.obsidian/plugins/better-word-count/main.js
+notes/.obsidian/plugins/better-word-count/manifest.json
+notes/.obsidian/plugins/better-word-count/styles.css
+notes/.obsidian/plugins/number-headings-obsidian/
+notes/.obsidian/plugins/number-headings-obsidian/data.json
+notes/.obsidian/plugins/number-headings-obsidian/main.js
+notes/.obsidian/plugins/number-headings-obsidian/manifest.json
+notes/.obsidian/plugins/number-headings-obsidian/styles.css
+notes/.obsidian/plugins/obsidian-completr/
+notes/.obsidian/plugins/obsidian-completr/callout_suggestions.json
+notes/.obsidian/plugins/obsidian-completr/data.json
+notes/.obsidian/plugins/obsidian-completr/latex_commands.json
+notes/.obsidian/plugins/obsidian-completr/main.js
+notes/.obsidian/plugins/obsidian-completr/manifest.json
+notes/.obsidian/plugins/obsidian-completr/scanned_words.txt
+notes/.obsidian/plugins/obsidian-completr/styles.css
+notes/.obsidian/plugins/obsidian-markdown-formatting-assistant-plugin/
+notes/.obsidian/plugins/obsidian-markdown-formatting-assistant-plugin/data.json
+notes/.obsidian/plugins/obsidian-markdown-formatting-assistant-plugin/main.js
+notes/.obsidian/plugins/obsidian-markdown-formatting-assistant-plugin/manifest.json
+notes/.obsidian/plugins/obsidian-markdown-formatting-assistant-plugin/styles.css
+notes/.obsidian/plugins/sidebar-resizer/
+notes/.obsidian/plugins/sidebar-resizer/data.json
+notes/.obsidian/plugins/sidebar-resizer/main.js
+notes/.obsidian/plugins/sidebar-resizer/manifest.json
+notes/.obsidian/plugins/sidebar-resizer/styles.css
+notes/.obsidian/themes/
+notes/.obsidian/themes/Solarized/
+notes/.obsidian/themes/Solarized/manifest.json
+notes/.obsidian/themes/Solarized/theme.css
+notes/.obsidian/themes/Vauxhall/
+notes/.obsidian/themes/Vauxhall/manifest.json
+notes/.obsidian/themes/Vauxhall/theme.css
+notes/AWS data engineering course/
+notes/AWS data engineering course/All modules, flash, 1.html
+notes/AWS data engineering course/All modules, flash, 5.html
+notes/AWS data engineering course/All modules, flash, 6.html
+notes/AWS data engineering course/All modules, flash, 7.html
+notes/AWS data engineering course/All modules, flash, 8.html
+notes/AWS data engineering course/All modules, flash, 9.html
+notes/AWS data engineering course/All modules, pro 3.html
+notes/AWS data engineering course/All modules, pro, 1.html
+notes/AWS data engineering course/All modules, pro, 3.html
+notes/AWS data engineering course/All modules, pro, 4.html
+notes/AWS data engineering course/Module 11 to 14.md
+notes/AWS data engineering course/Module 2 to 5.md
+notes/AWS data engineering course/Module 6 to 10.md
+notes/AWS data engineering course/Modules 1 to 5.html
+notes/AWS data engineering course/Modules 11 to 14.html
+notes/AWS data engineering course/Modules 6 to 10.html
+notes/AWS data engineering course/all modules, pro 4.html
+notes/AWS data engineering course/merge all.md
+notes/AWS data engineering course/All modules, flash, 1_files/
+notes/AWS data engineering course/All modules, flash, 1_files/marked.min.js
+notes/AWS data engineering course/All modules, flash, 5_files/
+notes/AWS data engineering course/All modules, flash, 5_files/marked.min.js
+notes/AWS data engineering course/All modules, flash, 6_files/
+notes/AWS data engineering course/All modules, flash, 6_files/marked.min.js
+notes/AWS data engineering course/All modules, flash, 7_files/
+notes/AWS data engineering course/All modules, flash, 7_files/marked.min.js
+notes/AWS data engineering course/All modules, flash, 8_files/
+notes/AWS data engineering course/All modules, flash, 8_files/marked.min.js
+notes/AWS data engineering course/All modules, flash, 9_files/
+notes/AWS data engineering course/All modules, flash, 9_files/marked.min.js
+notes/AWS data engineering course/All modules, pro 3_files/
+notes/AWS data engineering course/All modules, pro 3_files/marked.min.js
+notes/AWS data engineering course/All modules, pro, 1_files/
+notes/AWS data engineering course/All modules, pro, 1_files/marked.min.js
+notes/AWS data engineering course/All modules, pro, 3_files/
+notes/AWS data engineering course/All modules, pro, 3_files/marked.min.js
+notes/AWS data engineering course/All modules, pro, 4_files/
+notes/AWS data engineering course/All modules, pro, 4_files/marked.min.js
+notes/AWS data engineering course/Modules 1 to 5_files/
+notes/AWS data engineering course/Modules 1 to 5_files/marked.min.js
+notes/AWS data engineering course/Modules 11 to 14_files/
+notes/AWS data engineering course/Modules 11 to 14_files/marked.min.js
+notes/AWS data engineering course/Modules 6 to 10_files/
+notes/AWS data engineering course/Modules 6 to 10_files/marked.min.js
+notes/AWS data engineering course/all modules, pro 4_files/
+notes/AWS data engineering course/all modules, pro 4_files/marked.min.js
+notes/AWS data engineering course/segments/
+notes/AWS data engineering course/segments/Module 10.md
+notes/AWS data engineering course/segments/Module 11.md
+notes/AWS data engineering course/segments/Module 12.md
+notes/AWS data engineering course/segments/Module 13.md
+notes/AWS data engineering course/segments/Module 14.md
+notes/AWS data engineering course/segments/Module 2.md
+notes/AWS data engineering course/segments/Module 3.md
+notes/AWS data engineering course/segments/Module 4.md
+notes/AWS data engineering course/segments/Module 5.md
+notes/AWS data engineering course/segments/Module 6.md
+notes/AWS data engineering course/segments/Module 7.md
+notes/AWS data engineering course/segments/Module 8.md
+notes/AWS data engineering course/segments/Module 9.md
+notes/CRLS/
+notes/CRLS/algorithms.md
+notes/CRLS/from 1.md
+notes/CRLS/from 6.md
+notes/Obsidian Vault/
+notes/Obsidian Vault/bb.sh
+notes/Obsidian Vault/git_push.sh
+notes/Obsidian Vault/init.txt
+notes/Obsidian Vault/scratch0.md
+notes/Obsidian Vault/.obsidian/
+notes/Obsidian Vault/.obsidian/app.json
+notes/Obsidian Vault/.obsidian/appearance.json
+notes/Obsidian Vault/.obsidian/community-plugins.json
+notes/Obsidian Vault/.obsidian/core-plugins-migration.json
+notes/Obsidian Vault/.obsidian/core-plugins.json
+notes/Obsidian Vault/.obsidian/daily-notes.json
+notes/Obsidian Vault/.obsidian/hotkeys.json
+notes/Obsidian Vault/.obsidian/workspace.json
+notes/Obsidian Vault/.obsidian/plugins/
+notes/Obsidian Vault/.obsidian/plugins/better-word-count/
+notes/Obsidian Vault/.obsidian/plugins/better-word-count/main.js
+notes/Obsidian Vault/.obsidian/plugins/better-word-count/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/better-word-count/styles.css
+notes/Obsidian Vault/.obsidian/plugins/calendar/
+notes/Obsidian Vault/.obsidian/plugins/calendar/data.json
+notes/Obsidian Vault/.obsidian/plugins/calendar/main.js
+notes/Obsidian Vault/.obsidian/plugins/calendar/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/cm-editor-syntax-highlight-obsidian/
+notes/Obsidian Vault/.obsidian/plugins/cm-editor-syntax-highlight-obsidian/main.js
+notes/Obsidian Vault/.obsidian/plugins/cm-editor-syntax-highlight-obsidian/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/cm-editor-syntax-highlight-obsidian/styles.css
+notes/Obsidian Vault/.obsidian/plugins/dataview/
+notes/Obsidian Vault/.obsidian/plugins/dataview/main.js
+notes/Obsidian Vault/.obsidian/plugins/dataview/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/dataview/styles.css
+notes/Obsidian Vault/.obsidian/plugins/fantasy-calendar/
+notes/Obsidian Vault/.obsidian/plugins/fantasy-calendar/data.json
+notes/Obsidian Vault/.obsidian/plugins/fantasy-calendar/main.js
+notes/Obsidian Vault/.obsidian/plugins/fantasy-calendar/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/fantasy-calendar/styles.css
+notes/Obsidian Vault/.obsidian/plugins/obsidian-admonition/
+notes/Obsidian Vault/.obsidian/plugins/obsidian-admonition/main.js
+notes/Obsidian Vault/.obsidian/plugins/obsidian-admonition/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-admonition/styles.css
+notes/Obsidian Vault/.obsidian/plugins/obsidian-emoji-toolbar/
+notes/Obsidian Vault/.obsidian/plugins/obsidian-emoji-toolbar/main.js
+notes/Obsidian Vault/.obsidian/plugins/obsidian-emoji-toolbar/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-emoji-toolbar/styles.css
+notes/Obsidian Vault/.obsidian/plugins/obsidian-outliner/
+notes/Obsidian Vault/.obsidian/plugins/obsidian-outliner/data.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-outliner/main.js
+notes/Obsidian Vault/.obsidian/plugins/obsidian-outliner/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-outliner/styles.css
+notes/Obsidian Vault/.obsidian/plugins/obsidian-pluck/
+notes/Obsidian Vault/.obsidian/plugins/obsidian-pluck/main.js
+notes/Obsidian Vault/.obsidian/plugins/obsidian-pluck/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-pluck/styles.css
+notes/Obsidian Vault/.obsidian/plugins/obsidian-tasks-plugin/
+notes/Obsidian Vault/.obsidian/plugins/obsidian-tasks-plugin/main.js
+notes/Obsidian Vault/.obsidian/plugins/obsidian-tasks-plugin/manifest.json
+notes/Obsidian Vault/.obsidian/plugins/obsidian-tasks-plugin/styles.css
+notes/Obsidian Vault/.obsidian/themes/
+notes/Obsidian Vault/.obsidian/themes/Aura Dark/
+notes/Obsidian Vault/.obsidian/themes/Aura Dark/manifest.json
+notes/Obsidian Vault/.obsidian/themes/Aura Dark/theme.css
+notes/Obsidian Vault/.obsidian/themes/Blackbird/
+notes/Obsidian Vault/.obsidian/themes/Blackbird/manifest.json
+notes/Obsidian Vault/.obsidian/themes/Blackbird/theme.css
+notes/Obsidian Vault/.obsidian/themes/Cybertron/
+notes/Obsidian Vault/.obsidian/themes/Cybertron/manifest.json
+notes/Obsidian Vault/.obsidian/themes/Cybertron/theme.css
+notes/Obsidian Vault/.obsidian/themes/Dark Moss/
+notes/Obsidian Vault/.obsidian/themes/Dark Moss/manifest.json
+notes/Obsidian Vault/.obsidian/themes/Dark Moss/theme.css
+notes/Obsidian Vault/.obsidian/themes/Obsidianite/
+notes/Obsidian Vault/.obsidian/themes/Obsidianite/manifest.json
+notes/Obsidian Vault/.obsidian/themes/Obsidianite/theme.css
+notes/Obsidian Vault/Books/
+notes/Obsidian Vault/Books/scratch1 innovator2.md
+notes/Obsidian Vault/Books/scratch2 (48 laws 2 original).md
+notes/Obsidian Vault/Books/scratch3.md
+notes/Obsidian Vault/Books/Completed/
+notes/Obsidian Vault/Books/Completed/$$48 Laws of Power 1.md
+notes/Obsidian Vault/Books/Completed/$$Agile Way.md
+notes/Obsidian Vault/Books/Completed/$$Anti-Procrastination Hacks.md
+notes/Obsidian Vault/Books/Completed/$$Art of Seduction 1.md
+notes/Obsidian Vault/Books/Completed/$$Art of Seduction 2.md
+notes/Obsidian Vault/Books/Completed/$$Atomic Habits.md
+notes/Obsidian Vault/Books/Completed/$$Attached.md
+notes/Obsidian Vault/Books/Completed/$$Clayton Christensen Talk.md
+notes/Obsidian Vault/Books/Completed/$$Emotional intelligence.md
+notes/Obsidian Vault/Books/Completed/$$Execution.md
+notes/Obsidian Vault/Books/Completed/$$Extreme Ownership.md
+notes/Obsidian Vault/Books/Completed/$$High Performance Habits.md
+notes/Obsidian Vault/Books/Completed/$$Innovator's Dilemma 1.md
+notes/Obsidian Vault/Books/Completed/$$Innovator's Dilemma.md
+notes/Obsidian Vault/Books/Completed/$$Regret Minimization Framework.md
+notes/Obsidian Vault/Books/Completed/$$men are from mars.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Let Chaos Reign.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Prologue.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Rein in Chaos.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Signal or Noise.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Something has changed; the 10X change.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/The Morphing of the Computer Industry.md
+notes/Obsidian Vault/Books/Completed/$$Only the Paranoid Survive/Why not do it ourselves.md
+notes/Obsidian Vault/C/
+notes/Obsidian Vault/C/Make_cookbook.md
+notes/Obsidian Vault/C/Makefile.md
+notes/Obsidian Vault/C/Makefile_template.md
+notes/Obsidian Vault/C/Untitled.md
+notes/Obsidian Vault/C/Vim Motions.md
+notes/Obsidian Vault/C/resources.md
+notes/Obsidian Vault/C/Memory in C/
+notes/Obsidian Vault/C/Memory in C/All programs use virtual memory.md
+notes/Obsidian Vault/C/Memory in C/Cost of free.md
+notes/Obsidian Vault/C/Memory in C/Going berserk with malloc.md
+notes/Obsidian Vault/C/Memory in C/Information in memory has no type.md
+notes/Obsidian Vault/C/Memory in C/Malloc, Calloc, Realloc.md
+notes/Obsidian Vault/C/Memory in C/Memory-mapped File IO.md
+notes/Obsidian Vault/C/Memory in C/Valgrind.md
+notes/Obsidian Vault/C/Memory in C/getrusage ().md
+notes/Obsidian Vault/C/Memory in C/memcpy (), memset ().md
+notes/Obsidian Vault/C/Memory in C/mmap ().md
+notes/Obsidian Vault/C/Memory in C/strcpy () vs memcpy ().md
+notes/Obsidian Vault/C/Memory in C/void pointer.md
+notes/Obsidian Vault/C/Memory in C/volatile.md
+notes/Obsidian Vault/Daily notes/
+notes/Obsidian Vault/Daily notes/$$2023-10-15.md
+notes/Obsidian Vault/Daily notes/2023-11-15.md
+notes/Obsidian Vault/Daily notes/2023-11-22.md
+notes/Obsidian Vault/Daily notes/2023-11-24.md
+notes/Obsidian Vault/Daily notes/2023-11-25.md
+notes/Obsidian Vault/Daily notes/2023-11-27.md
+notes/Obsidian Vault/Daily notes/2023-11-28.md
+notes/Obsidian Vault/Daily notes/2023-12-02.md
+notes/Obsidian Vault/Daily notes/2023-12-03.md
+notes/Obsidian Vault/Daily notes/2023-12-05.md
+notes/Obsidian Vault/Daily notes/2023-12-19.md
+notes/Obsidian Vault/Daily notes/2024-01-04.md
+notes/Obsidian Vault/Daily notes/2024-01-05.md
+notes/Obsidian Vault/Daily notes/2024-01-06.md
+notes/Obsidian Vault/Daily notes/2024-03-10.md
+notes/Obsidian Vault/Daily notes/2024-03-27.md
+notes/Obsidian Vault/Daily notes/2024-05-01.md
+notes/Obsidian Vault/Daily notes/2024-05-02F.md
+notes/Obsidian Vault/Daily notes/2024-05-02M.md
+notes/Obsidian Vault/Daily notes/Record.md
+notes/Obsidian Vault/Reference/
+notes/Obsidian Vault/Reference/Youtube/
+notes/Obsidian Vault/Reference/Youtube/$$Superior man Miyamoto Musashi.md
+notes/Obsidian Vault/Reference/Youtube/$$Ultralearning.md
+notes/Obsidian Vault/attachments/
+notes/Obsidian Vault/attachments/images/
+notes/Obsidian Vault/attachments/images/2023-10-14 Reddit.md
+notes/Obsidian Vault/attachments/images/Pasted image 20231014134952.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014135045.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014135313.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014135655.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014135757.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014135911.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014143005.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014143031.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014143053.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014143642.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014143913.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014144641.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014144702.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231014144711.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233652.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233736.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233758.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233820.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233929.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108233953.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234008.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234052.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234109.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234136.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234411.png
+notes/Obsidian Vault/attachments/images/Pasted image 20231108234420.png
+notes/Obsidian Vault/embedded/
+notes/Obsidian Vault/embedded/nrf_pic.md
+notes/Obsidian Vault/embedded/microesque_pic/
+notes/Obsidian Vault/embedded/microesque_pic/bin_arithmetic.md
+notes/Obsidian Vault/embedded/microesque_pic/ext_itr.md
+notes/Obsidian Vault/embedded/microesque_pic/interrupt.md
+notes/Obsidian Vault/embedded/microesque_pic/ints.md
+notes/Obsidian Vault/embedded/microesque_pic/itr.md
+notes/Obsidian Vault/embedded/microesque_pic/osc.md
+notes/Obsidian Vault/embedded/microesque_pic/ports.md
+notes/Obsidian Vault/embedded/microesque_pic/prerequisite.md
+notes/Obsidian Vault/embedded/microesque_pic/rationale_for_uctrller.md
+notes/Obsidian Vault/embedded/microesque_pic/safety.md
+notes/Obsidian Vault/embedded/microesque_pic/uctrller.md
+notes/Obsidian Vault/misc/
+notes/Obsidian Vault/misc/GRAPH1/
+notes/Obsidian Vault/misc/GRAPH1/Common problems and associated algorithms.md
+notes/Obsidian Vault/misc/GRAPH1/Some definitions.md
+notes/Obsidian Vault/misc/GRAPH1/Storage, represntation.md
+notes/Obsidian Vault/misc/GRAPH1/Types of graphs.md
+notes/Obsidian Vault/misc/GRAPH1/Types of trees.md
+notes/Obsidian Vault/misc/GRAPH1/Traversal/
+notes/Obsidian Vault/misc/GRAPH1/Traversal/Depth-first search DFS.md
+notes/Obsidian Vault/misc/GRAPH1/Traversal/Lowest common ancestor (LCA).md
+notes/Obsidian Vault/misc/GRAPH1/Traversal/breadth-first search BFS.md
+notes/Obsidian Vault/misc/Racket/
+notes/Obsidian Vault/misc/Racket/Data Structures.md
+notes/Obsidian Vault/misc/Racket/Hashtable guide.md
+notes/Obsidian Vault/misc/Racket/Vector Reference.md
+notes/Obsidian Vault/misc/Racket/Vector guide.md
+notes/Obsidian Vault/misc/Racket/hashtable reference.md
+notes/Obsidian Vault/misc/Strategy/
+notes/Obsidian Vault/misc/Strategy/Optimize efficiency of studying.md
+notes/Obsidian Vault/misc/Strategy/GATE1/
+notes/Obsidian Vault/misc/Strategy/GATE1/Syllabus/
+notes/Obsidian Vault/misc/Strategy/GATE1/Syllabus/Strategy for syllabus.md
+notes/Obsidian Vault/misc/Strategy/GATE1/Syllabus/Syllabus.md
+notes/PBL/
+notes/PBL/mosfet.md
+notes/PBL/mosfet_cheap.md
+notes/PBL/mosfet_shortlisted_STD.md
+notes/PBL/mosfet_shortlisted_X.md
+notes/PBL/options.md
+notes/PBL/overview.md
+notes/PBL/wireless.md
+notes/embedded/
+notes/embedded/Introduction.md
+notes/system/
+notes/system/arch_packages.md
+notes/system/bash.md
+notes/system/bashrc.md
+notes/system/dnf_packages.txt
+notes/system/gcp.md
+notes/system/git_bash.md
+notes/system/install_dnf.md
+notes/system/jupyter_scilab.md
+notes/system/network.md
+notes/system/backup/
+notes/system/backup/backup.sh
+notes/system/backup/exclude_path.txt
+notes/system/backup/include_path.txt
+notes/system/backup/restic.md
+notes/system/basic_grub_recovery/
+notes/system/basic_grub_recovery/chmod.sh
+notes/system/basic_grub_recovery/grub_recov.sh
+notes/system/basic_grub_recovery/umount.sh
+notes/system/helix/
+notes/system/helix/config.toml
+notes/system/helix/languages.toml
+notes/system/helix/themes/
+notes/system/helix/themes/theme0.toml
+notes/web dev/
+notes/web dev/Compiling images.md
+notes/web dev/basic_setup.md
+notes/web dev/flask advanced.md
+notes/web dev/flask_basics.md
+notes/web dev/frontend.md
+notes/web dev/test.md
+tools and projects/
+tools and projects/.gitignore
+tools and projects/README.md
+tools and projects/Unit 1 Program NN with tf.ipynb
+tools and projects/git_backup.md
+tools and projects/git_backup.py
+tools and projects/git_push.sh
+tools and projects/projects/
+tools and projects/projects/Bank statement analyse/
+tools and projects/projects/Bank statement analyse/3 to 4 2024 v2.csv
+tools and projects/projects/Bank statement analyse/DA word file.docx
+tools and projects/projects/Bank statement analyse/Financial snapshot unveiling your bank journey.ipynb
+tools and projects/projects/Bank statement analyse/french_flag v0.jpg
+tools and projects/projects/Bank statement analyse/palettte_cyan_pink.jpg
+tools and projects/projects/Bank statement analyse/snap.jpg
+tools and projects/projects/Bank statement analyse/.ipynb_checkpoints/
+tools and projects/projects/Bank statement analyse/.ipynb_checkpoints/Financial snapshot unveiling your bank journey-checkpoint.ipynb
+tools and projects/projects/color detection on esp32/
+tools and projects/projects/color detection on esp32/esp32 web server v1.ino
+tools and projects/projects/color detection on esp32/opencv color detection.ipynb
+tools and projects/projects/color detection on esp32/.ipynb_checkpoints/
+tools and projects/projects/color detection on esp32/.ipynb_checkpoints/opencv color detection-checkpoint.ipynb
+tools and projects/projects/color palette/
+tools and projects/projects/color palette/4 palettes original.png
+tools and projects/projects/color palette/4 palettes.png
+tools and projects/projects/color palette/color palette.ipynb
+tools and projects/projects/color palette/french_flag v0.jpg
+tools and projects/projects/color palette/palettte_cyan_pink.jpg
+tools and projects/projects/color palette/.ipynb_checkpoints/
+tools and projects/projects/color palette/.ipynb_checkpoints/color palette-checkpoint.ipynb
+tools and projects/projects/compile image/
+tools and projects/projects/compile image/README.md
+tools and projects/projects/compile image/compile_image.py
+tools and projects/projects/compile image/gdrive_im.py
+tools and projects/projects/compile image/gdrive_te.py
+tools and projects/projects/compile image/output.md
+tools and projects/projects/compile image/requirements.txt
+tools and projects/projects/compile image/.idea/
+tools and projects/projects/compile image/.idea/.gitignore
+tools and projects/projects/compile image/.idea/compile image.iml
+tools and projects/projects/compile image/.idea/misc.xml
+tools and projects/projects/compile image/.idea/modules.xml
+tools and projects/projects/compile image/.idea/vcs.xml
+tools and projects/projects/compile image/.idea/inspectionProfiles/
+tools and projects/projects/compile image/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/compile image/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/compile image/templates/
+tools and projects/projects/compile image/templates/index_im.html
+tools and projects/projects/compile image/templates/results_im.html
+tools and projects/projects/esp32/
+tools and projects/projects/esp32/esp32 web server ref.c
+tools and projects/projects/esp32/esp32 web server v0.ino
+tools and projects/projects/esp32/motor_control.ino
+tools and projects/projects/esp32/DHT/
+tools and projects/projects/esp32/DHT/DHT.ino
+tools and projects/projects/esp32/addon/
+tools and projects/projects/esp32/addon/blank/
+tools and projects/projects/esp32/addon/blank/blank.ino
+tools and projects/projects/esp32/addon/blank2/
+tools and projects/projects/esp32/addon/blank2/blank2.ino
+tools and projects/projects/esp32/iot_platform/
+tools and projects/projects/esp32/iot_platform/iot_platform.ino
+tools and projects/projects/esp32/kh_gps/
+tools and projects/projects/esp32/kh_gps/kh_gps.ino
+tools and projects/projects/esp32/motion_buzzer/
+tools and projects/projects/esp32/motion_buzzer/motion_buzzer.ino
+tools and projects/projects/esp32/motor_push_button/
+tools and projects/projects/esp32/motor_push_button/motor_push_button.ino
+tools and projects/projects/esp32/servo/
+tools and projects/projects/esp32/servo/servo.ino
+tools and projects/projects/extract title of webpage/
+tools and projects/projects/extract title of webpage/reddit_title.py
+tools and projects/projects/extract title of webpage/title.py
+tools and projects/projects/flask login app/
+tools and projects/projects/flask login app/__init__.py
+tools and projects/projects/flask login app/auth.py
+tools and projects/projects/flask login app/main.py
+tools and projects/projects/flask login app/server_output.txt
+tools and projects/projects/flask login app/views.py
+tools and projects/projects/flask login app/.idea/
+tools and projects/projects/flask login app/.idea/.gitignore
+tools and projects/projects/flask login app/.idea/misc.xml
+tools and projects/projects/flask login app/.idea/modules.xml
+tools and projects/projects/flask login app/.idea/py.iml
+tools and projects/projects/flask login app/.idea/vcs.xml
+tools and projects/projects/flask login app/.idea/inspectionProfiles/
+tools and projects/projects/flask login app/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/flask login app/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/flask login app/__pycache__/
+tools and projects/projects/flask login app/__pycache__/__init__.cpython-311.pyc
+tools and projects/projects/flask login app/__pycache__/auth.cpython-311.pyc
+tools and projects/projects/flask login app/__pycache__/main.cpython-311.pyc
+tools and projects/projects/flask login app/__pycache__/views.cpython-311.pyc
+tools and projects/projects/flask login app/instance/
+tools and projects/projects/flask login app/instance/database.db
+tools and projects/projects/flask login app/models/
+tools and projects/projects/flask login app/models/autoschema.py
+tools and projects/projects/flask login app/models/notes.py
+tools and projects/projects/flask login app/models/users.py
+tools and projects/projects/flask login app/models/__pycache__/
+tools and projects/projects/flask login app/models/__pycache__/autoschema.cpython-311.pyc
+tools and projects/projects/flask login app/models/__pycache__/notes.cpython-311.pyc
+tools and projects/projects/flask login app/models/__pycache__/users.cpython-311.pyc
+tools and projects/projects/flask login app/templates/
+tools and projects/projects/flask login app/templates/base.html
+tools and projects/projects/flask login app/templates/home.html
+tools and projects/projects/flask login app/templates/login.html
+tools and projects/projects/flask login app/templates/signup.html
+tools and projects/projects/google cloud ai suite/
+tools and projects/projects/google cloud ai suite/GCP Databases comparison brief.png
+tools and projects/projects/google cloud ai suite/requirements.txt
+tools and projects/projects/google cloud ai suite/.idea/
+tools and projects/projects/google cloud ai suite/.idea/.gitignore
+tools and projects/projects/google cloud ai suite/.idea/google cloud ai suite.iml
+tools and projects/projects/google cloud ai suite/.idea/misc.xml
+tools and projects/projects/google cloud ai suite/.idea/modules.xml
+tools and projects/projects/google cloud ai suite/.idea/vcs.xml
+tools and projects/projects/google cloud ai suite/.idea/inspectionProfiles/
+tools and projects/projects/google cloud ai suite/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/google cloud ai suite/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/google cloud ai suite/source/
+tools and projects/projects/google cloud ai suite/source/document ai/
+tools and projects/projects/google cloud ai suite/source/document ai/document ai reference.md
+tools and projects/projects/google cloud ai suite/source/document ai/document_ai_batch_process.py
+tools and projects/projects/google cloud ai suite/source/document ai/gcloud_document.md
+tools and projects/projects/google cloud ai suite/source/document ai/gcloud_document_ai_processor.py
+tools and projects/projects/google cloud ai suite/source/document ai/gcloud_document_ai_processor_types.py
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/gcloud_gemini_ai.py
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/gcloud_vertexai.py
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/gcloud_vertexai_basic.py
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/gemini.md
+tools and projects/projects/google cloud ai suite/source/gemini vertexai/gemini_chatbot.py
+tools and projects/projects/google cloud ai suite/source/vision ai/
+tools and projects/projects/google cloud ai suite/source/vision ai/gcloud_image.py
+tools and projects/projects/google cloud ai suite/source/vision ai/gcloud_pdf.py
+tools and projects/projects/google cloud ai suite/source/vision ai/gcloud_video.py
+tools and projects/projects/langchain0/
+tools and projects/projects/langchain0/gcs_embedding_similarity_search.txt
+tools and projects/projects/langchain0/gcs_pdf_text.txt
+tools and projects/projects/langchain0/gcs_pdf_text_split.txt
+tools and projects/projects/langchain0/langchain_gcs.py
+tools and projects/projects/langchain0/langchain_gcs_output.md
+tools and projects/projects/langchain0/langchain_helper.py
+tools and projects/projects/langchain0/requirements.txt
+tools and projects/projects/langchain0/streamlit_chatbot.py
+tools and projects/projects/langchain0/streamlit_rocket_bot.py
+tools and projects/projects/langchain0/.idea/
+tools and projects/projects/langchain0/.idea/.gitignore
+tools and projects/projects/langchain0/.idea/langchain0.iml
+tools and projects/projects/langchain0/.idea/misc.xml
+tools and projects/projects/langchain0/.idea/modules.xml
+tools and projects/projects/langchain0/.idea/vcs.xml
+tools and projects/projects/langchain0/.idea/inspectionProfiles/
+tools and projects/projects/langchain0/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/langchain0/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/langchain0/__pycache__/
+tools and projects/projects/langchain0/__pycache__/langchain_helper.cpython-312.pyc
+tools and projects/projects/md file AI summary/
+tools and projects/projects/md file AI summary/.gitignore
+tools and projects/projects/md file AI summary/markdown_summarizer.ipynb
+tools and projects/projects/md file AI summary/markdown_summarizer.py
+tools and projects/projects/md file AI summary/op1.md
+tools and projects/projects/md file AI summary/op2.md
+tools and projects/projects/md file AI summary/sample.md
+tools and projects/projects/monitor internet usage/
+tools and projects/projects/monitor internet usage/usage.py
+tools and projects/projects/monthly spend overview/
+tools and projects/projects/monthly spend overview/README.md
+tools and projects/projects/monthly spend overview/SQL_queries.py
+tools and projects/projects/monthly spend overview/main.py
+tools and projects/projects/monthly spend overview/test0.json
+tools and projects/projects/monthly spend overview/test0.txt
+tools and projects/projects/monthly spend overview/.idea/
+tools and projects/projects/monthly spend overview/.idea/.gitignore
+tools and projects/projects/monthly spend overview/.idea/misc.xml
+tools and projects/projects/monthly spend overview/.idea/modules.xml
+tools and projects/projects/monthly spend overview/.idea/monthly spend overview.iml
+tools and projects/projects/monthly spend overview/.idea/vcs.xml
+tools and projects/projects/monthly spend overview/.idea/inspectionProfiles/
+tools and projects/projects/monthly spend overview/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/monthly spend overview/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/monthly spend overview/__pycache__/
+tools and projects/projects/monthly spend overview/__pycache__/SQL_queries.cpython-312.pyc
+tools and projects/projects/monthly spend overview/screenshots/
+tools and projects/projects/monthly spend overview/screenshots/error handling.png
+tools and projects/projects/monthly spend overview/screenshots/full page.png
+tools and projects/projects/monthly spend overview/screenshots/home page.png
+tools and projects/projects/monthly spend overview/screenshots/test routes.png
+tools and projects/projects/monthly spend overview/screenshots/upload page.png
+tools and projects/projects/monthly spend overview/templates/
+tools and projects/projects/monthly spend overview/templates/index.html
+tools and projects/projects/monthly spend overview/templates/select.html
+tools and projects/projects/monthly spend overview/templates/test.html
+tools and projects/projects/monthly spend overview/templates/upload.html
+tools and projects/projects/networking_reference/
+tools and projects/projects/networking_reference/task 1.pkt
+tools and projects/projects/networking_reference/task 2.pkt
+tools and projects/projects/networking_reference/tcpdump_amazonin
+tools and projects/projects/networking_reference/vlan.pkt
+tools and projects/projects/process pdfs new/
+tools and projects/projects/process pdfs new/start_server.sh
+tools and projects/projects/process pdfs new/.idea/
+tools and projects/projects/process pdfs new/.idea/.gitignore
+tools and projects/projects/process pdfs new/.idea/misc.xml
+tools and projects/projects/process pdfs new/.idea/modules.xml
+tools and projects/projects/process pdfs new/.idea/process pdfs.iml
+tools and projects/projects/process pdfs new/.idea/vcs.xml
+tools and projects/projects/process pdfs new/.idea/inspectionProfiles/
+tools and projects/projects/process pdfs new/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/process pdfs new/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/process pdfs new/output files html images/
+tools and projects/projects/process pdfs new/output files html images/GET  r.png
+tools and projects/projects/process pdfs new/output files html images/GET  rdeleter.png
+tools and projects/projects/process pdfs new/output files html images/GET rprompts.png
+tools and projects/projects/process pdfs new/output files html images/GET rtestr.png
+tools and projects/projects/process pdfs new/output files html images/Gemini Response.html
+tools and projects/projects/process pdfs new/output files html images/One file response.png
+tools and projects/projects/process pdfs new/output files html images/POST results.png
+tools and projects/projects/process pdfs new/output files html images/POST rprompts.png
+tools and projects/projects/process pdfs new/output files html images/test large file.html
+tools and projects/projects/process pdfs new/output files html images/time taken for 2 modules.png
+tools and projects/projects/process pdfs new/output files html images/two files response.png
+tools and projects/projects/process pdfs new/output files/
+tools and projects/projects/process pdfs new/output files/SIGCHLD_log.txt
+tools and projects/projects/process pdfs new/output files/all files err.md
+tools and projects/projects/process pdfs new/output files/all files.md
+tools and projects/projects/process pdfs new/output files/all_iterations.md
+tools and projects/projects/process pdfs new/output files/console
+tools and projects/projects/process pdfs new/output files/console log.md
+tools and projects/projects/process pdfs new/output files/console log2.md
+tools and projects/projects/process pdfs new/output files/console log3.md
+tools and projects/projects/process pdfs new/output files/console log4.md
+tools and projects/projects/process pdfs new/output files/last iteration.md
+tools and projects/projects/process pdfs new/source/
+tools and projects/projects/process pdfs new/source/main.py
+tools and projects/projects/process pdfs new/source/process pdfs hierarchy.png
+tools and projects/projects/process pdfs new/source/blueprints/
+tools and projects/projects/process pdfs new/source/blueprints/events_blueprints.py
+tools and projects/projects/process pdfs new/source/blueprints/genai_gemini_app.py
+tools and projects/projects/process pdfs new/source/blueprints/json_blueprints.py
+tools and projects/projects/process pdfs new/source/blueprints/parallel.py
+tools and projects/projects/process pdfs new/source/blueprints/test-steps.json
+tools and projects/projects/process pdfs new/source/blueprints/test.py
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/events_blueprints.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/genai_gemini_app.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/json_blueprints.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/parallel.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/__pycache__/test.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/genai_gemini.py
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/genai_gemini_parallel.py
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/__pycache__/
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/__pycache__/genai_gemini.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/__pycache__/genai_gemini_parallel.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/get_list_of_files.py
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/strings.py
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/utils.py
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/__pycache__/
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/__pycache__/strings.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/blueprints/base_gemini/utils/__pycache__/utils.cpython-312.pyc
+tools and projects/projects/process pdfs new/source/templates/
+tools and projects/projects/process pdfs new/source/templates/add_prompts.html
+tools and projects/projects/process pdfs new/source/templates/ge_te_re_3.html
+tools and projects/projects/process pdfs new/source/templates/gemini_app.html
+tools and projects/projects/process pdfs new/source/templates/gemini_responses.html
+tools and projects/projects/process pdfs new/source/templates/generic_delete.html
+tools and projects/projects/process pdfs new/source/templates/generic_test_results.html
+tools and projects/projects/process pdfs new/source/templates/index.html
+tools and projects/projects/process pdfs new/source/templates/index2.html
+tools and projects/projects/process pdfs new/source/templates/live status.html
+tools and projects/projects/process pdfs new/source/templates/pgemini_responses.html
+tools and projects/projects/process pdfs new/source/templates/plive status.html
+tools and projects/projects/process pdfs new/source/templates/processing.html
+tools and projects/projects/process pdfs new/source/templates/random_html.html
+tools and projects/projects/process pdfs new/source/templates/show_all_prompts.html
+tools and projects/projects/process pdfs new/source/templates/test_results.html
+tools and projects/projects/process pdfs new/testing/
+tools and projects/projects/process pdfs new/testing/obsolete.py
+tools and projects/projects/process pdfs new/testing/sigterm.py
+tools and projects/projects/process pdfs/
+tools and projects/projects/process pdfs/SIGCHLD_log.txt
+tools and projects/projects/process pdfs/console
+tools and projects/projects/process pdfs/console log2.md
+tools and projects/projects/process pdfs/console log3.md
+tools and projects/projects/process pdfs/console log4.md
+tools and projects/projects/process pdfs/events_blueprints.py
+tools and projects/projects/process pdfs/genai_gemini.py
+tools and projects/projects/process pdfs/genai_gemini_app.py
+tools and projects/projects/process pdfs/genai_gemini_parallel.py
+tools and projects/projects/process pdfs/get_list_of_files.py
+tools and projects/projects/process pdfs/json_blueprints.py
+tools and projects/projects/process pdfs/main.py
+tools and projects/projects/process pdfs/obsolete.py
+tools and projects/projects/process pdfs/parallel.py
+tools and projects/projects/process pdfs/process pdfs hierarchy.png
+tools and projects/projects/process pdfs/sigterm.py
+tools and projects/projects/process pdfs/start_server.sh
+tools and projects/projects/process pdfs/strings.py
+tools and projects/projects/process pdfs/test-steps.json
+tools and projects/projects/process pdfs/test.py
+tools and projects/projects/process pdfs/utils.py
+tools and projects/projects/process pdfs/.idea/
+tools and projects/projects/process pdfs/.idea/.gitignore
+tools and projects/projects/process pdfs/.idea/misc.xml
+tools and projects/projects/process pdfs/.idea/modules.xml
+tools and projects/projects/process pdfs/.idea/process pdfs.iml
+tools and projects/projects/process pdfs/.idea/vcs.xml
+tools and projects/projects/process pdfs/.idea/inspectionProfiles/
+tools and projects/projects/process pdfs/.idea/inspectionProfiles/Project_Default.xml
+tools and projects/projects/process pdfs/.idea/inspectionProfiles/profiles_settings.xml
+tools and projects/projects/process pdfs/__pycache__/
+tools and projects/projects/process pdfs/__pycache__/events_blueprints.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/genai_gemini.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/genai_gemini_app.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/genai_gemini_parallel.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/json_blueprints.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/main.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/parallel.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/strings.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/test.cpython-312.pyc
+tools and projects/projects/process pdfs/__pycache__/utils.cpython-312.pyc
+tools and projects/projects/process pdfs/output files html images/
+tools and projects/projects/process pdfs/output files html images/GET  r.png
+tools and projects/projects/process pdfs/output files html images/GET  rdeleter.png
+tools and projects/projects/process pdfs/output files html images/GET rprompts.png
+tools and projects/projects/process pdfs/output files html images/GET rtestr.png
+tools and projects/projects/process pdfs/output files html images/Gemini Response.html
+tools and projects/projects/process pdfs/output files html images/One file response.png
+tools and projects/projects/process pdfs/output files html images/POST results.png
+tools and projects/projects/process pdfs/output files html images/POST rprompts.png
+tools and projects/projects/process pdfs/output files html images/test large file.html
+tools and projects/projects/process pdfs/output files html images/time taken for 2 modules.png
+tools and projects/projects/process pdfs/output files html images/two files response.png
+tools and projects/projects/process pdfs/output files/
+tools and projects/projects/process pdfs/output files/all files err.md
+tools and projects/projects/process pdfs/output files/all files.md
+tools and projects/projects/process pdfs/output files/all_iterations.md
+tools and projects/projects/process pdfs/output files/console log.md
+tools and projects/projects/process pdfs/output files/last iteration.md
+tools and projects/projects/process pdfs/templates/
+tools and projects/projects/process pdfs/templates/add_prompts.html
+tools and projects/projects/process pdfs/templates/ge_te_re_3.html
+tools and projects/projects/process pdfs/templates/gemini_app.html
+tools and projects/projects/process pdfs/templates/gemini_responses.html
+tools and projects/projects/process pdfs/templates/generic_delete.html
+tools and projects/projects/process pdfs/templates/generic_test_results.html
+tools and projects/projects/process pdfs/templates/index.html
+tools and projects/projects/process pdfs/templates/index2.html
+tools and projects/projects/process pdfs/templates/live status.html
+tools and projects/projects/process pdfs/templates/pgemini_responses.html
+tools and projects/projects/process pdfs/templates/plive status.html
+tools and projects/projects/process pdfs/templates/processing.html
+tools and projects/projects/process pdfs/templates/random_html.html
+tools and projects/projects/process pdfs/templates/show_all_prompts.html
+tools and projects/projects/process pdfs/templates/test_results.html
+tools and projects/projects/py_web_dev/
+tools and projects/projects/py_web_dev/README.md
+tools and projects/projects/py_web_dev/__init__.py
+tools and projects/projects/py_web_dev/app.py
+tools and projects/projects/py_web_dev/compile_image.py
+tools and projects/projects/py_web_dev/dash_dashboard.py
+tools and projects/projects/py_web_dev/dashboard1.png
+tools and projects/projects/py_web_dev/dashboard2.png
+tools and projects/projects/py_web_dev/gdrive_im.py
+tools and projects/projects/py_web_dev/gdrive_te.py
+tools and projects/projects/py_web_dev/init.sh
+tools and projects/projects/py_web_dev/output.html
+tools and projects/projects/py_web_dev/requirements.txt
+tools and projects/projects/py_web_dev/test.py
+tools and projects/projects/py_web_dev/assets/
+tools and projects/projects/py_web_dev/assets/style.css
+tools and projects/projects/py_web_dev/lib/
+tools and projects/projects/py_web_dev/lib/db_models.py
+tools and projects/projects/py_web_dev/lib/helpers.py
+tools and projects/projects/py_web_dev/lib/__pycache__/
+tools and projects/projects/py_web_dev/lib/__pycache__/db_models.cpython-312.pyc
+tools and projects/projects/py_web_dev/lib/__pycache__/helpers.cpython-312.pyc
+tools and projects/projects/py_web_dev/templates/
+tools and projects/projects/py_web_dev/templates/crx1.html
+tools and projects/projects/py_web_dev/templates/crx2.html
+tools and projects/projects/py_web_dev/templates/index_im.html
+tools and projects/projects/py_web_dev/templates/results_im.html
+
+sent 1,977,293,130 bytes  received 20,241 bytes  30,656,021.26 bytes/sec
+total size is 2,006,162,391  speedup is 1.01
+Final listing of contents in /home/ec2-user/fedora/
+total 28868
+drwxr-xr-x. 13 ec2-user ec2-user   16384 Sep 21 14:51 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user      21 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user     175 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user     153 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user     183 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user   16384 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user   16384 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user       6 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x. 10 ec2-user ec2-user   16384 Sep 21 14:49 notes
+drwxrwxr-x.  3 ec2-user ec2-user     157 Sep 21 14:48 tools and projects
+Final listing of contents in /home/ec2-user/efs/
+total 28836
+drwxr-xr-x. 13 ec2-user ec2-user    6144 Sep 21 14:51 .
+drwx------.  5 ec2-user ec2-user     120 Sep 18 10:27 ..
+-rw-r--r--.  1 ec2-user ec2-user  670095 Sep 20 17:37 1726853869254.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  677497 Sep 20 17:37 1726853870316.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1416378 Sep 20 17:42 1726854117325.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 4085423 Sep 20 17:42 1726854117923.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 6970627 Sep 20 17:46 1726854396526.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  781806 Sep 20 17:50 1726854613572.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  554022 Sep 20 18:01 1726855264427.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  692819 Sep 20 18:05 1726855512979.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  552418 Sep 20 18:05 1726855543665.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  594043 Sep 20 18:05 1726855553240.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  560812 Sep 20 18:06 1726855581339.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  615036 Sep 20 18:06 1726855584725.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  765413 Sep 20 18:14 1726856049386.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1492187 Sep 20 18:15 1726856117713.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1165576 Sep 20 18:15 1726856119062.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1578381 Sep 20 18:15 1726856119696.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  209170 Sep 20 18:15 1726856155006.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  218893 Sep 20 18:15 1726856155947.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  192026 Sep 20 18:16 1726856162913.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  219737 Sep 20 18:27 1726856824823.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1920830 Sep 20 18:31 1726857080901.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1935623 Sep 20 18:31 1726857081820.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user 1367027 Sep 20 18:31 1726857111236.png_image.png
+-rw-r--r--.  1 ec2-user ec2-user  196643 Sep 20 18:31 1726857111738.png_image.png
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 13:07 AWS Cloud
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep  6 15:09 AWS Data Engineering
+drwxrwxr-x.  6 ec2-user ec2-user    6144 Sep 21 14:49 DSA3
+drwxrwxr-x.  7 ec2-user ec2-user    6144 Sep 21 14:49 DSA4
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Sep 18 06:18 Personal
+drwxr-xr-x.  3 ec2-user ec2-user    6144 Sep 19 16:13 Sun Tzu memes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:49 cic
+drwxr-xr-x.  6 ec2-user ec2-user    6144 Jul  3 09:35 datasheets
+drwxrwxr-x.  2 ec2-user ec2-user    6144 Sep 21 14:49 fyle-interview-backend
+drwxrwxr-x. 10 ec2-user ec2-user    6144 Sep 21 14:49 notes
+drwxrwxr-x.  3 ec2-user ec2-user    6144 Sep 21 14:48 tools and projects
+Backup operation to EC2 completed.

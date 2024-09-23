@@ -1,0 +1,199 @@
+./backup-to-s3.sh
+
+2024-09-23 22:33:16 - Enabling path autocompletion...
+
+Enter the local directory to sync [default: /home/ansarimn/Downloads/backup/all-dirs-backup/]:
+
+2024-09-23 22:33:20 - Local directory to sync: /home/ansarimn/Downloads/backup/all-dirs-backup/
+
+
+2024-09-23 22:33:20 - Changed directory to /home/ansarimn/Downloads/backup/
+
+Do you want to run the snapshot script before syncing? (yes/no): yes
+
+2024-09-23 22:33:22 - User chose to run snapshot script: yes
+
+
+2024-09-23 22:33:22 - Running snapshot DRY RUN script...
+
+Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+
+
+Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+sending incremental file list
+
+sent 1.01K bytes  received 13 bytes  2.04K bytes/sec
+total size is 4.89M  speedup is 4,789.41 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+
+
+Processing directory: /home/ansarimn/Downloads/Personal
+sending incremental file list
+
+sent 7.87K bytes  received 24 bytes  15.79K bytes/sec
+total size is 1.69G  speedup is 214,304.52 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/Personal
+
+
+Processing directory: /home/ansarimn/Downloads/tools and projects
+building file list ...
+rsync: [sender] link_stat "/home/ansarimn/Downloads/tools and projects/ec2_backup.log" failed: No such file or directory (2)
+done
+
+sent 11.45K bytes  received 12 bytes  22.93K bytes/sec
+total size is 26.33M  speedup is 2,297.23 (DRY RUN)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.3.0]
+    -> Copy complete for /home/ansarimn/Downloads/tools and projects
+
+
+Processing directory: /home/ansarimn/Downloads/notes
+building file list ... done
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/community-plugins.json
+.obsidian/core-plugins-migration.json
+.obsidian/core-plugins.json
+.obsidian/workspace.json
+.obsidian/plugins/obsidian-completr/scanned_words.txt
+AWS Cloud/Experience/Cloud storage pricing comparison.md
+
+sent 10.00K bytes  received 40 bytes  20.07K bytes/sec
+total size is 46.58M  speedup is 4,640.42 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/notes
+
+
+Processing directory: /home/ansarimn/Downloads/DSA3
+building file list ... done
+
+sent 1.12K bytes  received 12 bytes  2.27K bytes/sec
+total size is 146.18K  speedup is 128.57 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/DSA3
+
+
+Processing directory: /home/ansarimn/Downloads/DSA4
+building file list ... done
+
+sent 1.30K bytes  received 12 bytes  2.63K bytes/sec
+total size is 156.49K  speedup is 118.83 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/DSA4
+
+
+Processing directory: /home/ansarimn/Downloads/cic
+building file list ... done
+
+sent 578 bytes  received 12 bytes  1.18K bytes/sec
+total size is 20.67K  speedup is 35.04 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/cic
+
+
+Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend
+building file list ... done
+
+sent 1.93K bytes  received 12 bytes  3.88K bytes/sec
+total size is 85.41K  speedup is 44.07 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+Processing directory: /home/ansarimn/Downloads/AWS Cloud
+sending incremental file list
+
+sent 405 bytes  received 13 bytes  836.00 bytes/sec
+total size is 99.21M  speedup is 237,345.86 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/AWS Cloud
+
+
+Processing directory: /home/ansarimn/Downloads/AWS Data Engineering
+sending incremental file list
+
+sent 292 bytes  received 13 bytes  610.00 bytes/sec
+total size is 12.94M  speedup is 42,410.32 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/AWS Data Engineering
+
+
+Processing directory: /home/ansarimn/Downloads/datasheets
+sending incremental file list
+
+sent 4.02K bytes  received 45 bytes  8.13K bytes/sec
+total size is 96.84M  speedup is 23,812.11 (DRY RUN)
+    -> Copy complete for /home/ansarimn/Downloads/datasheets
+Backup operation completed.
+
+2024-09-23 22:33:23 - Snapshot DRY RUN script completed.
+
+Do you want to proceed with the actual snapshot script? (yes/no): yes
+
+2024-09-23 22:33:44 - User chose to run actual snapshot script: yes
+
+
+2024-09-23 22:33:44 - Running actual snapshot script...
+
+Reading directory list from /home/ansarimn/Downloads/backup/dir-list.md
+
+
+Processing directory: /home/ansarimn/Downloads/Sun Tzu memes
+    -> Copy complete for /home/ansarimn/Downloads/Sun Tzu memes
+
+
+Processing directory: /home/ansarimn/Downloads/Personal
+    -> Copy complete for /home/ansarimn/Downloads/Personal
+
+
+Processing directory: /home/ansarimn/Downloads/tools and projects
+
+rsync: [sender] link_stat "/home/ansarimn/Downloads/tools and projects/ec2_backup.log" failed: No such file or directory (2)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.3.0]
+    -> Copy complete for /home/ansarimn/Downloads/tools and projects
+
+
+Processing directory: /home/ansarimn/Downloads/notes
+    -> Copy complete for /home/ansarimn/Downloads/notes
+
+
+Processing directory: /home/ansarimn/Downloads/DSA3
+    -> Copy complete for /home/ansarimn/Downloads/DSA3
+
+
+Processing directory: /home/ansarimn/Downloads/DSA4
+    -> Copy complete for /home/ansarimn/Downloads/DSA4
+
+
+Processing directory: /home/ansarimn/Downloads/cic
+    -> Copy complete for /home/ansarimn/Downloads/cic
+
+
+Processing directory: /home/ansarimn/Downloads/fyle-interview-intern-backend
+    -> Copy complete for /home/ansarimn/Downloads/fyle-interview-intern-backend
+
+
+Processing directory: /home/ansarimn/Downloads/AWS Cloud
+    -> Copy complete for /home/ansarimn/Downloads/AWS Cloud
+
+
+Processing directory: /home/ansarimn/Downloads/AWS Data Engineering
+    -> Copy complete for /home/ansarimn/Downloads/AWS Data Engineering
+
+
+Processing directory: /home/ansarimn/Downloads/datasheets
+    -> Copy complete for /home/ansarimn/Downloads/datasheets
+Backup operation completed.
+
+2024-09-23 22:33:45 - Snapshot script completed.
+
+
+2024-09-23 22:33:45 - Testing S3 sync with dry run...
+
+
+2024-09-23 22:35:26 - Number of files to be uploaded: 2
+
+Do you want to proceed with the actual S3 sync? (yes/no): yes
+
+2024-09-23 22:35:37 - User response: yes
+
+
+2024-09-23 22:35:37 - Starting actual S3 sync...
+
+upload: all-dirs-backup/notes/AWS Cloud/Experience/Cloud storage pricing comparison.md to s3://ansarimn-fedora-backup-us-west-2/notes/AWS Cloud/Experience/Cloud storage pricing comparison.md
+upload: all-dirs-backup/notes/.obsidian/plugins/obsidian-completr/scanned_words.txt to s3://ansarimn-fedora-backup-us-west-2/notes/.obsidian/plugins/obsidian-completr/scanned_words.txt
+
+
+2024-09-23 22:37:09 - S3 sync completed.
