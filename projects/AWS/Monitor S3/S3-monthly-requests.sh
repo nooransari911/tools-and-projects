@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "[$(date +'%Y-%m-%d %H:%M:%S')] - Script started"
+
+
 # Variables
 DATABASE_NAME="default"
 OUTPUT_LOCATION="s3://aws-athena-query-results-677276075874-us-west-2"
