@@ -76,7 +76,7 @@ fi
 
 # Test S3 sync with dry run
 log "Testing S3 sync with dry run..."
-upload_count=$(aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2 --dryrun | grep 'upload' | wc -l)
+upload_count=$(aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2/all-dirs-backup/ --dryrun | grep 'upload' | wc -l)
 log "Number of files to be uploaded: $upload_count"
 
 # Ask the user if they want to proceed
@@ -95,5 +95,5 @@ fi
 
 # Proceed with the actual S3 sync
 log "Starting actual S3 sync..."
-aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2
+aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2/all-dirs-backup/
 log "S3 sync completed."

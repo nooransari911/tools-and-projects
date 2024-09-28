@@ -29,7 +29,7 @@ while IFS= read -r dir; do
     echo -e "\n\n${YELLOW}Processing directory: $expanded_dir${NC}"
 
     # Extract the directory name
-    dir_name=$(basename "$expanded_dir")
+    dir_name="${expanded_dir#${HOME}/Downloads/}"
     dest_subdir="$DEST_DIR/$dir_name"
 
     # Check if it's a git repository

@@ -29,7 +29,7 @@ while IFS= read -r dir; do
     echo -e "\n\n${YELLOW}Processing directory: $expanded_dir${NC}"
 
     # Extract the directory name
-    dir_name=$(basename "$expanded_dir")
+    dir_name="${expanded_dir#${HOME}/Downloads/}"
     dest_subdir="$DEST_DIR/$dir_name"
 
     # Check if it's a git repository
@@ -38,7 +38,7 @@ while IFS= read -r dir; do
 
         # Create the destination subdirectory
         mkdir -p "$dest_subdir"
-        # echo -e "    -> ${YELLOW}Creating destination directory: $dest_subdir${NC}\n    "
+        echo -e "    -> ${YELLOW}Creating destination directory: $dest_subdir${NC}\n    "
 
         # Use git to get a list of files respecting .gitignore and rsync to copy
         # echo "  -> Copying files from $expanded_dir to $dest_subdir, respecting .gitignore"
