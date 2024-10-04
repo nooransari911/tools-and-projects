@@ -5,12 +5,12 @@ from flask import Flask, render_template, jsonify, request, Request
 
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
-from gdrive_im import download_files
-from gdrive_te import download_filest
+#from gdrive_im import download_files
+#from gdrive_te import download_filest
 
 # ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
 # ROOT = "/tmp/"
-ROOT="/opt/render/project/src/projects/compile image/"
+ROOT="/home/ansarimn/Downloads/tools and projects/projects/compile image/"
 
 
 inits = [
