@@ -52,17 +52,17 @@ log "User chose to run snapshot script: $run_snapshot"
 
 
 if [[ "$run_snapshot" == "yes" ]]; then
-  log "Running snapshot DRY RUN script..."
-  /home/ansarimn/Downloads/backup/snapshot-script-dry.sh # Assuming you have a dry run version
+  log "Running snapshot DRY RUN script quiet-snapshot-script-dry.sh...."
+  /home/ansarimn/Downloads/backup/quiet-snapshot-script-dry.sh # Assuming you have a dry run version
   log "Snapshot DRY RUN script completed."
 
   # Ask if they want to proceed with the actual snapshot
-  read -rp "Do you want to proceed with the actual snapshot script? (yes/no): " run_snapshot_actual
+  read -rp "Do you want to proceed with the actual snapshot script quiet-snapshot-script.sh? (yes/no): " run_snapshot_actual
   log "User chose to run actual snapshot script: $run_snapshot_actual"
 
   if [[ "$run_snapshot_actual" == "yes" ]]; then
     log "Running actual snapshot script..."
-    /home/ansarimn/Downloads/backup/snapshot-script.sh
+    /home/ansarimn/Downloads/backup/quiet-snapshot-script.sh
     log "Snapshot script completed."
   else
     log "Skipping actual snapshot script."
