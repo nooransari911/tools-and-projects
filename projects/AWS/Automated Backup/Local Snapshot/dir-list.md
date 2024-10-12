@@ -2,6 +2,7 @@
 /home/ansarimn/Downloads/Personal
 /home/ansarimn/Downloads/tools\ and\ projects
 /home/ansarimn/Downloads/notes
+/home/ansarimn/Downloads/archive/youtube-playlists
 /home/ansarimn/Downloads/archive/DSA3
 /home/ansarimn/Downloads/archive/DSA4
 /home/ansarimn/Downloads/archive/cic
