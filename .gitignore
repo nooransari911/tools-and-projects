@@ -14,3 +14,5 @@ static-manifest*
 **/.env*
 /projects/resume/resume.md
 /projects/resume/index.html
+/projects/resume/spam.sh
+

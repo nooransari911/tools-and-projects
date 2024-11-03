@@ -11,7 +11,7 @@ validate_url() {
 }
 
 # Default HTTP endpoint
-default_endpoint="https://d1p82z2met9mpg.cloudfront.net/"
+default_endpoint="https://www.google.com/"
 default_requests=100
 
 # Print script start message with timestamp
