@@ -12,3 +12,5 @@ static-manifest*
 **/venv/
 **/ex-*
 **/.env*
+/projects/resume/resume.md
+/projects/resume/index.html
