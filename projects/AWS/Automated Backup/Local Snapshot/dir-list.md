@@ -10,4 +10,6 @@
 /home/ansarimn/Downloads/AWS\ Cloud
 /home/ansarimn/Downloads/AWS\ Data\ Engineering
 /home/ansarimn/Downloads/datasheets
+/home/ansarimn/Downloads/books/
 /home/ansarimn/Downloads/sim/
+/home/ansarimn/Downloads/S3\ Static\ Website/
