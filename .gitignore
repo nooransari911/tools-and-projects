@@ -9,6 +9,8 @@ static-manifest*
 /projects/DArchive
 *.mp4
 *.pdf
+*.part
+*.ytdl
 **/venv/
 **/ex-*
 **/.env*
