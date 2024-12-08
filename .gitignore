@@ -18,3 +18,4 @@ static-manifest*
 /projects/resume/index.html
 /projects/resume/spam.sh
 /projects/AWS/S3 Static Website/*.md
+**/automation

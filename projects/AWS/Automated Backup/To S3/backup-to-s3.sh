@@ -95,5 +95,5 @@ fi
 
 # Proceed with the actual S3 sync
 log "Starting actual S3 sync..."
-aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2/all-dirs-backup/
+aws s3 sync "$local_dir" s3://ansarimn-fedora-backup-us-west-2/all-dirs-backup/ --delete
 log "S3 sync completed."

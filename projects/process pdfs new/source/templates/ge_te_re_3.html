@@ -173,7 +173,7 @@
 
                     // Only display error if the connection is permanently closed
                     if (eventSource.readyState === EventSource.CLOSED) {
-                        statusDiv.textContent = 'Error connecting to server.';
+                        // statusDiv.textContent = 'Error connecting to server.';
                     } else if (eventSource.readyState === EventSource.CONNECTING) {
                         // Ignore transient connection issues
                         console.log('Reconnecting...');

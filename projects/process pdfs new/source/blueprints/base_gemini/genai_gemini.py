@@ -110,10 +110,14 @@ def gemini_chain (file=None):
         RESPONSES.append (gemini_response.text)
         gemini_input = []
 
+    """
     with open (output_file, "w") as md_output_file:
         md_output_file.write (f"{datetime.datetime.now ()};\n\n{gemini_response.text}")
     with open(all_iterations_file, "w") as md_file:
         md_file.write (f"{datetime.datetime.now ()};\n\n{RESPONSES}")
+
+    """
+
 
     # Return Gemini output text
     return gemini_response.text
