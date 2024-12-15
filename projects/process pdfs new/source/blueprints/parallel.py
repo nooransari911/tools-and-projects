@@ -20,6 +20,8 @@ def phome_async():
 
         if os.path.exists(directory):
             #print("Directory exists!!")
+            RESULT_DICT.clear ()
+            METADATA_DICT.clear ()
             process = multiprocessing.Process(target=pgemini_chain_all_files, args=(directory, PROMPT_LIST, RESULT_DICT, METADATA_DICT))
             process.start()
             PROCESS_L0.append(process.pid)
@@ -51,7 +53,8 @@ def presults():
             if not active_processes_L0:
                 # Processes have completed
                 all_responses_string, iint, oint, total_time = putil(RESULT_DICT, METADATA_DICT)
-                return render_template('random_html.html',
+                # print (all_responses_string)
+                return render_template('aesthetic-res.html',
                                        directory=directory, responses=all_responses_string, iint=iint, oint=oint, total_time=total_time)
             else:
                 # Processes are still running

@@ -10,9 +10,9 @@ PROCESS_L0 = manager.list()
 PROCESS_L1 = manager.list()
 
 
-genai.configure(api_key=os.environ["API_KEY_FREE"])
+genai.configure(api_key=os.environ["API_KEY_PAID"])
 
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel(os.environ["GEMINI_MODEL_NAME"])
 
 
 
@@ -71,10 +71,24 @@ def pgemini_chain (prompt_list, file=None):
             gemini_input.append(gemini_response.text)
 
         # Send the input (PDF or previous response + current prompt) to Gemini
+
+        """
         gemini_response = model.generate_content(gemini_input)
+
         #time.sleep(80)
         RESPONSES.append (gemini_response.text)
+        """
+
+        try:
+            gemini_response = model.generate_content(gemini_input)
+            RESPONSES.append (gemini_response.text)
+        except Exception as e:
+            gemini_response = f"Error: {str(e)}"
+            RESPONSES.append (f"Error: {str(e)}")
+            return (f"Error: {str(e)}")
+
         gemini_input = []
+
 
 
     # Return Gemini output text
@@ -158,12 +172,21 @@ def putil (result_dict, metadata_dict):
 
 
 
-
-
+    n_br_tags = 16
+    br_tags = "<br>" * n_br_tags
+    n_hr_tags = 2
+    hr_tags = "<hr>" * n_hr_tags
     all_responses_string = ""
-    for file_data in result_dict.values():
-        all_responses_string += file_data["response"]
 
+
+    for file_data in result_dict.values():
+        all_responses_string += "{}\n\n {} {} \n\n".format(file_data["response"], hr_tags, br_tags)
+
+
+
+    # all_responses_string = all_responses_string + "<br><br>"
+    # print (all_responses_string)
+    print ("Count of files: ", all_responses_string.count(br_tags))
 
 
     # 2. Calculate the sum of all iint and oint in metadata_dict
